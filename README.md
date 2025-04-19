@@ -1,6 +1,4 @@
-# OpenStacks-for-Change
-Modular, open-source tools and documentation stacks for public interest research, evaluation, and program design.
-readme_text = """# 📦 Open Stacks for Change
+# OpenStacks-for-Change: Modular, open-source tools and documentation stacks for public interest research, evaluation, and program design.
 
 *An open, modular ecosystem of tools and infrastructures for better research, evaluation, and program design — built in India, shared for impact.*
 
