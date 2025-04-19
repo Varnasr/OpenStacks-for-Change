@@ -57,9 +57,3 @@ You're welcome to:
 
 Built in India. Open for the world.  
 If our systems are meant to serve people, then our tools should too. ✨
-"""
-
-readme_path = "/mnt/data/README_OpenStacksForChange.md"
-Path(readme_path).write_text(readme_text)
-
-readme_path
