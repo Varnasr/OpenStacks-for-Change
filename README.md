@@ -57,10 +57,12 @@ You're welcome to:
 
 ## ☕ Support My Work
 
-If you find this project useful, consider supporting me:
+If this project has been useful to you, please consider supporting it:
 
 - 💖 [Buy Me a Coffee](https://buymeacoffee.com/varnasra)
-- 📱 UPI: `varna@icici` (clickable on some apps: [upi://pay?pa=varna@icici&pn=Varna%20Sri%20Raman&cu=INR](upi://pay?pa=varna@icici&pn=Varna%20Sri%20Raman&cu=INR))
+- 📱 UPI: `varna@icici`
+- 🌐 [Support Page](https://varnasr.github.io/OpenStacks-for-Change/support.html)
+
 
 ---
 
