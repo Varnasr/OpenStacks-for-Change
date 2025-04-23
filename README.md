@@ -16,6 +16,14 @@ These stacks help answer a deeper question:
 
 ---
 
+## 📄 About Me
+
+I'm a development economist, researcher, and social justice practitioner with over two decades of experience across livelihoods, public health, climate resilience, education, and gender equity in India and South Asia. My work spans large-scale research, evaluation, MEL strategy, and program design.
+
+👉 [Click here to view my full CV (PDF)](cv/varna-sri-raman-cv.pdf)
+
+---
+
 ## 🌱 Current Stacks
 
 | Stack | Description |
