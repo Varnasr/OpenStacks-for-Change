@@ -1,5 +1,3 @@
-ko_fi: varna-placeholder
+buy_me_a_coffee: varnasra
 custom:
-  - 'https://buymeacoffee.com/varna-placeholder'
-  - 'https://ko-fi.com/varna-placeholder'
-  - 'upi://pay?pa=varna@icici&pn=Varna&cu=INR'
+  - "upi://pay?pa=varna@icici&pn=Varna%20Sri%20Raman&cu=INR"

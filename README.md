@@ -55,5 +55,14 @@ You're welcome to:
 
 ---
 
+## ☕ Support My Work
+
+If you find this project useful, consider supporting me:
+
+- 💖 [Buy Me a Coffee](https://buymeacoffee.com/varnasra)
+- 📱 UPI: `varna@icici` (clickable on some apps: [upi://pay?pa=varna@icici&pn=Varna%20Sri%20Raman&cu=INR](upi://pay?pa=varna@icici&pn=Varna%20Sri%20Raman&cu=INR))
+
+---
+
 Built in India. Open for the world.  
 If our systems are meant to serve people, then our tools should too. ✨
