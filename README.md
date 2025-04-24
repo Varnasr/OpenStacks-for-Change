@@ -1,3 +1,5 @@
+<img src="banner/openstacks_banner.png" alt="OpenStacks banner">
+
 # OpenStacks-for-Change: Modular, open-source tools and documentation stacks for public interest research, evaluation, and program design.
 
 *An open, modular ecosystem of tools and infrastructures for better research, evaluation, and program design — built in India, shared for impact.*
@@ -76,3 +78,22 @@ If this project has been useful to you, please consider supporting it:
 
 Built in India. Open for the world.  
 If our systems are meant to serve people, then our tools should too. ✨
+
+---
+
+## 📄 Citation
+
+If you use this project in your work, please cite it as:
+
+**GitHub style**  
+> Varna Sri Raman. (2025). *OpenStacks for Change*. GitHub. https://github.com/Varnasr/OpenStacks-for-Change
+
+**Chicago style**  
+> Raman, Varna Sri. 2025. *OpenStacks for Change*. GitHub. https://github.com/Varnasr/OpenStacks-for-Change
+
+---
+
+## 🛠 License
+
+📄 *Licensed under the MIT License.*  
+For citation and usage rights, see this repository’s LICENSE file or contact varna.sr@gmail.com.
