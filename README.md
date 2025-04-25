@@ -81,6 +81,13 @@ If our systems are meant to serve people, then our tools should too. ✨
 
 ---
 
+> 🛠️ **Authorship Note**  
+> AI tools (like ChatGPT) were used in parts of this repository to support tasks such as documentation formatting, code generation, or editing — similar to using VSCode extensions, StackOverflow, or libraries like Pandas.  
+> All decisions, designs, datasets, and content curation are entirely mine.  
+> Using modern tools responsibly is part of authorship — not a substitute for it.
+
+---
+
 ## 📄 Citation
 
 If you use this project in your work, please cite it as:
