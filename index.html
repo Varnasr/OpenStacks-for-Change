@@ -3,55 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>OpenStacks for Change</title>
+  <link rel="icon" type="image/x-icon" href="favicon_openstacks.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #ffffff;
-      color: #333;
-    }
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    h1, h2 {
-      color: #2b3e50;
-    }
-    a {
-      color: #005a9c;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin: 2rem 0;
-    }
-    .card {
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    img.profile {
-      max-width: 240px;
-      height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-      display: block;
-    }
-    footer {
-      font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ccc;
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 880px; margin: 0 auto; padding: 1rem; background-color: #ffffff; color: #333; }
+    header img { width: 100%; height: auto; display: block; margin-bottom: 0.5rem; }
+    h1, h2 { color: #2b3e50; }
+    a.repo-link { color: #005a9c; text-decoration: none; transition: all 0.3s ease; font-weight: bold; }
+    a.repo-link:hover { color: #003366; text-decoration: underline; transform: scale(1.03); }
+    .section { margin: 2rem 0; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
+    .card { background: #f1f1f1; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    img.profile { max-width: 240px; height: auto; border-radius: 8px; margin: 1rem 0; display: block; }
+    footer { font-size: 0.9rem; color: #555; border-top: 1px solid #ccc; margin-top: 3rem; padding-top: 1.5rem; }
+    .tool-icons { margin-top: 0.8rem; font-size: 0.9em; color: #555; }
+    .tool-icons span { margin-right: 0.8rem; }
   </style>
 </head>
 <body>
@@ -61,128 +27,87 @@
 </header>
 
 <main>
-  <div class="section">
-    <h1>📚 OpenStacks for Change</h1>
-    <p>A modular, evolving collection of open-source documentation, research tools, MEL frameworks, and participatory knowledge practices—rooted in the realities of Indian and South Asian public interest work.</p>
+<div class="section">
+  <h1>📚 OpenStacks for Change</h1>
+  <p>A modular, evolving collection of open-source documentation, research tools, MEL frameworks, and participatory knowledge practices—rooted in the realities of Indian and South Asian public interest work.</p>
+</div>
+
+<div class="section">
+  <h2>📂 Repository Table of Contents</h2>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li style="margin-bottom: 1rem;">
+      📁 <a href="https://github.com/Varnasr/InsightStack" class="repo-link">InsightStack</a><br>
+      <span style="color: #666;">Visual documentation and participatory tools for research workflows.</span>
+    </li>
+    <li style="margin-bottom: 1rem;">
+      📁 <a href="https://github.com/Varnasr/FieldStack" class="repo-link">FieldStack</a><br>
+      <span style="color: #666;">Survey, evaluation, and field-based research infrastructure.</span>
+    </li>
+    <li style="margin-bottom: 1rem;">
+      📁 <a href="https://github.com/Varnasr/EquityStack" class="repo-link">EquityStack</a><br>
+      <span style="color: #666;">Python data tools for health, gender, education, and climate equity.</span>
+    </li>
+    <li style="margin-bottom: 1rem;">
+      📁 <a href="https://github.com/Varnasr/SignalStack" class="repo-link">SignalStack</a><br>
+      <span style="color: #666;">Research Rundown archive and development research highlights.</span>
+    </li>
+    <li style="margin-bottom: 1rem;">
+      📁 <a href="https://github.com/Varnasr/OpenStacks-for-Change" class="repo-link">OpenStacks.dev</a><br>
+      <span style="color: #666;">Project hub connecting research, fieldwork, and storytelling toolkits.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🔍 Explore the Repositories</h2>
+
+  <div class="card">
+    <h3>InsightStack</h3>
+    <p>Visual documentation, participatory analysis, and storytelling tools for development sector work. Includes Observable notebooks, Open Data Editor, Miro facilitation manuals, Excalidraw diagrams, and Descript visual ethnography.</p>
+    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Added participatory workshop templates (Miro) and Descript-based fieldwork visualization examples.</p>
+    <div class="tool-icons">
+      <span>🧠 Observable</span><span>🗂️ Open Data Editor</span><span>📝 Taguette</span><span>🖌️ Excalidraw</span><span>🎙️ Descript</span>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>📂 Repository Table of Contents</h2>
-    <ul>
-      <li>
-        <strong><a href="https://github.com/Varnasr/InsightStack">InsightStack</a></strong> – Visual documentation and research artifacts
-        <ul>
-          <li>🧰 Tools: Observable, Open Data Editor, Taguette, Excalidraw</li>
-          <li>📂 Folders: <code>observable_notebooks/</code>, <code>open_data_editor/</code>, <code>taguette_coding/</code>, <code>visual_ethnography_descript/</code></li>
-          <li>🌱 Why: For MEL teams, documentation strategists, and storytelling in development work</li>
-        </ul>
-      </li>
-      <li>
-        <strong><a href="https://github.com/Varnasr/FieldStack">FieldStack</a></strong> – Field research and evaluation infrastructure
-        <ul>
-          <li>🧰 Tools: ODK, KoboToolbox, Stata, R, Excel</li>
-          <li>📂 Folders: <code>survey_design/</code>, <code>data_cleaning/</code>, <code>qualitative_tools/</code>, <code>analysis_templates/</code></li>
-          <li>🌱 Why: For researchers, fellows, enumerators, and MEL practitioners conducting field-based studies</li>
-        </ul>
-      </li>
-      <li>
-        <strong><a href="https://github.com/Varnasr/EquityStack">EquityStack</a></strong> – Data tools for public health and gender equity
-        <ul>
-          <li>🧰 Tools: ggplot2, pandas, Power BI, custom dashboards</li>
-          <li>📂 Folders: <code>gender_data/</code>, <code>equity_dashboards/</code>, <code>visualizations/</code></li>
-          <li>🌱 Why: To support inclusive, evidence-based decision-making across policy and programming</li>
-        </ul>
-      </li>
-    </ul>
+  <div class="card">
+    <h3>FieldStack</h3>
+    <p>Evaluation, field survey infrastructure, and applied R and Stata modules for survey research, MEL, and quasi-experimental designs. Includes survey templates, data cleaning scripts, analysis frameworks, and econometrics walkthroughs.</p>
+    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Expanded econometrics examples: RDD, HTE, MDE calculations, and Stata visualizations.</p>
+    <div class="tool-icons">
+      <span>📋 KoboToolbox</span><span>🗺️ ODK</span><span>📊 Stata</span><span>📈 R</span><span>📋 Excel</span>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>❓ Why OpenStacks?</h2>
-    <p>Research and evaluation tools are often siloed, fragile, or inaccessible—especially when working across grassroots systems, multidisciplinary teams, or social impact fields. OpenStacks was created to address that gap. It connects the dots between <strong>documentation, analysis, fieldwork, and storytelling</strong>—so that development professionals, researchers, and policy actors can work with contextually grounded, reusable infrastructure.</p>
-    <p>Each folder is a real, working component used in field contexts like gender audits, public health evaluations, climate adaptation studies, and social systems documentation. You are free to copy, remix, cite, and build upon them.</p>
+  <div class="card">
+    <h3>EquityStack</h3>
+    <p>End-to-end Python workflows for data cleaning, modeling, and visualization focused on public health, gender, education, and climate sectors. Includes plug-and-play Jupyter notebooks, dashboard exports (Excel, Power BI), and pipeline automation tools.</p>
+    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Completed survey weighting notebooks and dashboard generation templates.</p>
+    <div class="tool-icons">
+      <span>🐍 Python</span><span>🧮 Pandas</span><span>📊 Power BI</span><span>📉 Jupyter</span>
+    </div>
   </div>
 
-  <div class="section">
-    <p>👉 Want to support this work? Visit <a href="https://buymeacoffee.com/varnasra" target="_blank">Buy Me a Coffee</a>.</p>
+  <div class="card">
+    <h3>SignalStack</h3>
+    <p>Hosting the Research Rundown issues archive—a curated newsletter featuring the latest in global development research, open data, tools, and methods—plus featured insights from the OpenStacks ecosystem.</p>
+    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Launch of Research Rundown issues archive and featured repository highlights section.</p>
+    <div class="tool-icons">
+      <span>📰 Substack</span><span>🌐 GitHub Pages</span>
+    </div>
   </div>
 
-  
-  <div class="section" style="background: #f9f9fc; padding: 1.5rem; border-left: 6px solid #3e4c63; border-radius: 8px;">
-    <h2 style="color: #3e4c63; font-size: 1.8em; margin-bottom: 1rem;">📌 What’s Coming Next</h2>
-    
-    <details style="margin-bottom: 1rem;" open>
-      <summary style="font-weight: bold; font-size: 1.1em;">Planned Tools and Methods (InsightStack)</summary>
-      <ul>
-        <li>Vensim models for system dynamics in health, livelihoods, education, and climate resilience</li>
-        <li>Econometrics modules covering RDD, HTE, DiD, LATE, MDE, and synthetic controls</li>
-        <li>Bayesian tools using PyMC, Stan, or brms for policy modelling and uncertainty handling</li>
-        <li>Data validation scripts for checking duplicates, ranges, missingness across CSV, SPSS, Stata</li>
-        <li>Survey-to-codebook converter from XLSForm to Markdown</li>
-        <li>Labeling templates and variable naming standardization tools</li>
-        <li>Replication folder structure with data lineage documentation</li>
-      </ul>
-    </details>
-
-    <details style="margin-bottom: 1rem;">
-      <summary style="font-weight: bold; font-size: 1.1em;">Field and Equity Tools (FieldStack + EquityStack)</summary>
-      <ul>
-        <li>SROI, care economy, and survey weighting notebooks with real sample data</li>
-        <li>Dashboard exports: Excel, Power BI, Looker Studio</li>
-        <li>Advanced graph types: stacked bars, waterfall plots, dot plots, panel visuals</li>
-        <li>Templates for longitudinal data, baseline/endline, and quasi-experimental studies</li>
-        <li>Test automation, Quarto rendering, and Zenodo citations via GitHub Actions</li>
-      </ul>
-    </details>
-
-    <details style="margin-bottom: 1rem;">
-      <summary style="font-weight: bold; font-size: 1.1em;">Knowledge and Communication Resources (KnowledgeStack)</summary>
-      <ul>
-        <li>Learning layer frameworks and program capacity guides</li>
-        <li>KM SOPs and tagging systems for documentation and reuse</li>
-        <li>Annotated writing samples, methods notes, and literature mapping visuals</li>
-        <li>Memo templates for evaluations, internal reports, and knowledge curation</li>
-      </ul>
-    </details>
-
-    <details style="margin-bottom: 1rem;">
-      <summary style="font-weight: bold; font-size: 1.1em;">Standalone and Experimental Ideas</summary>
-      <ul>
-        <li>BayesStack: Bayesian models and examples for development economics</li>
-        <li>APIs & AI for Development: using public APIs and AI tools for dashboards, reports, and automation</li>
-        <li>Online Library: curated open-access repository of key research, guides, and readings</li>
-        <li>Lovable Integration: exploring Lovable to enhance repo engagement and usability</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary style="font-weight: bold; font-size: 1.1em;">Cross-Cutting Enhancements (Across All Repos)</summary>
-      <ul>
-        <li>Automated changelog generation with GitHub Actions</li>
-        <li>Standardized authorship notes and responsible AI use declaration</li>
-        <li>Real sample datasets (≥100 rows) included in every repo</li>
-        <li><code>tools_used.md</code> for every technical or method folder</li>
-      </ul>
-    </details>
+  <div class="card">
+    <h3>OpenStacks.dev</h3>
+    <p>The coordinating repository for the OpenStacks for Change project. Houses the roadmap, repository links, citation formats, and OpenStacks philosophy connecting research, fieldwork, and visualization toolkits.</p>
+    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Fully structured roadmap, project meta-organization, and citation guidance finalized.</p>
+    <div class="tool-icons">
+      <span>📋 Roadmaps</span><span>🛠️ Meta-organizer</span><span>📜 Citation formats</span>
+    </div>
   </div>
 
-<div class="section card">
-    <h2>About the Maker</h2>
-    <img src="photo.jpg" alt="Varna Sri Raman" class="profile">
-    <p><strong>Dr. Varna Sri Raman</strong> is a development economist, writer, and award-winning social researcher with two decades of experience working across public health, education, food systems, gender equity, and climate resilience in India and South Asia.</p>
-    <p>Her work blends rigorous evaluation methods with human-centered design to strengthen institutions, build equity, and improve governance systems. Varna is the founder of StoryWell Books and has led programme design, MEL strategies, and research with Oxfam, UNICEF, Gates Foundation, PLAN India, and BBC Media Action.</p>
-    <p>📄 <a href="cv/varna-sri-raman-cv.pdf" target="_blank">View Full CV (PDF)</a></p>
-  </div>
+</div>
 
-  <footer>
-    <h2>📌 Cite This Project</h2>
-    <p><strong>GitHub-style citation:</strong><br>
-    Varna Sri Raman. <em>OpenStacks for Change</em>. GitHub, 2025. <a href="https://github.com/Varnasr/OpenStacks-for-Change">https://github.com/Varnasr/OpenStacks-for-Change</a></p>
-
-    <p><strong>Chicago-style citation:</strong><br>
-    Sri Raman, Varna. <em>OpenStacks for Change</em>. 2025. GitHub. https://github.com/Varnasr/OpenStacks-for-Change</p>
-
-    <p>Built and maintained with care ❤️ by <strong>Varna Sri Raman</strong> • <a href="mailto:varna.sr@gmail.com">varna.sr@gmail.com</a></p>
-  </footer>
 </main>
 
 </body>
