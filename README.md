@@ -1,106 +1,88 @@
-<img src="banner/openstacks_banner.png" alt="OpenStacks banner">
+# OpenStacks for Change
 
-# OpenStacks-for-Change: Modular, open-source tools and documentation stacks for public interest research, evaluation, and program design.
+**Open, modular toolkit ecosystem for development research, evaluation, and program design.**
 
-*An open, modular ecosystem of tools and infrastructures for better research, evaluation, and program design — built in India, shared for impact.*
+[![Website](https://img.shields.io/badge/Website-openstacks.dev-blue)](https://openstacks.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
----
-
-## ✨ Why this exists
-
-Across public health, climate programs, education systems, and gender equity work — we keep solving the same problems and rebuilding the same tools from scratch.
-
-**Open Stacks for Change** is my response:  
-A growing ecosystem of field-aware, testable, and reusable stacks designed for public interest work — built from real-world experience in MEL systems, research, and programs.
-
-These stacks help answer a deeper question:
-> 🧩 *How do we build systems that learn — not just deliver?*
+> How do we build systems that learn — not just deliver?
 
 ---
 
-## 📄 About Me
+## What This Is
 
-I'm a development economist, researcher, and social justice practitioner with over two decades of experience across livelihoods, public health, climate resilience, education, and gender equity in India and South Asia. My work spans large-scale research, evaluation, MEL strategy, and program design.
+OpenStacks for Change is a modular, open-source ecosystem of tools, scripts, templates, and documentation for **public interest research, evaluation, and program design**. It addresses a recurring problem in the development sector: organisations repeatedly solve identical challenges and rebuild the same tools independently.
 
-👉 [Click here to view my full CV (PDF)](cv/varna-sri-raman-cv.pdf)
+Each "stack" is a self-contained repository focused on a specific capability. Together, they form an integrated toolkit for development practitioners working across health, education, gender equity, climate resilience, and governance — primarily in India and South Asia.
 
----
+**This repository** is the coordinating hub. It hosts the [openstacks.dev](https://openstacks.dev) landing page, governance documents, and ecosystem-level documentation.
 
-## 🌱 Current Stacks
+## The Stacks
 
-| Stack | Description |
-|-------|-------------|
-| [**InsightStack**](https://github.com/Varnasr/InsightStack) | Knowledge systems, documentation SOPs, and planning calculators |
-| [**FieldStack**](https://github.com/Varnasr/FieldStack) | Applied R tools and MEL workflows — real notebooks, real data |
-| [**EquityStack**](https://github.com/Varnasr/EquityStack) | Python-powered templates for WEE, education, health, and evaluation analysis |
+### Active — Real tools you can use today
 
-Each stack is real, runnable, and used in the field — not a prototype.
+| Stack | What It Does | Language | Link |
+|-------|-------------|----------|------|
+| **InsightStack** | MEL tools, calculators, research documentation, visual frameworks | Stata, Python, R | [Repo](https://github.com/Varnasr/InsightStack) |
+| **FieldStack** | R notebooks and scripts for fieldwork, surveys, and evaluation | R | [Repo](https://github.com/Varnasr/FieldStack) |
+| **EquityStack** | Python/Jupyter workflows for health, gender, education, and climate data | Python, Jupyter | [Repo](https://github.com/Varnasr/EquityStack) |
+| **SignalStack** | Research Rundown newsletter archive and curated resources | Markdown | [Repo](https://github.com/Varnasr/SignalStack) |
 
----
+### Early-Stage — Foundations being built
 
-## 🔭 What’s Next
+| Stack | What It Will Do | Status | Link |
+|-------|----------------|--------|------|
+| **RootStack** | Database schemas and seed data for the ecosystem | Scaffolded, needs implementation | [Repo](https://github.com/Varnasr/RootStack) |
+| **BridgeStack** | FastAPI backend bridging data to frontend | Scaffolded, needs implementation | [Repo](https://github.com/Varnasr/BridgeStack) |
+| **ViewStack** | Frontend UI for data visualisation | Scaffolded, needs implementation | [Repo](https://github.com/Varnasr/ViewStack) |
+| **PolicyStack** | South Asia policy tracker | Just started | [Repo](https://github.com/Varnasr/PolicyStack) |
 
-Upcoming stacks include:
+### Planned — On the roadmap
 
-- **PolicyStack** → Scheme analysis, policy mapping, and budget planning tools  
-- **ClimateStack** → Composite risk scores, resilience modeling, and geo-mapping  
-- **EduStack** → Learning assessment pipelines, education dashboard prep  
-- **SocialStack** → Tools for rapid ethnography, qualitative coding, and NLP  
-- **InfraStack** → Access scoring, infrastructure mapping, spatial planning  
+- **ClimateStack** — Composite risk scores, resilience modelling, geo-mapping
+- **EduStack** — Learning assessment pipelines, education dashboards
+- **SocialStack** — Rapid ethnography, qualitative coding, NLP
+- **InfraStack** — Access scoring, infrastructure mapping, spatial planning
 
-Each new stack will be:
-- Open-source, reproducible, and field-ready  
-- Documented and tested  
-- Designed for public impact
+## Who This Is For
 
----
+- **Development practitioners** who need ready-to-use analysis tools
+- **Evaluators and researchers** working on MEL, impact assessment, and policy analysis
+- **Data analysts** in NGOs, government, and multilateral organisations
+- **Students and educators** in development economics and public policy
+- **Anyone** building tools for social impact in South Asia
 
-## 🤝 Use, Fork, Contribute
+## How to Use
 
-You're welcome to:
-- Use these stacks in your program, research, or MEL work  
-- Fork and adapt them for your own teams  
-- Suggest a new stack or collaborate on one  
-- Share feedback, ideas, and extensions
+1. **Browse the stacks** — Pick the one that matches your language (R, Python, Stata) and need
+2. **Clone and explore** — Each stack is self-contained with sample data and documentation
+3. **Adapt to your context** — Scripts are designed to be modified for your specific data and programs
+4. **Contribute back** — Share your own tools, templates, and workflows
 
----
+## Project Governance
 
-## ☕ Support My Work
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Citation Information](CITATION.cff)
 
-If this project has been useful to you, please consider supporting it:
+## About the Creator
 
-- 💖 [Buy Me a Coffee](https://buymeacoffee.com/varnasra)
-- 📱 UPI: `varna@icici`
-- 🌐 [Support Page](https://varnasr.github.io/OpenStacks-for-Change/support.html)
+**Dr. Varna Sri Raman** — Development economist and social researcher with 20+ years of experience across health, education, equity, and climate work. Has worked with Oxfam, UNICEF, Gates Foundation, PLAN India, and BBC Media Action. Based in Delhi, India.
 
+- GitHub: [@Varnasr](https://github.com/Varnasr)
+- Twitter: [@varna](https://x.com/varna)
+- Web: [postheroic.world](https://www.postheroic.world)
 
----
+## Support
 
-Built in India. Open for the world.  
-If our systems are meant to serve people, then our tools should too. ✨
+If you find OpenStacks useful, consider supporting the project:
+- [Buy Me a Coffee](https://buymeacoffee.com/varnasr)
+- UPI: varna@icici
 
----
+## AI Disclosure
 
-> 🛠️ **Authorship Note**  
-> AI tools (like ChatGPT) were used in parts of this repository to support tasks such as documentation formatting, code generation, or editing — similar to using VSCode extensions, StackOverflow, or libraries like Pandas.  
-> All decisions, designs, datasets, and content curation are entirely mine.  
-> Using modern tools responsibly is part of authorship — not a substitute for it.
+AI tools (ChatGPT, Claude) have been used for documentation, code generation, and editing support. All decisions, designs, datasets, and content curation are entirely the creator's.
 
----
+## License
 
-## 📄 Citation
-
-If you use this project in your work, please cite it as:
-
-**GitHub style**  
-> Varna Sri Raman. (2025). *OpenStacks for Change*. GitHub. https://github.com/Varnasr/OpenStacks-for-Change
-
-**Chicago style**  
-> Raman, Varna Sri. 2025. *OpenStacks for Change*. GitHub. https://github.com/Varnasr/OpenStacks-for-Change
-
----
-
-## 🛠 License
-
-📄 *Licensed under the MIT License.*  
-For citation and usage rights, see this repository’s LICENSE file or contact varna.sr@gmail.com.
+MIT — free to use, modify, and share. See [LICENSE](LICENSE).

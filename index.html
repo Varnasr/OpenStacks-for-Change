@@ -2,123 +2,541 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OpenStacks for Change</title>
+  <title>OpenStacks for Change — Open Tools for Development Research</title>
   <link rel="icon" type="image/x-icon" href="favicon_openstacks.ico">
+  <link rel="icon" type="image/png" href="favicon_openstacks.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open, modular toolkit ecosystem for development research, evaluation, and program design. Built in India, shared for impact.">
+  <meta property="og:title" content="OpenStacks for Change">
+  <meta property="og:description" content="Open-source tools for development research, evaluation, and program design across health, education, gender, and climate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://openstacks.dev">
+  <meta property="og:image" content="https://openstacks.dev/banner/openstacks_banner.png">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 880px; margin: 0 auto; padding: 1rem; background-color: #ffffff; color: #333; }
-    header img { width: 100%; height: auto; display: block; margin-bottom: 0.5rem; }
-    h1, h2 { color: #2b3e50; }
-    a.repo-link { color: #005a9c; text-decoration: none; transition: all 0.3s ease; font-weight: bold; }
-    a.repo-link:hover { color: #003366; text-decoration: underline; transform: scale(1.03); }
-    .section { margin: 2rem 0; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
-    .card { background: #f1f1f1; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-    img.profile { max-width: 240px; height: auto; border-radius: 8px; margin: 1rem 0; display: block; }
-    footer { font-size: 0.9rem; color: #555; border-top: 1px solid #ccc; margin-top: 3rem; padding-top: 1.5rem; }
-    .tool-icons { margin-top: 0.8rem; font-size: 0.9em; color: #555; }
-    .tool-icons span { margin-right: 0.8rem; }
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f8f9fa;
+      --text: #2d3436;
+      --text-muted: #636e72;
+      --accent: #0984e3;
+      --accent-dark: #0652DD;
+      --border: #e9ecef;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+      --green: #00b894;
+      --orange: #e17055;
+      --purple: #6c5ce7;
+      --tag-bg: #e8f0fe;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
+      color: #fff;
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
+    .hero .tagline { font-size: 1.15rem; max-width: 680px; margin: 0 auto 2rem; opacity: 0.92; line-height: 1.6; }
+    .hero .stats {
+      display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
+      margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.85;
+    }
+    .hero .stat-item strong { display: block; font-size: 1.6rem; opacity: 1; }
+
+    /* Section */
+    section { padding: 3.5rem 0; }
+    section.alt { background: var(--bg-alt); }
+    .section-header { text-align: center; margin-bottom: 2.5rem; }
+    .section-header h2 { font-size: 1.8rem; color: var(--text); margin-bottom: 0.5rem; }
+    .section-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+    /* Architecture diagram */
+    .arch-diagram {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      overflow-x: auto;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Stack cards */
+    .stacks-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+
+    .stack-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .stack-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .stack-card .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .stack-card h3 { font-size: 1.2rem; color: var(--text); margin: 0; }
+    .stack-card .description { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
+
+    .tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: 0.78rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+    .tag.status-active { background: #d4edda; color: #155724; }
+    .tag.status-early { background: #fff3cd; color: #856404; }
+    .tag.status-planned { background: #e2e3e5; color: #495057; }
+
+    .stack-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Tier labels */
+    .tier-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .tier-section { margin-bottom: 2rem; }
+
+    /* About */
+    .about-grid {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .about-photo {
+      width: 180px;
+      min-width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .about-text h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+    .about-text p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
+    .about-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .about-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .about-links a:hover { text-decoration: underline; }
+
+    /* How to use */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .step {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .step h4 { margin-bottom: 0.4rem; }
+    .step p { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+
+    /* Support banner */
+    .support-banner {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .support-banner p { margin-bottom: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover { background: var(--tag-bg); }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero .stats { gap: 1.5rem; }
+      .about-grid { flex-direction: column; align-items: center; text-align: center; }
+      .about-photo { width: 140px; min-width: 140px; height: 140px; }
+      .about-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="banner/openstacks_banner.png" alt="OpenStacks for Change Banner">
-</header>
-
-<main>
-<div class="section">
-  <h1>📚 OpenStacks for Change</h1>
-  <p>A modular, evolving collection of open-source documentation, research tools, MEL frameworks, and participatory knowledge practices—rooted in the realities of Indian and South Asian public interest work.</p>
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <h1>OpenStacks for Change</h1>
+    <p class="tagline">An open, modular ecosystem of tools for development research, evaluation, and program design — built in India, shared for impact.</p>
+    <div class="stats">
+      <div class="stat-item"><strong>9</strong> repositories</div>
+      <div class="stat-item"><strong>4</strong> active stacks</div>
+      <div class="stat-item"><strong>3</strong> languages</div>
+      <div class="stat-item"><strong>MIT</strong> licensed</div>
+    </div>
+  </div>
 </div>
 
-<div class="section">
-  <h2>📂 Repository Table of Contents</h2>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li style="margin-bottom: 1rem;">
-      📁 <a href="https://github.com/Varnasr/InsightStack" class="repo-link">InsightStack</a><br>
-      <span style="color: #666;">Visual documentation and participatory tools for research workflows.</span>
-    </li>
-    <li style="margin-bottom: 1rem;">
-      📁 <a href="https://github.com/Varnasr/FieldStack" class="repo-link">FieldStack</a><br>
-      <span style="color: #666;">Survey, evaluation, and field-based research infrastructure.</span>
-    </li>
-    <li style="margin-bottom: 1rem;">
-      📁 <a href="https://github.com/Varnasr/EquityStack" class="repo-link">EquityStack</a><br>
-      <span style="color: #666;">Python data tools for health, gender, education, and climate equity.</span>
-    </li>
-    <li style="margin-bottom: 1rem;">
-      📁 <a href="https://github.com/Varnasr/SignalStack" class="repo-link">SignalStack</a><br>
-      <span style="color: #666;">Research Rundown archive and development research highlights.</span>
-    </li>
-    <li style="margin-bottom: 1rem;">
-      📁 <a href="https://github.com/Varnasr/OpenStacks-for-Change" class="repo-link">OpenStacks.dev</a><br>
-      <span style="color: #666;">Project hub connecting research, fieldwork, and storytelling toolkits.</span>
-    </li>
-  </ul>
-</div>
+<!-- Problem + Vision -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Why This Exists</h2>
+      <p>Across public health, climate, education, and gender equity, organisations repeatedly solve identical challenges and rebuild the same tools independently. OpenStacks asks: <em>how do we build systems that learn — not just deliver?</em></p>
+    </div>
 
-<div class="section">
-  <h2>🔍 Explore the Repositories</h2>
-
-  <div class="card">
-    <h3>InsightStack</h3>
-    <p>Visual documentation, participatory analysis, and storytelling tools for development sector work. Includes Observable notebooks, Open Data Editor, Miro facilitation manuals, Excalidraw diagrams, and Descript visual ethnography.</p>
-    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Added participatory workshop templates (Miro) and Descript-based fieldwork visualization examples.</p>
-    <div class="tool-icons">
-      <span>🧠 Observable</span><span>🗂️ Open Data Editor</span><span>📝 Taguette</span><span>🖌️ Excalidraw</span><span>🎙️ Descript</span>
+    <div class="arch-diagram">
+      openstacks.dev (you are here)<br>
+      │<br>
+      ├── <strong>InsightStack</strong> ── MEL tools &amp; calculators (Stata/Python/R)<br>
+      ├── <strong>FieldStack</strong> ──── R notebooks for fieldwork &amp; evaluation<br>
+      ├── <strong>EquityStack</strong> ─── Python/Jupyter data workflows<br>
+      ├── <strong>SignalStack</strong> ─── Research Rundown newsletter<br>
+      │<br>
+      ├── <strong>RootStack</strong> ───── Database schemas (early-stage)<br>
+      ├── <strong>BridgeStack</strong> ── API backend (early-stage)<br>
+      ├── <strong>ViewStack</strong> ──── Frontend UI (early-stage)<br>
+      └── <strong>PolicyStack</strong> ── Policy tracker (early-stage)
     </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>FieldStack</h3>
-    <p>Evaluation, field survey infrastructure, and applied R and Stata modules for survey research, MEL, and quasi-experimental designs. Includes survey templates, data cleaning scripts, analysis frameworks, and econometrics walkthroughs.</p>
-    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Expanded econometrics examples: RDD, HTE, MDE calculations, and Stata visualizations.</p>
-    <div class="tool-icons">
-      <span>📋 KoboToolbox</span><span>🗺️ ODK</span><span>📊 Stata</span><span>📈 R</span><span>📋 Excel</span>
+<!-- How to use -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>How to Use</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Pick Your Language</h4>
+        <p>R? Use FieldStack. Python? Use EquityStack. Stata? Use InsightStack. Each stack is self-contained.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Clone and Explore</h4>
+        <p>Each repo has sample data and documentation. Browse by topic or analysis type.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Adapt and Contribute</h4>
+        <p>Modify scripts for your own data. Share your tools back with the community.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>EquityStack</h3>
-    <p>End-to-end Python workflows for data cleaning, modeling, and visualization focused on public health, gender, education, and climate sectors. Includes plug-and-play Jupyter notebooks, dashboard exports (Excel, Power BI), and pipeline automation tools.</p>
-    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Completed survey weighting notebooks and dashboard generation templates.</p>
-    <div class="tool-icons">
-      <span>🐍 Python</span><span>🧮 Pandas</span><span>📊 Power BI</span><span>📉 Jupyter</span>
+<!-- Active Stacks -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>The Stacks</h2>
+      <p>Tools you can use today, and foundations being built for tomorrow.</p>
+    </div>
+
+    <!-- Active -->
+    <div class="tier-section">
+      <div class="tier-label">Active — real tools with code and data</div>
+      <div class="stacks-grid">
+
+        <a href="https://github.com/Varnasr/InsightStack" class="stack-card">
+          <div class="card-header">
+            <h3>InsightStack</h3>
+            <span class="tag status-active">Active</span>
+          </div>
+          <p class="description">MEL tools, calculators, research documentation, and visual frameworks for development sector work. Includes Observable notebooks, Excalidraw diagrams, Miro templates, Flourish charts, and Stata/Python/R scripts.</p>
+          <div>
+            <span class="tag">Stata</span>
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">Observable</span>
+            <span class="tag">Excalidraw</span>
+            <span class="tag">Miro</span>
+          </div>
+          <div class="stack-meta">
+            <span>73 commits</span>
+            <span>49 directories</span>
+            <span>DOI: 10.5281/zenodo.15245182</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Varnasr/FieldStack" class="stack-card">
+          <div class="card-header">
+            <h3>FieldStack</h3>
+            <span class="tag status-active">Active</span>
+          </div>
+          <p class="description">Reusable R notebooks, scripts, and sample data for applied research and evaluation. Covers survey design, regression analysis, cost-effectiveness, qualitative coding, and automated reporting.</p>
+          <div>
+            <span class="tag">R</span>
+            <span class="tag">Quarto</span>
+            <span class="tag">Stata</span>
+            <span class="tag">KoboToolbox</span>
+            <span class="tag">ODK</span>
+          </div>
+          <div class="stack-meta">
+            <span>42 commits</span>
+            <span>22 directories</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Varnasr/EquityStack" class="stack-card">
+          <div class="card-header">
+            <h3>EquityStack</h3>
+            <span class="tag status-active">Active</span>
+          </div>
+          <p class="description">Python scripts and Jupyter notebooks for development sector data workflows. Plug-and-play templates for data cleaning, modelling, and visualisation across health, gender, education, and climate equity.</p>
+          <div>
+            <span class="tag">Python</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Power BI</span>
+          </div>
+          <div class="stack-meta">
+            <span>37 commits</span>
+            <span>17 directories</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Varnasr/SignalStack" class="stack-card">
+          <div class="card-header">
+            <h3>SignalStack</h3>
+            <span class="tag status-active">Active</span>
+          </div>
+          <p class="description">Companion repository for the Research Rundown newsletter. Archived issues, featured research tools, method spotlights, and curated resources for development practitioners.</p>
+          <div>
+            <span class="tag">Substack</span>
+            <span class="tag">Markdown</span>
+          </div>
+          <div class="stack-meta">
+            <span>17 commits</span>
+            <span>2 newsletter issues</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Early stage -->
+    <div class="tier-section">
+      <div class="tier-label">Early-Stage — scaffolded, contributions welcome</div>
+      <div class="stacks-grid">
+
+        <a href="https://github.com/Varnasr/RootStack" class="stack-card">
+          <div class="card-header">
+            <h3>RootStack</h3>
+            <span class="tag status-early">Early Stage</span>
+          </div>
+          <p class="description">Foundational database schemas, seed data, and queries for the OpenStacks data layer. PostgreSQL/SQLite.</p>
+        </a>
+
+        <a href="https://github.com/Varnasr/BridgeStack" class="stack-card">
+          <div class="card-header">
+            <h3>BridgeStack</h3>
+            <span class="tag status-early">Early Stage</span>
+          </div>
+          <p class="description">FastAPI backend bridging RootStack data to the ViewStack frontend via REST API.</p>
+        </a>
+
+        <a href="https://github.com/Varnasr/ViewStack" class="stack-card">
+          <div class="card-header">
+            <h3>ViewStack</h3>
+            <span class="tag status-early">Early Stage</span>
+          </div>
+          <p class="description">Frontend UI for visualising and interacting with OpenStacks data. Interactive dashboards and exploration tools.</p>
+        </a>
+
+        <a href="https://github.com/Varnasr/PolicyStack" class="stack-card">
+          <div class="card-header">
+            <h3>PolicyStack</h3>
+            <span class="tag status-early">Early Stage</span>
+          </div>
+          <p class="description">South Asia policy tracker — government schemes, budgets, and implementation data across development sectors.</p>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Planned -->
+    <div class="tier-section">
+      <div class="tier-label">On the Roadmap</div>
+      <div class="stacks-grid">
+        <div class="stack-card" style="cursor: default;">
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">ClimateStack</h4>
+              <p class="description" style="margin: 0;">Composite risk scores, resilience modelling, geo-mapping</p>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">EduStack</h4>
+              <p class="description" style="margin: 0;">Learning assessment pipelines, education dashboards</p>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">SocialStack</h4>
+              <p class="description" style="margin: 0;">Rapid ethnography, qualitative coding, NLP</p>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">InfraStack</h4>
+              <p class="description" style="margin: 0;">Access scoring, infrastructure mapping, spatial planning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Who this is for -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Who This Is For</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h4>Development Practitioners</h4>
+        <p>Ready-to-use analysis tools for MEL, impact assessment, and program design across health, education, gender, and climate.</p>
+      </div>
+      <div class="step">
+        <h4>Researchers &amp; Evaluators</h4>
+        <p>Reproducible scripts, sample data, and evaluation frameworks grounded in real South Asian fieldwork.</p>
+      </div>
+      <div class="step">
+        <h4>Data Analysts in NGOs</h4>
+        <p>Python, R, and Stata templates that work with the data formats and analysis patterns you actually use.</p>
+      </div>
+      <div class="step">
+        <h4>Students &amp; Educators</h4>
+        <p>Practice datasets, guided notebooks, and real-world examples for development economics and public policy courses.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>SignalStack</h3>
-    <p>Hosting the Research Rundown issues archive—a curated newsletter featuring the latest in global development research, open data, tools, and methods—plus featured insights from the OpenStacks ecosystem.</p>
-    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Launch of Research Rundown issues archive and featured repository highlights section.</p>
-    <div class="tool-icons">
-      <span>📰 Substack</span><span>🌐 GitHub Pages</span>
+<!-- About -->
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <img src="photo.jpg" alt="Dr. Varna Sri Raman" class="about-photo">
+      <div class="about-text">
+        <h3>Dr. Varna Sri Raman</h3>
+        <p>Development economist, social researcher, and licensed social justice worker with 20+ years of experience across public health, education, gender equity, and climate resilience in India and South Asia.</p>
+        <p>Has led programme design, MEL strategies, and research with Oxfam, UNICEF, Gates Foundation, PLAN India, and BBC Media Action. Founder of StoryWell Books.</p>
+        <div class="about-links">
+          <a href="https://github.com/Varnasr">GitHub</a>
+          <a href="https://x.com/varna">Twitter</a>
+          <a href="https://www.postheroic.world">Web</a>
+          <a href="cv/varna-sri-raman-cv.pdf">CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-banner">
+      <p>If you find OpenStacks useful in your work, consider supporting the project.</p>
+      <a href="https://buymeacoffee.com/varnasr" class="btn">Support on Buy Me a Coffee</a>
+      <a href="support.html" class="btn btn-outline" style="margin-left: 0.5rem;">Other ways to support</a>
     </div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>OpenStacks.dev</h3>
-    <p>The coordinating repository for the OpenStacks for Change project. Houses the roadmap, repository links, citation formats, and OpenStacks philosophy connecting research, fieldwork, and visualization toolkits.</p>
-    <p><strong style="background: #e8f0fe; padding: 0.2rem 0.5rem; border-radius: 4px;">What's New:</strong> Fully structured roadmap, project meta-organization, and citation guidance finalized.</p>
-    <div class="tool-icons">
-      <span>📋 Roadmaps</span><span>🛠️ Meta-organizer</span><span>📜 Citation formats</span>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change">GitHub</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CONTRIBUTING.md">Contributing</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CITATION.cff">Cite This Work</a>
     </div>
+    <p>MIT License. Built by <a href="https://github.com/Varnasr">Varna Sri Raman</a> in Delhi, India.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">AI tools were used for documentation and code generation support. All decisions, designs, datasets, and content curation are entirely the creator's.</p>
   </div>
-
-</div>
-
-
-<div class="section card">
-    <h2>About the Maker</h2>
-    <img src="photo.jpg" alt="Varna Sri Raman" class="profile">
-    <p><strong>Dr. Varna Sri Raman</strong> is a development economist, writer, and award-winning social researcher with two decades of experience working across public health, education, food systems, gender equity, and climate resilience in India and South Asia.</p>
-    <p>Her work blends rigorous evaluation methods with human-centered design to strengthen institutions, build equity, and improve governance systems. Varna is the founder of StoryWell Books and has led programme design, MEL strategies, and research with Oxfam, UNICEF, Gates Foundation, PLAN India, and BBC Media Action.</p>
-    <p>📄 <a href="cv/varna-sri-raman-cv.pdf" target="_blank">View Full CV (PDF)</a></p>
-</div>
-
-</main>
-
+</footer>
 
 </body>
 </html>
