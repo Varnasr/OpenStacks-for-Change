@@ -53,19 +53,19 @@ These are mature, usable tools with real code, sample data, and documentation.
 
 #### [InsightStack](https://github.com/Varnasr/InsightStack) — MEL Tools and Research Frameworks
 
-The backbone of the ecosystem. Monitoring, evaluation, and learning (MEL) tools including calculators, visual frameworks, and research documentation templates. Includes Observable notebooks, Excalidraw diagrams, Miro templates, and Flourish charts.
+The backbone of the ecosystem. Monitoring, evaluation, and learning (MEL) tools including calculators, visual frameworks, and research documentation templates. Includes a full **econometrics module** (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R, plus Observable notebooks, Excalidraw diagrams, Miro templates, and Flourish charts.
 
 **Languages:** Stata, Python, R, Observable | **DOI:** 10.5281/zenodo.15245182
 
 #### [FieldStack](https://github.com/Varnasr/FieldStack) — Applied Research and Evaluation
 
-Reusable R notebooks and scripts for the full lifecycle of applied fieldwork: survey design, sampling, regression analysis, cost-effectiveness, qualitative coding, and automated reporting. Designed for researchers working with KoboToolbox, ODK, and Quarto.
+Reusable R notebooks and scripts for the full lifecycle of applied fieldwork: survey design, sampling, regression analysis, cost-effectiveness, qualitative coding, and automated reporting. Includes **survey tools** (sample size, weights, complex survey analysis) and **automated reporting** (batch Quarto rendering, monthly summary templates). Designed for researchers working with KoboToolbox, ODK, and Quarto.
 
 **Languages:** R, Quarto, Stata
 
 #### [EquityStack](https://github.com/Varnasr/EquityStack) — Development Data Workflows
 
-Python scripts and Jupyter notebooks for data workflows across health, gender, education, and climate equity. Plug-and-play templates for data cleaning, modelling, and visualisation that work with the data formats development practitioners actually use.
+Python scripts and Jupyter notebooks for data workflows across health, gender, education, and climate equity. Includes an **impact evaluation module** (DiD, PSM, RDD) and a **data cleaning pipeline** with automatic logging. Plug-and-play templates for modelling and visualisation that work with the data formats development practitioners actually use.
 
 **Languages:** Python, Jupyter, Pandas
 
