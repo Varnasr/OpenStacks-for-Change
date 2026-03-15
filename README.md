@@ -75,15 +75,9 @@ Companion repository for the [Research Rundown](https://researchrundown.substack
 
 **Format:** Markdown, Substack
 
----
-
-### Early-Stage Stacks
-
-Scaffolded and structured, with foundations in place. These are where contributions can make the biggest difference.
-
 #### [RootStack](https://github.com/Varnasr/RootStack) — Data Layer
 
-Foundational database schemas, seed data, and queries for the ecosystem's data layer. PostgreSQL and SQLite. The shared data backbone that other stacks can connect to.
+Foundational database schemas, seed data, and queries for the ecosystem's data layer. PostgreSQL and SQLite. The shared data backbone that other stacks connect to.
 
 #### [BridgeStack](https://github.com/Varnasr/BridgeStack) — API Backend
 
@@ -91,11 +85,11 @@ FastAPI backend that bridges RootStack data to frontend applications via REST AP
 
 #### [ViewStack](https://github.com/Varnasr/ViewStack) — Frontend and Visualisation
 
-Frontend UI for visualising and interacting with OpenStacks data. Interactive dashboards, exploration tools, and data stories.
+React frontend for visualising OpenStacks data. State and scheme dashboards, indicator explorer with interactive charts, and budget trend analysis. Built with React, Recharts, and Vite.
 
 #### [PolicyStack](https://github.com/Varnasr/PolicyStack) — Policy Tracker
 
-South Asia policy tracker covering government schemes, budgets, and implementation data across development sectors. Turning policy documents into structured, queryable data.
+South Asia policy tracker with 15 flagship government schemes, 4 years of budget data, performance indicators, and analysis scripts. Turning policy documents into structured, queryable data.
 
 ---
 
