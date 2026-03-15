@@ -52,33 +52,25 @@
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-      color: #fff;
-      padding: 5rem 0 4rem;
+      background: var(--bg);
+      color: var(--text);
+      padding: 4rem 0 3rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(9,105,218,0.15) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(124,58,237,0.1) 0%, transparent 60%);
+    .hero-banner {
+      max-width: 420px;
+      margin: 0 auto 2rem;
     }
-    .hero .container { position: relative; z-index: 1; }
-    .hero h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+    .hero-banner img {
+      width: 100%;
+      height: auto;
     }
     .hero .tagline {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       max-width: 640px;
-      margin: 0 auto 2.5rem;
-      opacity: 0.85;
+      margin: 0 auto 2rem;
+      color: var(--text-secondary);
       line-height: 1.7;
       font-weight: 400;
     }
@@ -93,25 +85,25 @@
       font-size: 0.95rem;
     }
     .hero-cta .btn-primary {
-      background: var(--accent);
+      background: var(--text);
       color: #fff;
-      border: 1px solid var(--accent);
+      border: 1px solid var(--text);
     }
-    .hero-cta .btn-primary:hover { background: var(--accent-hover); }
+    .hero-cta .btn-primary:hover { background: #2d2d4e; }
     .hero-cta .btn-ghost {
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
-    .hero-cta .btn-ghost:hover { background: rgba(255,255,255,0.15); }
+    .hero-cta .btn-ghost:hover { background: var(--bg-alt); }
 
     .hero-stats {
       display: flex;
       justify-content: center;
       gap: 3rem;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid var(--border);
       flex-wrap: wrap;
     }
     .hero-stat { text-align: center; }
@@ -119,11 +111,11 @@
       display: block;
       font-size: 1.75rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
     }
     .hero-stat span {
       font-size: 0.85rem;
-      opacity: 0.6;
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 500;
@@ -442,8 +434,8 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero { padding: 3.5rem 0 3rem; }
+      .hero-banner { max-width: 320px; }
+      .hero { padding: 3rem 0 2.5rem; }
       .hero-stats { gap: 2rem; }
       .problem-grid { grid-template-columns: 1fr; }
       .stacks-grid { grid-template-columns: 1fr; }
@@ -455,7 +447,7 @@
       .about-links { justify-content: center; }
     }
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.7rem; }
+      .hero-banner { max-width: 260px; }
       .planned-grid { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr; }
     }
@@ -466,8 +458,10 @@
 <!-- Hero -->
 <div class="hero">
   <div class="container">
-    <h1>OpenStacks for Change</h1>
-    <p class="tagline">An open-source ecosystem of tools for development research, evaluation, and program design. Built in India, shared for impact.</p>
+    <div class="hero-banner">
+      <img src="banner/openstacks_banner.png" alt="OpenStacks for Change">
+    </div>
+    <p class="tagline">Open-source tools for development research, evaluation, and program design. Built in India, shared for impact.</p>
     <div class="hero-cta">
       <a href="https://github.com/Varnasr/OpenStacks-for-Change" class="btn btn-primary">View on GitHub</a>
       <a href="#stacks" class="btn btn-ghost">Explore the Stacks</a>
@@ -750,6 +744,8 @@
   <div class="container">
     <div class="footer-links">
       <a href="https://github.com/Varnasr/OpenStacks-for-Change">GitHub</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/discussions">Discussions</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/wiki">Wiki</a>
       <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CONTRIBUTING.md">Contributing</a>
       <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
       <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CITATION.cff">Cite This Work</a>
