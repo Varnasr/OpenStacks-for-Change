@@ -5,9 +5,9 @@ version: 2025.0.1
 authors:
   - family-names: Sri Raman
     given-names: Varna
-    orcid: https://orcid.org/0000-0002-1234-5678  # update if you have one
+    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX
 date-released: 2025-04-23
 repository-code: https://github.com/Varnasr/OpenStacks-for-Change
-url: https://github.com/Varnasr/OpenStacks-for-Change
+url: https://openstacks.dev
 license: MIT
 type: software
