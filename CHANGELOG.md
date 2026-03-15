@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Varnasr/OpenStacks-for-Change/tree/HEAD)
+
+[Full Changelog](https://github.com/Varnasr/OpenStacks-for-Change/compare/V1.0.0...HEAD)
+
+**Merged pull requests:**
+
+- Update landing page, README, and migrate to shared .github repo [\#11](https://github.com/Varnasr/OpenStacks-for-Change/pull/11) ([Varnasr](https://github.com/Varnasr))
+
 ## [V1.0.0](https://github.com/Varnasr/OpenStacks-for-Change/tree/V1.0.0) (2025-04-27)
 
 [Full Changelog](https://github.com/Varnasr/OpenStacks-for-Change/compare/bd32cc61477a14af86dacad84100459c30be45c0...V1.0.0)
