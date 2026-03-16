@@ -1,0 +1,7 @@
+# CODEOWNERS — defines default reviewers for pull requests
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @Varnasr
+
+.github/ @Varnasr
