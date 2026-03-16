@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Chore: add git best-practice standards [\#14](https://github.com/Varnasr/OpenStacks-for-Change/pull/14) ([Varnasr](https://github.com/Varnasr))
 - Promote all 8 stacks to Active [\#12](https://github.com/Varnasr/OpenStacks-for-Change/pull/12) ([Varnasr](https://github.com/Varnasr))
 - Update landing page, README, and migrate to shared .github repo [\#11](https://github.com/Varnasr/OpenStacks-for-Change/pull/11) ([Varnasr](https://github.com/Varnasr))
 
