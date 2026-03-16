@@ -24,7 +24,7 @@ jobs:
           output: CHANGELOG.md
 
       - name: Commit and Push CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Auto-update CHANGELOG [skip ci]"
           file_pattern: CHANGELOG.md
