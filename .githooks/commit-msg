@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Commit message hook: enforce prefix convention from CONTRIBUTING.md
+set -euo pipefail
+
+MSG_FILE="$1"
+MSG=$(head -1 "$MSG_FILE")
+
+RED='\033[0;31m'
+NC='\033[0m'
+
+# Skip merge commits and fixup/squash commits
+if echo "$MSG" | grep -qE '^(Merge|Revert|fixup!|squash!)'; then
+  exit 0
+fi
+
+# Allowed prefixes (from CONTRIBUTING.md)
+PREFIXES="Add|Fix|Update|Translate|Docs|Refactor|Test|CI|Chore|Merge"
+
+if ! echo "$MSG" | grep -qE "^(${PREFIXES}):"; then
+  echo -e "${RED}Invalid commit message format.${NC}"
+  echo ""
+  echo "Commit message must start with one of these prefixes:"
+  echo "  Add:       — New feature, course, or tool"
+  echo "  Fix:       — Bug fix or broken link"
+  echo "  Update:    — Improvement to existing content or code"
+  echo "  Translate: — Translation work"
+  echo "  Docs:      — Documentation changes"
+  echo "  Refactor:  — Code restructuring (no behaviour change)"
+  echo "  Test:      — Adding or updating tests"
+  echo "  CI:        — CI/CD pipeline changes"
+  echo "  Chore:     — Maintenance (deps, configs, tooling)"
+  echo ""
+  echo "Example: Add: interactive Theory of Change lab"
+  echo ""
+  echo "Your message was: $MSG"
+  exit 1
+fi
+
+# Warn if subject line is too long
+if [ ${#MSG} -gt 72 ]; then
+  echo -e "\033[0;33mWARNING:\033[0m Commit subject is ${#MSG} chars (recommended max: 72)"
+fi

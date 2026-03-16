@@ -1,0 +1,19 @@
+# <prefix>: <short summary in imperative mood, max 72 chars>
+#
+# Prefixes:
+#   Add:       — New feature, course, or tool
+#   Fix:       — Bug fix or broken link
+#   Update:    — Improvement to existing content or code
+#   Translate: — Translation work
+#   Docs:      — Documentation changes
+#   Refactor:  — Code restructuring (no behaviour change)
+#   Test:      — Adding or updating tests
+#   CI:        — CI/CD pipeline changes
+#   Chore:     — Maintenance (deps, configs, tooling)
+#
+# Example:
+#   Add: interactive Theory of Change lab
+#   Fix: broken nav dropdown on mobile Safari
+#
+# Body (optional): explain *why*, not *what* — the diff shows what changed.
+# Wrap at 72 characters.
