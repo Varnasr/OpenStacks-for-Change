@@ -61,6 +61,7 @@ If you are looking for the polished, reader-facing version of this work, start w
 | **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 10 generators, 350k+ rows. |
 | **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps for impact evaluation, poverty analysis, and program design. |
 | **[The Real Middle](https://github.com/Varnasr/The-Real-Middle)** | Interactive game revealing where you actually stand in India's income distribution. |
+| **[ImpactLex](https://www.impactmojo.in/impactlex/)** | Development-sector glossary and companion to Impact Mojo — 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae, and cross-references to where each term is taught. Offline-capable PWA. |
 
 ### Research toolkits — the OpenStacks
 
@@ -83,7 +84,6 @@ Early-stage work, built in the [Experiments](https://github.com/Varnasr/Experime
 | Project | What it is |
 |---|---|
 | **[Court Petition Translator](https://github.com/Varnasr/Experiments/tree/main/court-translator)** | Hindi → English translation for Supreme Court and High Court petitions. Sarvam AI handles translation; Llama 3.3 corrects legal terminology (याचिकाकर्ता → Petitioner, अनुच्छेद → Article). Prototype. |
-| **[AICC Observer Grading](https://github.com/Varnasr/Experiments/tree/main/aicc_analysis)** | Methodology and scoring engine for evaluating district observers across six components of reporting readiness. Covers 592 districts and 2,413 candidate profiles. |
 
 ### Writing
 
@@ -111,7 +111,7 @@ These are archived and read-only. The code stays public and browsable; nothing h
 | **[RootStack](https://github.com/Varnasr/RootStack)** | SQLite/PostgreSQL schemas and seed data for the shared data layer |
 | **[BridgeStack](https://github.com/Varnasr/BridgeStack)** | FastAPI backend serving RootStack to frontends |
 | **[ViewStack](https://github.com/Varnasr/ViewStack)** | React dashboard for exploring the data |
-| **[ImpactLex](https://github.com/Varnasr/ImpactLex)** | Earlier lexicon project |
+**Not retired — graduated.** [ImpactLex](https://www.impactmojo.in/impactlex/) moved into Impact Mojo rather than winding down, and is listed under Teaching and practice above. Its [old repository](https://github.com/Varnasr/ImpactLex) is archived for citation continuity only; the living version is at [impactmojo.in/impactlex](https://www.impactmojo.in/impactlex/).
 
 Four further stacks — ClimateStack, EduStack, SocialStack, InfraStack — were on a published roadmap and were never started. That roadmap has been withdrawn rather than left standing as a promise. The needs behind them are better served by [How India Lives](https://github.com/Varnasr/how-india-lives), [PolicyDhara](https://github.com/Varnasr/PolicyDhara), and [JanVayu](https://www.janvayu.in).
 
