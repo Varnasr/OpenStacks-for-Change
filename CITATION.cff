@@ -1,13 +1,24 @@
 cff-version: 1.2.0
 message: "If you use OpenStacks for Change, please cite it using the metadata below."
 title: "OpenStacks for Change"
-version: 2025.0.1
+abstract: >-
+  An index of open-source work on development research, data, and policy,
+  including a set of stable research toolkits for monitoring, evaluation,
+  and applied fieldwork in India and South Asia.
+version: 2026.1.0
 authors:
   - family-names: Sri Raman
     given-names: Varna
     # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX
-date-released: 2025-04-23
+date-released: 2026-08-28
 repository-code: https://github.com/Varnasr/OpenStacks-for-Change
 url: https://openstacks.dev
 license: MIT
 type: software
+keywords:
+  - development-economics
+  - monitoring-evaluation
+  - impact-evaluation
+  - research-tools
+  - south-asia
+  - open-data
