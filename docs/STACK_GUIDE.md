@@ -1,109 +1,94 @@
 # Stack Guide
 
-Which stack should you use? Find your use case below.
+Which repository should you use? Find your use case below.
+
+All five toolkits are **Stable** — usable and correct, not under active development. See [MAINTENANCE.md](../MAINTENANCE.md) for what that means.
 
 ---
 
-## By Task
+## By task
 
 ### I need to analyse survey data
-**FieldStack** — R notebooks for sampling, regression, cost-effectiveness, and qualitative coding. Works with KoboToolbox and ODK exports.
+**[FieldStack](https://github.com/Varnasr/FieldStack)** — R notebooks for sampling, sample size, sampling weights, complex survey analysis, regression, cost-effectiveness, and qualitative coding. Works with KoboToolbox and ODK exports.
 
 ### I need to clean and transform development data
-**EquityStack** — Python/Jupyter templates for data cleaning, modelling, and visualisation across health, gender, education, and climate datasets.
+**[EquityStack](https://github.com/Varnasr/EquityStack)** — Python/Jupyter templates for cleaning, modelling, and visualisation across health, gender, education, and climate datasets. Includes a data-cleaning pipeline with automatic logging.
 
 ### I need MEL tools, frameworks, or calculators
-**InsightStack** — Monitoring, evaluation, and learning toolkits. Includes visual frameworks, calculators, Observable notebooks, and research documentation templates.
+**[InsightStack](https://github.com/Varnasr/InsightStack)** — Monitoring, evaluation, and learning toolkits: visual frameworks, calculators, Observable notebooks, and research documentation templates.
+
+### I need to run an impact evaluation
+**[InsightStack](https://github.com/Varnasr/InsightStack)** for the full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R. **[EquityStack](https://github.com/Varnasr/EquityStack)** has a lighter Python-only version (DiD, PSM, RDD).
 
 ### I need to track government policies and schemes
-**PolicyStack** — South Asia policy tracker. Turns policy documents into structured, queryable data covering schemes, budgets, and implementation.
+**[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** for current work — it auto-updates and is actively developed. **[PolicyStack](https://github.com/Varnasr/PolicyStack)** holds the original static dataset: 15 flagship schemes with four years of budget data.
+
+### I need practice data to teach or learn with
+**[DevData Practice](https://github.com/Varnasr/devdata-practice)** — 10 generators, 350k+ rows of realistic development data.
+
+### I need teaching material or case studies
+**[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** (200 cases, 117 countries) and **[Development Discourses](https://github.com/Varnasr/development-discourses)** (500+ curated open-access sources).
+
+### I need Indian state-level data or maps
+**[How India Lives](https://github.com/Varnasr/how-india-lives)** — 205 state-level choropleth maps across demography, health, gender, economy, education, and environment.
 
 ### I need to publish or archive research content
-**SignalStack** — Markdown-based archive for the Research Rundown newsletter. Method spotlights, curated resources, and research tool reviews.
-
-### I need a database for development indicators
-**RootStack** — PostgreSQL and SQLite schemas, seed data, and queries. The shared data backbone for the ecosystem.
-
-### I need an API to serve development data
-**BridgeStack** — FastAPI backend that connects RootStack data to frontend applications via REST endpoints.
-
-### I need a dashboard or data visualisation interface
-**ViewStack** — Frontend UI for interactive dashboards and data exploration tools.
+**[SignalStack](https://github.com/Varnasr/SignalStack)** — Markdown archive for the Research Rundown newsletter: method spotlights, curated resources, tool reviews.
 
 ---
 
-## By Language
+## By language
 
-| Language | Stacks |
-|----------|--------|
-| **R** | FieldStack, InsightStack |
-| **Python** | EquityStack, InsightStack, BridgeStack |
+| Language | Repositories |
+|----------|--------------|
+| **R** | FieldStack, InsightStack, [DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit) |
+| **Python** | EquityStack, InsightStack, PolicyStack, [DevData Practice](https://github.com/Varnasr/devdata-practice) |
 | **Stata** | InsightStack, FieldStack |
 | **Jupyter** | EquityStack |
-| **SQL** | RootStack |
-| **Markdown** | SignalStack |
+| **Quarto** | FieldStack |
 | **Observable** | InsightStack |
+| **Markdown** | SignalStack |
 
 ---
 
-## By Domain
+## By domain
 
-| Domain | Start With | Also Useful |
+| Domain | Start with | Also useful |
 |--------|-----------|-------------|
 | **Public health** | EquityStack | FieldStack, InsightStack |
-| **Education** | EquityStack | InsightStack |
-| **Gender equity** | EquityStack | InsightStack, PolicyStack |
-| **Climate / resilience** | EquityStack | PolicyStack |
-| **Governance / policy** | PolicyStack | InsightStack |
+| **Education** | EquityStack | InsightStack, Dev Case Studies |
+| **Gender equity** | EquityStack | InsightStack |
+| **Climate / resilience** | EquityStack | [JanVayu](https://www.janvayu.in) for air quality |
+| **Governance / policy** | [PolicyDhara](https://github.com/Varnasr/PolicyDhara) | PolicyStack, InsightStack |
 | **General MEL** | InsightStack | FieldStack |
 | **Fieldwork / surveys** | FieldStack | InsightStack |
 
 ---
 
-## By Maturity
-
-### Ready to use now
-These stacks have real code, sample data, and documentation.
-
-- **InsightStack** — Mature. Broad toolkit across MEL, Stata, Python, R, and Observable.
-- **FieldStack** — Mature. Full lifecycle R notebooks for applied research.
-- **EquityStack** — Mature. Python/Jupyter data workflows for development sectors.
-- **SignalStack** — Mature. Newsletter archive and curated resources.
-
-### Foundations in place — contributions welcome
-Scaffolded with structure and initial code. Good entry points for contributors.
-
-- **RootStack** — Database schemas and seed data.
-- **BridgeStack** — FastAPI backend, early endpoints.
-- **ViewStack** — Frontend scaffolding.
-- **PolicyStack** — Policy tracking structure.
-
-### On the roadmap
-Planned but not yet started. If one of these matches your expertise, reach out.
-
-- **ClimateStack** — Composite risk scores, resilience modelling, geo-spatial mapping.
-- **EduStack** — Learning assessment pipelines, education outcome dashboards.
-- **SocialStack** — Rapid ethnography, qualitative coding, NLP for field narratives.
-- **InfraStack** — Access scoring, infrastructure mapping, spatial planning tools.
-
----
-
-## Quick Decision Tree
+## Quick decision tree
 
 ```
 What do you need?
 │
-├── Analysis or research?
+├── To analyse something
 │   ├── Survey / fieldwork data ──→ FieldStack (R)
-│   ├── Data cleaning / modelling ──→ EquityStack (Python)
-│   └── MEL frameworks / tools ──→ InsightStack (multi-language)
+│   ├── Cleaning / modelling ─────→ EquityStack (Python)
+│   ├── Impact evaluation ────────→ InsightStack (Python, R)
+│   └── MEL frameworks ───────────→ InsightStack (multi-language)
 │
-├── Content or knowledge?
-│   ├── Policy tracking ──→ PolicyStack
-│   └── Research curation ──→ SignalStack
+├── Data to work with
+│   ├── Practice datasets ────────→ DevData Practice
+│   ├── Indian state indicators ──→ How India Lives
+│   └── Schemes and budgets ──────→ PolicyDhara
 │
-└── Infrastructure?
-    ├── Database ──→ RootStack
-    ├── API ──→ BridgeStack
-    └── Frontend ──→ ViewStack
+└── To read or teach
+    ├── Case studies ─────────────→ Dev Case Studies
+    ├── Literature ───────────────→ Development Discourses
+    └── Newsletter archive ───────→ SignalStack
 ```
+
+---
+
+## Retired
+
+**RootStack** (database schemas), **BridgeStack** (FastAPI backend), and **ViewStack** (React dashboard) are archived and read-only. They formed a data → API → dashboard pipeline that the toolkits above never depended on. If you were looking for a database of Indian development indicators, [How India Lives](https://github.com/Varnasr/how-india-lives) and [PolicyDhara](https://github.com/Varnasr/PolicyDhara) are the maintained alternatives.

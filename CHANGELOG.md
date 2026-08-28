@@ -1,5 +1,25 @@
 # Changelog
 
+> **This changelog is no longer generated automatically.** The workflow that
+> rewrote it on every push produced more commits than information, and has been
+> removed. See [MAINTENANCE.md](MAINTENANCE.md) for the current policy. The
+> history below is retained as a record up to August 2026; the commit log is the
+> authoritative history from here on.
+
+## 2026-08 — Repositioned as an index
+
+- Rewrote the README and landing page as an index of all open-source work,
+  rather than a hub for an eight-stack ecosystem.
+- Introduced explicit **Active / Stable / Retired** status labels and published
+  a maintenance policy in `MAINTENANCE.md`.
+- Retired RootStack, BridgeStack, and ViewStack — a database → API → dashboard
+  pipeline that the research toolkits never depended on.
+- Withdrew the roadmap for ClimateStack, EduStack, SocialStack, and InfraStack,
+  which had stood for a year with no work behind it.
+- Replaced the auto-changelog workflow with a twice-yearly link check.
+- Fixed dead links: Buy Me a Coffee (404), and README links to `CONTRIBUTING.md`
+  and `CODE_OF_CONDUCT.md` that were removed in March 2026.
+
 ## [Unreleased](https://github.com/Varnasr/OpenStacks-for-Change/tree/HEAD)
 
 [Full Changelog](https://github.com/Varnasr/OpenStacks-for-Change/compare/V1.0.0...HEAD)

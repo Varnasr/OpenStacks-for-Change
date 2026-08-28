@@ -6,9 +6,9 @@
   <link rel="icon" type="image/x-icon" href="favicon_openstacks.ico">
   <link rel="icon" type="image/png" href="favicon_openstacks.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Open, modular toolkit ecosystem for development research, evaluation, and program design. Built in India, shared for impact.">
+  <meta name="description" content="An index of open-source work on development research, data, and policy by Dr. Varna Sri Raman. Built in India, shared for impact.">
   <meta property="og:title" content="OpenStacks for Change">
-  <meta property="og:description" content="Open-source tools for development research, evaluation, and program design across health, education, gender, and climate.">
+  <meta property="og:description" content="An index of open-source work on development research, data, and policy across health, education, gender, and climate.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://openstacks.dev">
   <meta property="og:image" content="https://openstacks.dev/banner/openstacks_banner.png">
@@ -228,6 +228,44 @@
     .tag-status-active { background: var(--green-light); color: var(--green); }
     .tag-status-early { background: var(--amber-light); color: var(--amber); }
     .tag-status-planned { background: var(--slate-light); color: var(--slate); }
+    .tag-status-stable { background: var(--accent-light); color: var(--accent-hover); }
+    .tag-status-retired { background: var(--slate-light); color: var(--slate); }
+
+    /* Platform cards */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .platform-card {
+      display: block;
+      padding: 1.75rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+    .platform-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
+    .platform-card h3 { font-size: 1.2rem; margin-bottom: .35rem; color: var(--accent); }
+    .platform-card .url { font-size: .82rem; color: var(--text-muted); display: block; margin-bottom: .6rem; }
+    .platform-card p { font-size: .93rem; color: var(--text-secondary); }
+
+    /* Notice */
+    .notice {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--slate);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 2rem;
+    }
+    .notice p { font-size: .93rem; color: var(--text-secondary); }
+    .notice p + p { margin-top: .6rem; }
 
     /* Tier labels */
     .tier-label {
@@ -461,219 +499,313 @@
     <div class="hero-banner">
       <img src="banner/openstacks_banner.png" alt="OpenStacks for Change">
     </div>
-    <p class="tagline">Open-source tools for development research, evaluation, and program design. Built in India, shared for impact.</p>
+    <p class="tagline">An index of open-source work on development research, data, and policy. Built in India, shared for impact.</p>
     <div class="hero-cta">
-      <a href="https://github.com/Varnasr/OpenStacks-for-Change" class="btn btn-primary">View on GitHub</a>
-      <a href="#stacks" class="btn btn-ghost">Explore the Stacks</a>
+      <a href="#projects" class="btn btn-primary">Browse Projects</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change" class="btn btn-ghost">View on GitHub</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>9</strong><span>Repositories</span></div>
-      <div class="hero-stat"><strong>8</strong><span>Active Stacks</span></div>
-      <div class="hero-stat"><strong>6+</strong><span>Languages</span></div>
+      <div class="hero-stat"><strong>20+</strong><span>Public Repositories</span></div>
+      <div class="hero-stat"><strong>4</strong><span>Live Sites</span></div>
+      <div class="hero-stat"><strong>5</strong><span>Research Toolkits</span></div>
       <div class="hero-stat"><strong>MIT</strong><span>Licensed</span></div>
     </div>
   </div>
 </div>
 
-<!-- Problem + Architecture -->
+<!-- Start here -->
 <section>
   <div class="container">
     <div class="section-header">
-      <h2>Why This Exists</h2>
+      <h2>Start Here</h2>
+      <p>If you want the reader-facing version of this work rather than the source code, begin with these.</p>
+    </div>
+    <div class="platform-grid">
+      <a href="https://www.impactmojo.in" class="platform-card">
+        <h3>Impact Mojo</h3>
+        <span class="url">impactmojo.in</span>
+        <p>Teaching and practice platform for development economics and social research. Courses, case studies, and open teaching material.</p>
+      </a>
+      <a href="https://www.janvayu.in" class="platform-card">
+        <h3>JanVayu &#2332;&#2344;&#2357;&#2366;&#2351;&#2369;</h3>
+        <span class="url">janvayu.in</span>
+        <p>A citizen-led national archive of India&rsquo;s air quality crisis &mdash; data, stories, and sensor readings.</p>
+      </a>
+      <a href="https://whatcounts.in/" class="platform-card">
+        <h3>The Measurement Trap</h3>
+        <span class="url">whatcounts.in</span>
+        <p>Companion site to the forthcoming Routledge book on India&rsquo;s eight decades of counting itself.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- What this is -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>What This Is</h2>
     </div>
     <div class="problem-grid">
       <div class="problem-text">
-        <p>Across public health, climate adaptation, education, and gender equity, development organisations face the same problem: <strong>they repeatedly build the same tools from scratch.</strong></p>
-        <p>Survey analysis scripts. MEL frameworks. Policy trackers. Data cleaning pipelines. Each organisation creates its own, often in isolation, often losing the work when projects end.</p>
-        <p><strong>OpenStacks for Change</strong> is a response to that waste. It's an ecosystem of open, modular toolkits &mdash; each focused on a specific capability &mdash; that development practitioners can pick up, adapt, and build on.</p>
+        <p><strong>This site is an index, not a product.</strong> It points to the open-source repositories behind work in development economics, evaluation, and public-interest data.</p>
+        <p>It began in 2025 as the hub for a family of eight interlocking &ldquo;stacks.&rdquo; Some of those turned out to be genuinely useful and are still here, still working. Others were scaffolding for an ecosystem that never needed to exist, and have been retired.</p>
+        <p>Rather than leave that ambiguous, every repository below carries a status label that means something specific.</p>
       </div>
       <div>
-        <div class="arch-label">Ecosystem Architecture</div>
+        <div class="arch-label">Status Labels</div>
         <div class="arch-box">
-          openstacks.dev<br>
-          &#9474;<br>
-          &#9500;&#9472;&#9472; <strong>InsightStack</strong> &middot;&middot;&middot; MEL tools &amp; calculators<br>
-          &#9500;&#9472;&#9472; <strong>FieldStack</strong> &middot;&middot;&middot;&middot;&middot; R notebooks for fieldwork<br>
-          &#9500;&#9472;&#9472; <strong>EquityStack</strong> &middot;&middot;&middot;&middot; Python data workflows<br>
-          &#9500;&#9472;&#9472; <strong>SignalStack</strong> &middot;&middot;&middot;&middot; Research newsletter<br>
-          &#9474;<br>
-          &#9500;&#9472;&#9472; <strong>RootStack</strong> &middot;&middot;&middot;&middot;&middot;&middot; Database layer<br>
-          &#9500;&#9472;&#9472; <strong>BridgeStack</strong> &middot;&middot;&middot; API backend<br>
-          &#9500;&#9472;&#9472; <strong>ViewStack</strong> &middot;&middot;&middot;&middot;&middot;&middot; Frontend UI<br>
-          &#9492;&#9472;&#9472; <strong>PolicyStack</strong> &middot;&middot;&middot; Policy tracker
+          <strong>Active</strong><br>
+          Under development. Issues get<br>
+          answered in days.<br><br>
+          <strong>Stable</strong><br>
+          Works and is correct. Not being<br>
+          developed. Bug reports welcome;<br>
+          replies take weeks.<br><br>
+          <strong>Retired</strong><br>
+          Archived, read-only. Kept public<br>
+          so links and citations survive.
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- How to use -->
-<section class="alt">
+<!-- Projects -->
+<section id="projects">
   <div class="container">
     <div class="section-header">
-      <h2>How to Use</h2>
-      <p>Each stack is self-contained. Pick the one that fits your language and domain, clone it, and start working.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <h4>Find Your Stack</h4>
-        <p>R? FieldStack. Python? EquityStack. Stata? InsightStack. Browse by language or domain.</p>
-      </div>
-      <div class="step">
-        <h4>Clone and Explore</h4>
-        <p>Every repo includes sample data, documentation, and working scripts you can run immediately.</p>
-      </div>
-      <div class="step">
-        <h4>Adapt to Your Context</h4>
-        <p>Modify templates for your own data, programmes, and reporting needs.</p>
-      </div>
-      <div class="step">
-        <h4>Contribute Back</h4>
-        <p>Found a bug? Built an extension? Share it with the community via a pull request.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- The Stacks -->
-<section id="stacks">
-  <div class="container">
-    <div class="section-header">
-      <h2>The Stacks</h2>
-      <p>Real tools you can use today, and foundations being built for tomorrow.</p>
+      <h2>Projects</h2>
+      <p>Grouped by what they are for, with an honest status on each.</p>
     </div>
 
-    <!-- Active -->
+    <!-- Data and policy -->
     <div class="tier-section">
-      <div class="tier-label">All Stacks &mdash; real tools with code and data</div>
+      <div class="tier-label">Data and Policy</div>
+      <div class="stacks-grid">
+
+        <a href="https://github.com/Varnasr/PolicyDhara" class="stack-card">
+          <div class="card-top">
+            <h3>PolicyDhara</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">Auto-updating tracker of Indian government policy across development sectors. The maintained successor to PolicyStack.</p>
+          <div class="tags"><span class="tag tag-lang">Astro</span><span class="tag tag-lang">Open Data</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/how-india-lives" class="stack-card">
+          <div class="card-top">
+            <h3>How India Lives</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">205 state-level choropleth maps and 10 visual stories on India&rsquo;s diversity across demography, health, gender, economy, education, and environment.</p>
+          <div class="tags"><span class="tag tag-lang">HTML</span><span class="tag tag-lang">Maps</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/someperspective" class="stack-card">
+          <div class="card-top">
+            <h3>Some Perspective</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">Unfunded empirical study of India&rsquo;s political economy, 2004&ndash;2026. Three constructed indices, full dataset, replication code, and a working paper.</p>
+          <div class="tags"><span class="tag tag-lang">Data</span><span class="tag tag-lang">Replication</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/H-VSAINC" class="stack-card">
+          <div class="card-top">
+            <h3>H-VSAINC</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">Hyderabad voting patterns and public infrastructure, 1999&ndash;2023, across five assembly seats with party-wise vote share trends.</p>
+          <div class="tags"><span class="tag tag-lang">HTML</span><span class="tag tag-lang">Elections</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/BiharParichay-Project" class="stack-card">
+          <div class="card-top">
+            <h3>Bihar Parichay</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">Interactive bilingual resource on Bihar &mdash; society, economy, caste, migration, climate, culture. A single offline-capable HTML file.</p>
+          <div class="tags"><span class="tag tag-lang">D3</span><span class="tag tag-lang">Leaflet</span><span class="tag tag-lang">Bilingual</span></div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Teaching -->
+    <div class="tier-section">
+      <div class="tier-label">Teaching and Practice</div>
+      <div class="stacks-grid">
+
+        <a href="https://github.com/Varnasr/dev-case-studies" class="stack-card">
+          <div class="card-top">
+            <h3>Dev Case Studies</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">200 real development case studies from 117 countries &mdash; searchable, filterable, and fully cited.</p>
+          <div class="tags"><span class="tag tag-lang">JavaScript</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/development-discourses" class="stack-card">
+          <div class="card-top">
+            <h3>Development Discourses</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">A curated open-access library of 500+ research papers, books, and grey literature for practitioners in South Asia.</p>
+          <div class="tags"><span class="tag tag-lang">JavaScript</span><span class="tag tag-lang">Open Access</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/devdata-practice" class="stack-card">
+          <div class="card-top">
+            <h3>DevData Practice</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">Realistic practice datasets for development economics &mdash; 10 generators producing 350k+ rows for teaching and training.</p>
+          <div class="tags"><span class="tag tag-lang">Python</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/deveconomics-toolkit" class="stack-card">
+          <div class="card-top">
+            <h3>DevEconomics Toolkit</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">11 interactive Shiny apps for impact evaluation, poverty analysis, program design, and data exploration.</p>
+          <div class="tags"><span class="tag tag-lang">R</span><span class="tag tag-lang">Shiny</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/The-Real-Middle" class="stack-card">
+          <div class="card-top">
+            <h3>The Real Middle</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">Interactive game revealing where you actually stand in India&rsquo;s income distribution. Most people guess wrong.</p>
+          <div class="tags"><span class="tag tag-lang">React</span></div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Toolkits -->
+    <div class="tier-section">
+      <div class="tier-label">Research Toolkits &mdash; the OpenStacks</div>
       <div class="stacks-grid">
 
         <a href="https://github.com/Varnasr/InsightStack" class="stack-card">
           <div class="card-top">
             <h3>InsightStack</h3>
-            <span class="tag tag-status-active">Active</span>
+            <span class="tag tag-status-stable">Stable</span>
           </div>
-          <p class="description">The backbone of the ecosystem. MEL tools, calculators, and a full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R. Plus Observable notebooks, Excalidraw diagrams, and Flourish charts.</p>
-          <div class="tags">
-            <span class="tag tag-lang">Stata</span>
-            <span class="tag tag-lang">Python</span>
-            <span class="tag tag-lang">R</span>
-            <span class="tag tag-lang">Observable</span>
-          </div>
+          <p class="description">The largest of the set. MEL calculators, visual frameworks, research documentation templates, and a full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis).</p>
+          <div class="tags"><span class="tag tag-lang">Stata</span><span class="tag tag-lang">Python</span><span class="tag tag-lang">R</span><span class="tag tag-lang">Observable</span></div>
         </a>
 
         <a href="https://github.com/Varnasr/FieldStack" class="stack-card">
           <div class="card-top">
             <h3>FieldStack</h3>
-            <span class="tag tag-status-active">Active</span>
+            <span class="tag tag-status-stable">Stable</span>
           </div>
-          <p class="description">Reusable R notebooks and scripts for applied fieldwork: survey design, sample size calculation, sampling weights, complex survey analysis, cost-effectiveness, qualitative coding, and automated Quarto reporting.</p>
-          <div class="tags">
-            <span class="tag tag-lang">R</span>
-            <span class="tag tag-lang">Quarto</span>
-            <span class="tag tag-lang">KoboToolbox</span>
-            <span class="tag tag-lang">ODK</span>
-          </div>
+          <p class="description">The applied fieldwork lifecycle &mdash; survey design, sample size, sampling weights, complex survey analysis, cost-effectiveness, qualitative coding, and batch Quarto reporting.</p>
+          <div class="tags"><span class="tag tag-lang">R</span><span class="tag tag-lang">Quarto</span><span class="tag tag-lang">KoboToolbox</span></div>
         </a>
 
         <a href="https://github.com/Varnasr/EquityStack" class="stack-card">
           <div class="card-top">
             <h3>EquityStack</h3>
-            <span class="tag tag-status-active">Active</span>
+            <span class="tag tag-status-stable">Stable</span>
           </div>
-          <p class="description">Python and Jupyter notebooks for development data workflows. Includes impact evaluation (DiD, PSM, RDD), a reproducible data cleaning pipeline with logging, and visualisation tools across health, gender, education, and climate equity.</p>
-          <div class="tags">
-            <span class="tag tag-lang">Python</span>
-            <span class="tag tag-lang">Jupyter</span>
-            <span class="tag tag-lang">Pandas</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/Varnasr/SignalStack" class="stack-card">
-          <div class="card-top">
-            <h3>SignalStack</h3>
-            <span class="tag tag-status-active">Active</span>
-          </div>
-          <p class="description">Companion repository for the Research Rundown newsletter. Archived issues, featured tools, method spotlights, and curated resources for development practitioners.</p>
-          <div class="tags">
-            <span class="tag tag-lang">Markdown</span>
-            <span class="tag tag-lang">Substack</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/Varnasr/RootStack" class="stack-card">
-          <div class="card-top">
-            <h3>RootStack</h3>
-            <span class="tag tag-status-active">Active</span>
-          </div>
-          <p class="description">Foundational database schemas, seed data, and queries for the ecosystem's data layer. The shared backbone that other stacks connect to. PostgreSQL and SQLite.</p>
-          <div class="tags">
-            <span class="tag tag-lang">SQL</span>
-            <span class="tag tag-lang">PostgreSQL</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/Varnasr/BridgeStack" class="stack-card">
-          <div class="card-top">
-            <h3>BridgeStack</h3>
-            <span class="tag tag-status-active">Active</span>
-          </div>
-          <p class="description">FastAPI backend that bridges RootStack data to frontend applications via REST API. The plumbing that connects data to dashboards and tools.</p>
-          <div class="tags">
-            <span class="tag tag-lang">Python</span>
-            <span class="tag tag-lang">FastAPI</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/Varnasr/ViewStack" class="stack-card">
-          <div class="card-top">
-            <h3>ViewStack</h3>
-            <span class="tag tag-status-active">Active</span>
-          </div>
-          <p class="description">React frontend for visualising OpenStacks data. State and scheme dashboards, indicator explorer with interactive charts, and budget trend analysis.</p>
-          <div class="tags">
-            <span class="tag tag-lang">React</span>
-            <span class="tag tag-lang">Recharts</span>
-            <span class="tag tag-lang">Vite</span>
-          </div>
+          <p class="description">Development data workflows across health, gender, education, and climate equity. Impact evaluation module and a data cleaning pipeline with automatic logging.</p>
+          <div class="tags"><span class="tag tag-lang">Python</span><span class="tag tag-lang">Jupyter</span><span class="tag tag-lang">Pandas</span></div>
         </a>
 
         <a href="https://github.com/Varnasr/PolicyStack" class="stack-card">
           <div class="card-top">
             <h3>PolicyStack</h3>
-            <span class="tag tag-status-active">Active</span>
+            <span class="tag tag-status-stable">Stable</span>
           </div>
-          <p class="description">South Asia policy tracker &mdash; 15 flagship government schemes with 4 years of budget data, performance indicators, and analysis scripts. Turning policy documents into queryable data.</p>
-          <div class="tags">
-            <span class="tag tag-lang">Python</span>
-            <span class="tag tag-lang">CSV</span>
-            <span class="tag tag-lang">Pandas</span>
+          <p class="description">South Asia policy tracker &mdash; 15 flagship schemes, 4 years of budget data, and performance indicators. Superseded for new work by PolicyDhara.</p>
+          <div class="tags"><span class="tag tag-lang">Python</span><span class="tag tag-lang">CSV</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/SignalStack" class="stack-card">
+          <div class="card-top">
+            <h3>SignalStack</h3>
+            <span class="tag tag-status-stable">Stable</span>
           </div>
+          <p class="description">Companion archive for the Research Rundown newsletter &mdash; issues, featured tools, method spotlights, and curated resources.</p>
+          <div class="tags"><span class="tag tag-lang">Markdown</span><span class="tag tag-lang">Substack</span></div>
         </a>
 
       </div>
     </div>
 
-    <!-- Planned -->
+    <!-- Writing and utilities -->
     <div class="tier-section">
-      <div class="tier-label">On the Roadmap</div>
+      <div class="tier-label">Writing and Utilities</div>
+      <div class="stacks-grid">
+
+        <a href="https://github.com/Varnasr/the-measurement-trap" class="stack-card">
+          <div class="card-top">
+            <h3>The Measurement Trap</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">Companion site for the forthcoming Routledge book on India&rsquo;s quest for social progress through eight decades of measurement.</p>
+          <div class="tags"><span class="tag tag-lang">HTML</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/theverylastsuperhero" class="stack-card">
+          <div class="card-top">
+            <h3>The Very Last Superhero</h3>
+            <span class="tag tag-status-active">Active</span>
+          </div>
+          <p class="description">An illustrated speculative fiction novel set in a climate-collapsed India, following a 14-year-old girl through AI, memory, and resistance.</p>
+          <div class="tags"><span class="tag tag-lang">Astro</span><span class="tag tag-lang">Fiction</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/CandidateDossier" class="stack-card">
+          <div class="card-top">
+            <h3>CandidateDossier</h3>
+            <span class="tag tag-status-stable">Stable</span>
+          </div>
+          <p class="description">CSV to LaTeX to PDF generator for uniform, privacy-masked candidate dossiers. Runs via Netlify Functions or Overleaf.</p>
+          <div class="tags"><span class="tag tag-lang">LaTeX</span><span class="tag tag-lang">Netlify</span></div>
+        </a>
+
+        <a href="https://github.com/Varnasr/Experiments" class="stack-card">
+          <div class="card-top">
+            <h3>Experiments</h3>
+            <span class="tag tag-status-stable">Sandbox</span>
+          </div>
+          <p class="description">Prototypes, proofs-of-concept, and sandbox work. Expect rough edges &mdash; nothing here is a finished thing.</p>
+          <div class="tags"><span class="tag tag-lang">Mixed</span></div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Retired -->
+    <div class="tier-section">
+      <div class="tier-label">Retired &mdash; archived and read-only</div>
       <div class="planned-grid">
         <div class="planned-card">
-          <h4>ClimateStack</h4>
-          <p>Composite risk scores, resilience modelling, geo-spatial mapping</p>
+          <h4>RootStack</h4>
+          <p>SQLite and PostgreSQL schemas for the shared data layer</p>
         </div>
         <div class="planned-card">
-          <h4>EduStack</h4>
-          <p>Learning assessment pipelines, education outcome dashboards</p>
+          <h4>BridgeStack</h4>
+          <p>FastAPI backend serving RootStack to frontends</p>
         </div>
         <div class="planned-card">
-          <h4>SocialStack</h4>
-          <p>Rapid ethnography, qualitative coding, NLP for field narratives</p>
+          <h4>ViewStack</h4>
+          <p>React dashboard for exploring the data</p>
         </div>
         <div class="planned-card">
-          <h4>InfraStack</h4>
-          <p>Access scoring, infrastructure mapping, spatial planning tools</p>
+          <h4>ImpactLex</h4>
+          <p>An earlier lexicon project</p>
         </div>
+      </div>
+      <div class="notice">
+        <p>These three formed a database &rarr; API &rarr; dashboard pipeline. It was the most expensive part of this project to maintain and the least used &mdash; and the research toolkits never depended on it. Nothing has been deleted: the code stays public, forkable, and citable.</p>
+        <p>Four further stacks &mdash; ClimateStack, EduStack, SocialStack, and InfraStack &mdash; sat on a published roadmap for a year without a line of code written. That roadmap has been withdrawn rather than left standing as a promise to readers. The needs behind it are better served by How India Lives, PolicyDhara, and JanVayu.</p>
       </div>
     </div>
 
@@ -702,7 +834,7 @@
       </div>
       <div class="audience-card">
         <h4>Students and Educators</h4>
-        <p>Practice datasets, guided notebooks, and real-world examples for development economics and public policy courses.</p>
+        <p>Practice datasets, guided notebooks, case studies, and real-world examples for development economics and public policy courses.</p>
       </div>
     </div>
   </div>
@@ -726,9 +858,8 @@
     </div>
 
     <div class="support-banner">
-      <p>If OpenStacks is useful to your work, consider supporting the project.</p>
-      <a href="https://buymeacoffee.com/varnasr" class="btn btn-accent">Support on Buy Me a Coffee</a>
-      <a href="support.html" class="btn btn-outline" style="margin-left: 0.5rem;">Other ways to support</a>
+      <p>If this work is useful to you, you can support it directly.</p>
+      <a href="support.html" class="btn btn-accent">Support via UPI</a>
     </div>
   </div>
 </section>
@@ -738,14 +869,13 @@
   <div class="container">
     <div class="footer-links">
       <a href="https://github.com/Varnasr/OpenStacks-for-Change">GitHub</a>
-      <a href="https://github.com/Varnasr/OpenStacks-for-Change/discussions">Discussions</a>
-      <a href="https://github.com/Varnasr/OpenStacks-for-Change/wiki">Wiki</a>
+      <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">Maintenance Policy</a>
       <a href="https://github.com/Varnasr/.github/blob/main/CONTRIBUTING.md">Contributing</a>
       <a href="https://github.com/Varnasr/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
       <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CITATION.cff">Cite This Work</a>
     </div>
     <p>MIT License. Built by <a href="https://github.com/Varnasr">Varna Sri Raman</a> in Delhi, India.</p>
-    <p class="footer-note">AI tools were used for documentation and code generation support. All decisions, designs, datasets, and content curation are entirely the creator's.</p>
+    <p class="footer-note">AI tools were used for documentation and code generation support. All decisions, designs, datasets, and content curation are entirely the creator&rsquo;s.</p>
   </div>
 </footer>
 
