@@ -43,9 +43,10 @@ If you are looking for the polished, reader-facing version of this work, start w
 |---|---|
 | **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** | Auto-updating tracker of Indian government policy across development sectors. A complement to Impact Mojo. |
 | **[How India Lives](https://howindialives.impactmojo.in)** | 205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. [Source](https://github.com/Varnasr/how-india-lives). |
-| **[Some Perspective](https://github.com/Varnasr/someperspective)** | Unfunded empirical study of India's political economy, 2004–2026. Three constructed indices, full dataset, replication code, and a working paper. |
+| **[Some Perspective](https://someperspective.info)** | Unfunded empirical study of India's political economy, 2004–2026. Three constructed indices, full dataset, replication code, and a working paper. |
 | **[H-VSAINC](https://github.com/Varnasr/H-VSAINC)** | Hyderabad voting patterns and public infrastructure, 1999–2023, across five assembly seats. |
 | **[Bihar Parichay](https://github.com/Varnasr/BiharParichay-Project)** | Interactive bilingual resource on Bihar — society, economy, caste, migration, climate, culture. Single offline-capable HTML file. |
+| **[Bihar Electoral Dashboard](https://forindia.netlify.app)** | Analysis of Bihar electoral roll anomalies — voter deletion patterns, demographic shifts, and election data integrity. |
 | **[SDG Progress Tracker](https://sdgtracker.impactmojo.in)** | India's progress on all 17 UN Sustainable Development Goals — scores, trends, radar charts, and category breakdowns. |
 | **[India Development Indicators](https://devindicators.impactmojo.in)** | Interactive dashboard across economic, health, education, infrastructure, and environmental indicators, pulling live from the World Bank Open Data API. |
 | **[Climate TRACE India](https://climatetrace.impactmojo.in)** | Satellite-verified, facility-level greenhouse-gas emissions for India — power, manufacturing, transport, fossil fuels, agriculture, and waste, including the top-emitting coal and steel plants. |
@@ -57,7 +58,7 @@ If you are looking for the polished, reader-facing version of this work, start w
 | Project | What it is |
 |---|---|
 | **[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** | 200 real development case studies from 117 countries — searchable, filterable, fully cited. |
-| **[Development Discourses](https://github.com/Varnasr/development-discourses)** | Curated open-access library of 500+ papers, books, and grey literature for South Asian practitioners. |
+| **[Development Discourses](https://varnasr.github.io/development-discourses/)** | Curated open-access library of 500+ papers, books, and grey literature for South Asian practitioners. |
 | **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 10 generators, 350k+ rows. |
 | **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps for impact evaluation, poverty analysis, and program design. |
 | **[The Real Middle](https://github.com/Varnasr/The-Real-Middle)** | Interactive game revealing where you actually stand in India's income distribution. |
@@ -90,7 +91,7 @@ Early-stage work, built in the [Experiments](https://github.com/Varnasr/Experime
 | Project | What it is |
 |---|---|
 | **[The Measurement Trap](https://github.com/Varnasr/the-measurement-trap)** | Companion site for *The Measurement Trap: India's Quest for Social Progress Through Eight Decades* (Routledge, forthcoming). Live at [whatcounts.in](https://whatcounts.in/). |
-| **[The Very Last Superhero](https://github.com/Varnasr/theverylastsuperhero)** | Illustrated speculative fiction set in a climate-collapsed India. |
+| **[The Very Last Superhero](https://postheroic.world)** | Illustrated speculative fiction set in a climate-collapsed India. |
 
 ### Utilities
 
