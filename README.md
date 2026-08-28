@@ -61,7 +61,6 @@ If you are looking for the polished, reader-facing version of this work, start w
 | **[Development Discourses](https://varnasr.github.io/development-discourses/)** | Curated open-access library of 500+ papers, books, and grey literature for South Asian practitioners. |
 | **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 10 generators, 350k+ rows. |
 | **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps for impact evaluation, poverty analysis, and program design. |
-| **[The Real Middle](https://github.com/Varnasr/The-Real-Middle)** | Interactive game revealing where you actually stand in India's income distribution. |
 | **[ImpactLex](https://www.impactmojo.in/impactlex/)** | Development-sector glossary and companion to Impact Mojo — 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae, and cross-references to where each term is taught. Offline-capable PWA. |
 
 ### Research toolkits — the OpenStacks
