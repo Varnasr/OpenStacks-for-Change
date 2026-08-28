@@ -42,10 +42,15 @@ If you are looking for the polished, reader-facing version of this work, start w
 | Project | What it is |
 |---|---|
 | **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** | Auto-updating tracker of Indian government policy across development sectors. A complement to Impact Mojo. |
-| **[How India Lives](https://github.com/Varnasr/how-india-lives)** | 205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. |
+| **[How India Lives](https://howindialives.impactmojo.in)** | 205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. [Source](https://github.com/Varnasr/how-india-lives). |
 | **[Some Perspective](https://github.com/Varnasr/someperspective)** | Unfunded empirical study of India's political economy, 2004–2026. Three constructed indices, full dataset, replication code, and a working paper. |
 | **[H-VSAINC](https://github.com/Varnasr/H-VSAINC)** | Hyderabad voting patterns and public infrastructure, 1999–2023, across five assembly seats. |
 | **[Bihar Parichay](https://github.com/Varnasr/BiharParichay-Project)** | Interactive bilingual resource on Bihar — society, economy, caste, migration, climate, culture. Single offline-capable HTML file. |
+| **[SDG Progress Tracker](https://sdgtracker.impactmojo.in)** | India's progress on all 17 UN Sustainable Development Goals — scores, trends, radar charts, and category breakdowns. |
+| **[India Development Indicators](https://devindicators.impactmojo.in)** | Interactive dashboard across economic, health, education, infrastructure, and environmental indicators, pulling live from the World Bank Open Data API. |
+| **[Climate TRACE India](https://climatetrace.impactmojo.in)** | Satellite-verified, facility-level greenhouse-gas emissions for India — power, manufacturing, transport, fossil fuels, agriculture, and waste, including the top-emitting coal and steel plants. |
+| **[Industry Conglomerates Tracker](https://industrygroups.impactmojo.in)** | Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999–2026 — searchable and filterable, with government-support classification. |
+| **[WhoGaveTheOrder.in](https://whogavetheorder.netlify.app)** | Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map, and an RTI register with a live reply-due clock. |
 
 ### Teaching and practice
 
@@ -71,6 +76,15 @@ Reusable scripts, notebooks, and templates for people doing MEL and applied rese
 
 InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo.15245182).
 
+### Prototypes and research outputs
+
+Early-stage work, built in the [Experiments](https://github.com/Varnasr/Experiments) sandbox. Expect rough edges — these are shared because they are useful, not because they are finished.
+
+| Project | What it is |
+|---|---|
+| **[Court Petition Translator](https://github.com/Varnasr/Experiments/tree/main/court-translator)** | Hindi → English translation for Supreme Court and High Court petitions. Sarvam AI handles translation; Llama 3.3 corrects legal terminology (याचिकाकर्ता → Petitioner, अनुच्छेद → Article). Prototype. |
+| **[AICC Observer Grading](https://github.com/Varnasr/Experiments/tree/main/aicc_analysis)** | Methodology and scoring engine for evaluating district observers across six components of reporting readiness. Covers 592 districts and 2,413 candidate profiles. |
+
 ### Writing
 
 | Project | What it is |
@@ -83,7 +97,7 @@ InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo
 | Project | What it is |
 |---|---|
 | **[CandidateDossier](https://github.com/Varnasr/CandidateDossier)** | CSV → LaTeX → PDF generator for uniform, privacy-masked candidate dossiers. |
-| **[Experiments](https://github.com/Varnasr/Experiments)** | Prototypes, proofs-of-concept, and sandbox work. Expect rough edges. |
+| **[Experiments](https://github.com/Varnasr/Experiments)** | The sandbox the projects above are built in, plus smaller tools. Where ideas live before they graduate to their own repository — or get quietly retired. |
 | **[.github](https://github.com/Varnasr/.github)** | Shared community health files — contributing guide, code of conduct, issue templates — inherited by every repo above. |
 
 ---
