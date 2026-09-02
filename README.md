@@ -77,14 +77,6 @@ Reusable scripts, notebooks, and templates for people doing MEL and applied rese
 
 InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo.15245182).
 
-### Prototypes and research outputs
-
-Early-stage work, built in the [Experiments](https://github.com/Varnasr/Experiments) sandbox. Expect rough edges — these are shared because they are useful, not because they are finished.
-
-| Project | What it is |
-|---|---|
-| **[Court Petition Translator](https://github.com/Varnasr/Experiments/tree/main/court-translator)** | Hindi → English translation for Supreme Court and High Court petitions. Sarvam AI handles translation; Llama 3.3 corrects legal terminology (याचिकाकर्ता → Petitioner, अनुच्छेद → Article). Prototype. |
-
 ### Writing
 
 | Project | What it is |
@@ -97,7 +89,7 @@ Early-stage work, built in the [Experiments](https://github.com/Varnasr/Experime
 | Project | What it is |
 |---|---|
 | **[CandidateDossier](https://github.com/Varnasr/CandidateDossier)** | CSV → LaTeX → PDF generator for uniform, privacy-masked candidate dossiers. |
-| **[Experiments](https://github.com/Varnasr/Experiments)** | The sandbox the projects above are built in, plus smaller tools. Where ideas live before they graduate to their own repository — or get quietly retired. |
+| **[Experiments](https://github.com/Varnasr/Experiments)** | The sandbox. Small browser tools are built and indexed there and are not listed here; anything that lasts moves to a repository of its own and appears above. |
 | **[.github](https://github.com/Varnasr/.github)** | Shared community health files — contributing guide, code of conduct, issue templates — inherited by every repo above. |
 
 ---
