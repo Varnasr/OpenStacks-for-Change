@@ -8,21 +8,20 @@
   <link rel="icon" type="image/png" href="favicon_openstacks.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Work+Sans:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
-    :root { --paper:#f7f4ee; --ink:#15171b; --ink-2:#454a54; --ink-3:#7b8190; --line-2:#cbc3b3; --teal:#0f6e56; --white:#fffdf9; }
+    :root { --black:#0d0d0f; --white:#f6f2ea; --saffron:#f2a541; --grey:#8a8a90; }
     * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--paper); color:var(--ink); min-height:100vh; display:grid; place-items:center; padding:2rem 1.25rem; line-height:1.6; }
-    body::before { content:""; position:fixed; inset:0; z-index:-1; background-image:radial-gradient(var(--line-2) .9px, transparent 1px); background-size:22px 22px; opacity:.45; }
-    main { background:var(--white); border:1px solid var(--line-2); border-radius:10px; padding:2rem 2rem 1.6rem; max-width:26rem; width:100%; text-align:center; position:relative; }
-    main::before { content:""; position:absolute; inset:8px; border:1.5px dashed var(--line-2); border-radius:6px; pointer-events:none; }
-    .k { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); }
-    h1 { font-family:"Fraunces",Georgia,serif; font-weight:500; font-size:1.7rem; letter-spacing:-.01em; margin:.5rem 0 .6rem; }
-    p { color:var(--ink-2); font-size:.95rem; }
-    .upi { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:1.15rem; font-weight:500; color:var(--ink); margin:.9rem 0; letter-spacing:.02em; user-select:all; }
-    img { width:220px; max-width:100%; height:auto; margin:.6rem auto 0; display:block; border-radius:6px; }
-    a { color:var(--teal); text-decoration:none; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.78rem; }
-    .back { display:inline-block; margin-top:1.2rem; }
+    body { font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--black); color:var(--white); min-height:100vh; display:grid; place-items:center; padding:2rem 1.25rem; line-height:1.55; }
+    main { border:2px solid var(--white); padding:2rem 2rem 1.8rem; max-width:28rem; width:100%; }
+    .k { font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--saffron); }
+    h1 { font-family:"Syne","Arial Black",sans-serif; font-weight:800; font-size:2.2rem; letter-spacing:-.02em; line-height:1; margin:.6rem 0 .9rem; text-transform:uppercase; }
+    p { color:#d8d3c8; font-size:.95rem; }
+    .upi { font-family:"JetBrains Mono",ui-monospace,monospace; font-size:1.2rem; font-weight:500; color:var(--white); margin:1rem 0; letter-spacing:.02em; user-select:all; border:2px solid var(--saffron); display:inline-block; padding:.4rem .8rem; }
+    img { width:220px; max-width:100%; height:auto; margin:.8rem 0 0; display:block; border:2px solid var(--white); }
+    a { color:var(--white); text-decoration:none; font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; }
+    .back { display:inline-block; margin-top:1.4rem; border:2px solid var(--white); padding:.6rem 1rem; }
+    .back:hover { background:var(--white); color:var(--black); }
   </style>
 </head>
 <body>
@@ -33,7 +32,7 @@
     <p class="upi">varna@icici</p>
     <p>Or scan the code:</p>
     <img src="upi_qr_varna_icici.png" alt="UPI QR code for varna@icici">
-    <a class="back" href="./">← back to the index</a>
+    <a class="back" href="./">← Back to the index</a>
   </main>
 </body>
 </html>

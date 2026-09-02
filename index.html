@@ -15,230 +15,216 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #f7f4ee;
-      --paper-2: #efeae0;
-      --ink: #15171b;
-      --ink-2: #454a54;
-      --ink-3: #7b8190;
-      --line: #dcd6ca;
-      --line-2: #cbc3b3;
-      --teal: #0f6e56;
-      --teal-2: #0a5240;
-      --teal-tint: #dcefe7;
-      --amber: #b45309;
-      --amber-tint: #fbe9d3;
-      --sand: #e9e1d1;
-      --white: #fffdf9;
-      --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-      --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      --w: 1120px;
+      --black: #0d0d0f; --white: #f6f2ea; --grey: #8a8a90; --grey-2: #2a2a2f;
+      --navy: #14305c; --saffron: #f2a541; --teal: #0f6e56; --brick: #b23a2a; --ash: #d9d5cc;
+      --display: "Syne", "Arial Black", Impact, sans-serif;
+      --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      --pad: clamp(1.1rem, 4vw, 3.5rem);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
-    body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { color: var(--teal); text-decoration: none; }
-    a:hover { color: var(--teal-2); }
-    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 1.5rem; }
-    .mono { font-family: var(--mono); font-size: .78rem; letter-spacing: .02em; }
-    .serif { font-family: var(--serif); }
-    :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
-
-    /* dotted paper: the banner's dots, faintly, everywhere */
-    body::before { content: ""; position: fixed; inset: 0; z-index: -1; background-image: radial-gradient(var(--line-2) .9px, transparent 1px); background-size: 22px 22px; opacity: .45; pointer-events: none; }
+    html { scroll-behavior: smooth; scroll-padding-top: 3.6rem; }
+    body { font-family: var(--sans); background: var(--black); color: var(--white); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+    .mono { font-family: var(--mono); }
 
     /* top bar */
-    .top { position: sticky; top: 0; z-index: 20; background: rgba(247,244,238,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-    .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 3.4rem; gap: 1rem; }
-    .brand { display: flex; align-items: center; gap: .6rem; color: var(--ink); font-weight: 600; letter-spacing: -.01em; font-size: .98rem; }
-    .brand svg { width: 26px; height: 26px; }
-    .top nav { display: flex; gap: 1.3rem; }
-    .top nav a { color: var(--ink-2); font-size: .86rem; font-weight: 500; }
-    .top nav a:hover { color: var(--ink); }
-    .top nav a.gh { font-family: var(--mono); font-size: .78rem; border: 1px solid var(--line-2); border-radius: 999px; padding: .2rem .7rem; }
-    @media (max-width: 700px) { .top nav a:not(.gh) { display: none; } }
+    .top { position: sticky; top: 0; z-index: 30; background: var(--black); border-bottom: 2px solid var(--white); }
+    .top .in { display: flex; align-items: stretch; justify-content: space-between; height: 3.6rem; padding: 0 var(--pad); }
+    .brand { display: flex; align-items: center; gap: .7rem; font-family: var(--display); font-weight: 800; letter-spacing: .01em; font-size: 1.05rem; text-transform: uppercase; }
+    .brand svg { width: 28px; height: 28px; }
+    .top nav { display: flex; }
+    .top nav a { display: flex; align-items: center; padding: 0 1rem; font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; border-left: 2px solid var(--white); }
+    .top nav a:hover { background: var(--white); color: var(--black); }
+    @media (max-width: 760px) { .top nav a:not(.gh) { display: none; } }
 
     /* hero */
-    .hero { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
-    .hero .wrap { display: grid; grid-template-columns: 1.35fr .9fr; gap: 3rem; align-items: end; }
-    .kicker { font-family: var(--mono); font-size: .76rem; color: var(--teal); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.1rem; display: flex; align-items: center; gap: .6rem; }
-    .kicker i { display: inline-block; width: 10px; height: 10px; border: 1.5px dashed var(--teal); }
-    h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -.02em; color: var(--ink); max-width: 15ch; }
-    h1 em { font-style: italic; color: var(--teal); font-weight: 400; }
-    .hero p.lede { margin-top: 1.4rem; font-size: 1.08rem; color: var(--ink-2); max-width: 56ch; line-height: 1.65; }
-    .hero .cta { margin-top: 1.8rem; display: flex; gap: .7rem; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: .45rem; font: 500 .9rem var(--sans); padding: .62rem 1.15rem; border-radius: 6px; border: 1px solid var(--ink); color: var(--ink); background: transparent; transition: background .15s, color .15s; }
-    .btn:hover { background: var(--ink); color: var(--paper); }
-    .btn.solid { background: var(--ink); color: var(--paper); }
-    .btn.solid:hover { background: var(--teal-2); border-color: var(--teal-2); }
-    .btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
-    .btn.teal:hover { background: var(--teal-2); border-color: var(--teal-2); color: #fff; }
-    /* the index card */
-    .card-index { background: var(--white); border: 1px solid var(--line-2); border-radius: 10px; padding: 1.25rem 1.35rem 1.1rem; box-shadow: 0 1px 0 var(--line), 0 14px 40px -24px rgba(21,23,27,.35); position: relative; }
-    .card-index::before { content: ""; position: absolute; inset: 8px; border: 1.5px dashed var(--line-2); border-radius: 6px; pointer-events: none; }
-    .card-index h2 { font-family: var(--mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; margin-bottom: .9rem; }
-    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1rem; }
-    .stat b { display: block; font-family: var(--serif); font-weight: 500; font-size: 2rem; line-height: 1; color: var(--ink); letter-spacing: -.02em; }
-    .stat span { display: block; font-size: .78rem; color: var(--ink-3); margin-top: .25rem; }
-    .stat.t b { color: var(--teal); }
-    .card-index .foot { margin-top: 1rem; padding-top: .8rem; border-top: 1px dashed var(--line-2); font-family: var(--mono); font-size: .74rem; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .4rem; }
-    @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero { padding: 3rem 0 2.5rem; } }
+    .hero { padding: clamp(2.5rem, 7vw, 6rem) var(--pad) clamp(2rem, 5vw, 4rem); border-bottom: 2px solid var(--white); position: relative; overflow: hidden; }
+    .hero .mark { position: absolute; right: var(--pad); top: 2.5rem; width: clamp(120px, 22vw, 320px); opacity: .95; }
+    .hero .mark rect.o { animation: dash 24s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -400; } }
+    .word { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: .86; letter-spacing: -.03em; font-size: clamp(3.4rem, 14vw, 13.5rem); }
+    .word span { display: block; }
+    .word .s2 { color: var(--saffron); }
+    .word .s3 { font-size: .38em; letter-spacing: 0; line-height: 1; margin-top: .35em; color: var(--white); font-weight: 700; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; margin-top: 3rem; align-items: end; }
+    .hero p { font-size: clamp(1rem, 1.5vw, 1.2rem); max-width: 52ch; color: #d8d3c8; }
+    .hero p a { text-decoration: underline; text-decoration-color: var(--saffron); text-underline-offset: 3px; }
+    .counts { display: grid; grid-template-columns: repeat(4, 1fr); border: 2px solid var(--white); }
+    .counts div { padding: .9rem .9rem .8rem; border-left: 2px solid var(--white); }
+    .counts div:first-child { border-left: none; }
+    .counts b { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; }
+    .counts span { display: block; font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--grey); margin-top: .35rem; }
+    .counts div.hi b { color: var(--saffron); }
+    .cta { margin-top: 1.6rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+    .btn { display: inline-block; font-family: var(--mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; padding: .8rem 1.2rem; border: 2px solid var(--white); }
+    .btn:hover { background: var(--white); color: var(--black); }
+    .btn.fill { background: var(--saffron); border-color: var(--saffron); color: var(--black); }
+    .btn.fill:hover { background: var(--white); border-color: var(--white); }
+    @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; margin-top: 2rem; } .counts { grid-template-columns: 1fr 1fr; } .counts div:nth-child(3) { border-left: none; } .counts div:nth-child(n+3) { border-top: 2px solid var(--white); } .hero .mark { top: 1.2rem; width: 96px; } }
 
-    /* sections */
-    section { padding: 4rem 0; }
-    section + section { border-top: 1px solid var(--line); }
-    .sec-head { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.5rem; margin-bottom: 2rem; align-items: baseline; }
-    .sec-head .n { font-family: var(--mono); font-size: .78rem; color: var(--teal); letter-spacing: .08em; padding-top: .5rem; display: flex; align-items: center; gap: .5rem; }
-    .sec-head .n i { width: 8px; height: 8px; background: var(--teal); display: inline-block; }
-    .sec-head h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.15rem); letter-spacing: -.015em; line-height: 1.15; }
-    .sec-head p { color: var(--ink-2); margin-top: .5rem; max-width: 62ch; font-size: 1rem; }
-    @media (max-width: 700px) { .sec-head { grid-template-columns: 1fr; gap: .3rem; } }
+    /* search bar */
+    .bar { position: sticky; top: 3.6rem; z-index: 25; background: var(--black); border-bottom: 2px solid var(--white); display: grid; grid-template-columns: 1fr auto; }
+    .bar input { font: 500 1rem var(--sans); padding: .9rem var(--pad); background: var(--black); color: var(--white); border: none; min-width: 0; }
+    .bar input::placeholder { color: var(--grey); }
+    .bar .st { display: flex; }
+    .bar .st button { font: 500 .74rem var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 0 1rem; background: var(--black); color: var(--white); border: none; border-left: 2px solid var(--white); cursor: pointer; }
+    .bar .st button.on, .bar .st button:hover { background: var(--white); color: var(--black); }
+    .bar .cnt { font-family: var(--mono); font-size: .74rem; padding: 0 1rem; display: flex; align-items: center; color: var(--grey); border-left: 2px solid var(--white); white-space: nowrap; }
+    @media (max-width: 760px) { .bar { grid-template-columns: 1fr; position: static; } .bar .st { border-top: 2px solid var(--white); } .bar .st button { flex: 1; padding: .7rem 0; border-left: none; } .bar .st button + button { border-left: 2px solid var(--white); } .bar .cnt { display: none; } }
 
-    /* start here tiles */
-    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .tile { display: block; background: var(--white); border: 1px solid var(--line-2); border-radius: 10px; padding: 1.35rem 1.35rem 1.2rem; color: var(--ink); position: relative; transition: transform .15s, box-shadow .15s, border-color .15s; }
-    .tile:hover { transform: translateY(-2px); border-color: var(--teal); box-shadow: 0 14px 30px -20px rgba(15,110,86,.5); color: var(--ink); }
-    .tile .dom { font-family: var(--mono); font-size: .76rem; color: var(--teal); margin-bottom: .55rem; }
-    .tile h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; letter-spacing: -.01em; line-height: 1.15; margin-bottom: .5rem; }
-    .tile p { font-size: .92rem; color: var(--ink-2); }
-    .tile .go { position: absolute; right: 1.1rem; top: 1.1rem; font-family: var(--mono); font-size: .8rem; color: var(--ink-3); }
-    .tile:hover .go { color: var(--teal); }
-    @media (max-width: 860px) { .tiles { grid-template-columns: 1fr; } }
+    /* bands */
+    .band { padding: clamp(2rem, 5vw, 4rem) var(--pad); border-bottom: 2px solid var(--black); }
+    .band.navy { background: var(--navy); color: var(--white); --ink: var(--white); --bg: var(--navy); }
+    .band.saffron { background: var(--saffron); color: var(--black); --ink: var(--black); --bg: var(--saffron); }
+    .band.teal { background: var(--teal); color: var(--white); --ink: var(--white); --bg: var(--teal); }
+    .band.brick { background: var(--brick); color: var(--white); --ink: var(--white); --bg: var(--brick); }
+    .band.ash { background: var(--ash); color: var(--black); --ink: var(--black); }
+    .band.white { background: var(--white); color: var(--black); --ink: var(--black); }
+    .band.black { background: var(--black); color: var(--white); --ink: var(--white); }
+    .band-h { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+    .band-h h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -.02em; line-height: .95; font-size: clamp(2rem, 6vw, 4.6rem); }
+    .band-h .sub { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; opacity: .85; }
+    .band-h .num { font-family: var(--mono); font-size: .78rem; opacity: .7; }
+    .band.hide { display: none; }
 
-    /* what this is + status legend */
+    /* tiles */
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0; border: 2px solid var(--ink); background-image: repeating-linear-gradient(45deg, transparent 0 7px, color-mix(in srgb, var(--ink) 28%, transparent) 7px 8px); }
+    .tile { display: flex; flex-direction: column; padding: 1.1rem 1.1rem 1rem; border: 1px solid var(--ink); margin: -.5px; min-height: 15rem; position: relative; background: var(--bg); transition: background .12s, color .12s; }
+    .tile:hover, .tile:focus-visible { background: var(--ink); color: var(--band); }
+    .band.navy .tile:hover, .band.navy .tile:focus-visible { --band: var(--navy); }
+    .band.saffron .tile:hover, .band.saffron .tile:focus-visible { --band: var(--saffron); }
+    .band.teal .tile:hover, .band.teal .tile:focus-visible { --band: var(--teal); }
+    .band.brick .tile:hover, .band.brick .tile:focus-visible { --band: var(--brick); }
+    .band.ash .tile:hover, .band.ash .tile:focus-visible { --band: var(--ash); }
+    .band.white .tile:hover, .band.white .tile:focus-visible { --band: var(--white); }
+    .tile .meta { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .8rem; }
+    .tile .stt { display: inline-flex; align-items: center; gap: .4rem; }
+    .tile .stt i { width: 9px; height: 9px; display: inline-block; background: currentColor; }
+    .tile .stt.stable i { background: transparent; border: 2px solid currentColor; }
+    .tile .stt.proto i { transform: rotate(45deg); }
+    .tile h3 { font-family: var(--display); font-weight: 700; font-size: 1.55rem; line-height: 1.05; letter-spacing: -.02em; margin-bottom: .55rem; }
+    .tile p { font-size: .88rem; line-height: 1.45; opacity: .92; flex: 1; }
+    .tile .foot { margin-top: .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: flex-end; font-family: var(--mono); font-size: .68rem; }
+    .tile .url { opacity: .75; word-break: break-all; }
+    .tile .tags { display: flex; gap: .3rem; flex-wrap: wrap; justify-content: flex-end; }
+    .tile .tags span { border: 1px solid currentColor; padding: .05rem .35rem; white-space: nowrap; }
+    .tile.hide { display: none; }
+    .tile.big { grid-column: span 1; }
+    @media (min-width: 900px) { .tile.big { grid-column: span 2; } .tile.big h3 { font-size: 2.2rem; } }
+
+    /* start here */
+    .doors { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); }
+    .door { padding: 1.4rem 1.3rem 1.3rem; border-left: 2px solid var(--ink); min-height: 14rem; display: flex; flex-direction: column; transition: background .12s, color .12s; }
+    .door:first-child { border-left: none; }
+    .door:hover, .door:focus-visible { background: var(--black); color: var(--white); }
+    .door .dom { font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; margin-bottom: 1rem; }
+    .door h3 { font-family: var(--display); font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1; letter-spacing: -.02em; margin-bottom: .7rem; }
+    .door p { font-size: .92rem; flex: 1; }
+    .door .go { font-family: var(--mono); font-size: .78rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: .06em; }
+    @media (max-width: 860px) { .doors { grid-template-columns: 1fr; } .door { border-left: none; border-top: 2px solid var(--ink); } .door:first-child { border-top: none; } }
+
+    /* prose + legend */
     .two { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: start; }
-    .prose p { color: var(--ink-2); font-size: 1.02rem; margin-bottom: 1rem; line-height: 1.7; }
-    .prose p strong { color: var(--ink); font-weight: 600; }
-    .legend { border: 1px solid var(--line-2); border-radius: 10px; background: var(--white); overflow: hidden; }
-    .legend .row { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 1rem 1.2rem; border-top: 1px solid var(--line); }
-    .legend .row:first-child { border-top: none; }
-    .legend .row b { font-family: var(--mono); font-size: .8rem; display: inline-flex; align-items: center; gap: .45rem; }
-    .legend .row p { font-size: .9rem; color: var(--ink-2); }
-    .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
-    .dot.active { background: var(--teal); }
-    .dot.stable { background: transparent; border: 2px solid var(--teal); }
-    .dot.proto { background: var(--amber); }
-    .dot.retired { background: var(--line-2); }
-    @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
-
-    /* project index */
-    .toolbar { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.2rem; }
-    .toolbar input { font: inherit; font-size: .9rem; padding: .5rem .8rem; border: 1px solid var(--line-2); border-radius: 6px; background: var(--white); color: var(--ink); min-width: 220px; flex: 1 1 220px; }
-    .chips { display: flex; gap: .35rem; flex-wrap: wrap; }
-    .chip { font: 500 .8rem var(--sans); padding: .35rem .75rem; border-radius: 999px; border: 1px solid var(--line-2); background: transparent; color: var(--ink-2); cursor: pointer; }
-    .chip:hover { border-color: var(--ink); color: var(--ink); }
-    .chip.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-    .chip.s { font-family: var(--mono); font-size: .74rem; }
-    .count { font-family: var(--mono); font-size: .76rem; color: var(--ink-3); margin-left: auto; }
-    .group { margin-top: 2.2rem; }
-    .group-h { display: flex; align-items: baseline; gap: 1rem; margin-bottom: .4rem; }
-    .group-h h3 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; letter-spacing: -.01em; }
-    .group-h span { font-family: var(--mono); font-size: .74rem; color: var(--ink-3); }
-    .group-h::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
-    .list { border-top: 1px solid var(--line-2); }
-    .entry { display: grid; grid-template-columns: 3.2rem 1.25fr 2fr auto; gap: 1.2rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line); align-items: start; color: var(--ink); position: relative; }
-    .entry:hover { background: linear-gradient(90deg, transparent, var(--white) 8%, var(--white) 92%, transparent); color: var(--ink); }
-    .entry .no { font-family: var(--mono); font-size: .76rem; color: var(--ink-3); padding-top: .35rem; }
-    .entry h4 { font-family: var(--serif); font-weight: 500; font-size: 1.22rem; letter-spacing: -.01em; line-height: 1.2; }
-    .entry .st { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--mono); font-size: .72rem; color: var(--ink-2); margin-top: .35rem; }
-    .entry .url { display: block; font-family: var(--mono); font-size: .72rem; color: var(--ink-3); margin-top: .15rem; word-break: break-all; }
-    .entry p { font-size: .93rem; color: var(--ink-2); line-height: 1.55; }
-    .entry .tags { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .3rem; }
-    .tag { font-family: var(--mono); font-size: .68rem; padding: .1rem .45rem; border: 1px solid var(--line-2); border-radius: 4px; color: var(--ink-2); background: var(--white); }
-    .entry .arrow { font-family: var(--mono); font-size: .9rem; color: var(--ink-3); padding-top: .3rem; transition: transform .15s, color .15s; }
-    .entry:hover .arrow { color: var(--teal); transform: translateX(3px); }
-    .entry.hide { display: none; }
-    .group.hide { display: none; }
-    .empty { display: none; padding: 2rem 0; color: var(--ink-3); font-size: .95rem; }
-    .empty.show { display: block; }
-    @media (max-width: 800px) { .entry { grid-template-columns: 2.6rem 1fr; gap: .4rem 1rem; } .entry > div { grid-column: 2; min-width: 0; } .entry .arrow { display: none; } .entry .no { grid-row: 1 / span 2; } }
-    @media (max-width: 800px) { .group-h { display: block; } .group-h::after { display: none; } .group-h span { display: block; margin: .15rem 0 .5rem; } }
+    .prose p { font-size: 1.02rem; margin-bottom: .9rem; max-width: 60ch; }
+    .prose a { text-decoration: underline; text-underline-offset: 3px; }
+    .legend { border: 2px solid var(--ink); }
+    .legend div { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: .9rem 1rem; border-top: 2px solid var(--ink); }
+    .legend div:first-child { border-top: none; }
+    .legend b { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; display: inline-flex; align-items: center; gap: .5rem; }
+    .legend b i { width: 10px; height: 10px; display: inline-block; background: currentColor; }
+    .legend b.stable i { background: transparent; border: 2px solid currentColor; }
+    .legend b.proto i { transform: rotate(45deg); }
+    .legend b.retired i { opacity: .35; }
+    .legend p { font-size: .9rem; }
+    @media (max-width: 860px) { .two { grid-template-columns: 1fr; } .legend div { grid-template-columns: 1fr; gap: .3rem; } }
 
     /* retired */
-    .retired { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.4rem; }
-    .ret { border: 1px dashed var(--line-2); border-radius: 10px; padding: 1rem 1.1rem; background: transparent; }
-    .ret h4 { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; color: var(--ink-2); }
-    .ret p { font-size: .86rem; color: var(--ink-3); margin-top: .25rem; }
-    .ret .st { font-family: var(--mono); font-size: .7rem; color: var(--ink-3); display: inline-flex; align-items: center; gap: .4rem; margin-top: .5rem; }
-    .notice { background: var(--sand); border-radius: 10px; padding: 1.2rem 1.4rem; }
-    .notice p { font-size: .93rem; color: var(--ink-2); }
-    .notice p + p { margin-top: .7rem; }
-    .notice strong { color: var(--ink); }
-    @media (max-width: 800px) { .retired { grid-template-columns: 1fr; } }
+    .ret { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); margin-bottom: 1.4rem; }
+    .ret div { padding: 1.1rem; border-left: 2px solid var(--ink); }
+    .ret div:first-child { border-left: none; }
+    .ret h3 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; letter-spacing: -.02em; text-decoration: line-through; text-decoration-thickness: 2px; }
+    .ret p { font-size: .88rem; margin-top: .3rem; }
+    .notice p { font-size: .95rem; max-width: 70ch; margin-bottom: .7rem; }
+    .notice a { text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 860px) { .ret { grid-template-columns: 1fr; } .ret div { border-left: none; border-top: 2px solid var(--ink); } .ret div:first-child { border-top: none; } }
 
-    /* audience */
-    .aud { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-    .aud div { border-top: 2px solid var(--ink); padding-top: .9rem; }
-    .aud h4 { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; margin-bottom: .35rem; }
-    .aud p { font-size: .9rem; color: var(--ink-2); }
-    @media (max-width: 800px) { .aud { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 520px) { .aud { grid-template-columns: 1fr; } }
+    /* audience + about */
+    .aud { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 2px solid var(--ink); }
+    .aud div { padding: 1.1rem; border-left: 2px solid var(--ink); }
+    .aud div:first-child { border-left: none; }
+    .aud h3 { font-family: var(--display); font-weight: 700; font-size: 1.25rem; line-height: 1.1; margin-bottom: .4rem; }
+    .aud p { font-size: .88rem; }
+    @media (max-width: 860px) { .aud { grid-template-columns: 1fr 1fr; } .aud div:nth-child(3) { border-left: none; } .aud div:nth-child(n+3) { border-top: 2px solid var(--ink); } }
+    @media (max-width: 520px) { .aud { grid-template-columns: 1fr; } .aud div { border-left: none; border-top: 2px solid var(--ink); } .aud div:first-child { border-top: none; } }
+    .about { display: grid; grid-template-columns: 220px 1fr; gap: 2.2rem; align-items: start; }
+    .about img { width: 220px; height: 220px; object-fit: cover; filter: grayscale(1) contrast(1.1); border: 2px solid var(--white); }
+    .about h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -.02em; line-height: 1; margin-bottom: .8rem; }
+    .about p { max-width: 62ch; margin-bottom: .7rem; color: #d8d3c8; }
+    .about .links { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .8rem; }
+    .support { margin-top: 2.5rem; border: 2px solid var(--white); padding: 1.2rem 1.3rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 700px) { .about { grid-template-columns: 1fr; } .about img { width: 160px; height: 160px; } }
 
-    /* about */
-    .about { display: grid; grid-template-columns: 180px 1fr; gap: 2.2rem; align-items: start; }
-    .about img { width: 180px; height: 180px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line-2); filter: saturate(.9); }
-    .about h3 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; letter-spacing: -.01em; margin-bottom: .5rem; }
-    .about p { color: var(--ink-2); font-size: .98rem; margin-bottom: .7rem; max-width: 66ch; }
-    .links { display: flex; gap: 1.1rem; flex-wrap: wrap; font-family: var(--mono); font-size: .8rem; margin-top: .4rem; }
-    .support { margin-top: 2.5rem; border: 1px solid var(--line-2); border-radius: 10px; background: var(--white); padding: 1.4rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .support p { color: var(--ink-2); font-size: .95rem; }
-    @media (max-width: 700px) { .about { grid-template-columns: 1fr; } .about img { width: 140px; height: 140px; } }
-
-    footer { border-top: 1px solid var(--line); padding: 2.2rem 0 2.6rem; color: var(--ink-3); font-size: .84rem; }
-    footer .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    footer .fl { display: flex; gap: 1.2rem; flex-wrap: wrap; font-family: var(--mono); font-size: .76rem; }
-    footer .fl a { color: var(--ink-2); }
-    footer .note { font-size: .78rem; margin-top: .6rem; max-width: 60ch; }
-    footer .right { text-align: right; }
-    @media (max-width: 700px) { footer .wrap { grid-template-columns: 1fr; } footer .right { text-align: left; } }
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
+    footer { padding: 2rem var(--pad) 2.5rem; font-size: .84rem; color: var(--grey); display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    footer .fl { display: flex; gap: 1.2rem; flex-wrap: wrap; font-family: var(--mono); font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; }
+    footer .fl a { color: var(--white); }
+    footer .fl a:hover { color: var(--saffron); }
+    footer .note { margin-top: .7rem; max-width: 60ch; font-size: .78rem; }
+    footer .r { text-align: right; }
+    footer .r a { color: var(--white); text-decoration: underline; }
+    @media (max-width: 700px) { footer { grid-template-columns: 1fr; } footer .r { text-align: left; } }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
 
-<header class="top"><div class="wrap">
+<header class="top"><div class="in">
   <a class="brand" href="#top" aria-label="OpenStacks for Change, home">
-    <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1.5" y="1.5" width="23" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><rect x="8" y="8" width="4" height="4" fill="currentColor"/><rect x="14" y="8" width="4" height="4" fill="currentColor"/><rect x="8" y="14" width="4" height="4" fill="currentColor"/><rect x="14" y="14" width="4" height="4" fill="currentColor"/></svg>
-    OpenStacks for Change
+    <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1.5" y="1.5" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="4 3"/><rect x="8" y="8" width="4" height="4" fill="currentColor"/><rect x="14" y="8" width="4" height="4" fill="currentColor"/><rect x="8" y="14" width="4" height="4" fill="currentColor"/><rect x="14" y="14" width="4" height="4" fill="currentColor"/></svg>
+    OpenStacks
   </a>
-  <nav aria-label="Sections"><a href="#start">Start here</a><a href="#index">Index</a><a href="#status">Status</a><a href="#about">About</a><a class="gh" href="https://github.com/Varnasr/OpenStacks-for-Change">github ↗</a></nav>
+  <nav aria-label="Sections"><a href="#start">Start</a><a href="#labels">Labels</a><a href="#data">Repositories</a><a href="#about">About</a><a class="gh" href="https://github.com/Varnasr/OpenStacks-for-Change">GitHub ↗</a></nav>
 </div></header>
 
-<div class="hero" id="top"><div class="wrap">
-  <div>
-    <div class="kicker"><i></i> Index of repositories</div>
-    <h1>Open-source work on development research, data and policy.</h1>
-    <p class="lede">Twenty-six public repositories by Varna Sri Raman, most of them about India, grouped by what they are for: data explorers and trackers, teaching material, research toolkits, and a few utilities. Each one has a status label. The labels are defined further down and in the <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
-    <div class="cta"><a class="btn solid" href="#index">See the repositories</a><a class="btn" href="#start">Reader-facing sites</a></div>
-  </div>
-  <aside class="card-index" aria-label="Counts on this page">
-    <h2>On this page</h2>
-    <div class="stats">
-      <div class="stat"><b id="nProj">0</b><span>repositories</span></div>
-      <div class="stat"><b id="nLive">0</b><span>with a live site</span></div>
-      <div class="stat t"><b id="nActive">0</b><span>active</span></div>
-      <div class="stat"><b id="nStable">0</b><span>stable</span></div>
+<div class="hero" id="top">
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><rect class="o" x="6" y="6" width="108" height="108" fill="none" stroke="#f6f2ea" stroke-width="5" stroke-dasharray="16 10"/><rect x="38" y="38" width="18" height="18" fill="#f2a541"/><rect x="64" y="38" width="18" height="18" fill="#f6f2ea"/><rect x="38" y="64" width="18" height="18" fill="#f6f2ea"/><rect x="64" y="64" width="18" height="18" fill="#f2a541"/></svg>
+  <h1 class="word"><span class="s1">Open</span><span class="s2">Stacks</span><span class="s3">for Change</span></h1>
+  <div class="hero-grid">
+    <div>
+      <p>An index of open-source work on development research, data and policy. Twenty-six public repositories by Varna Sri Raman, most of them about India, grouped by what they are for. Each one has a status label; the labels are defined below and in the <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
+      <div class="cta"><a class="btn fill" href="#data">See the repositories</a><a class="btn" href="#start">Reader-facing sites</a></div>
     </div>
-    <div class="foot"><span>3 retired</span><span>MIT licence</span><span>Delhi</span></div>
-  </aside>
-</div></div>
+    <div class="counts" aria-label="Counts on this page">
+      <div><b id="nProj">0</b><span>repositories</span></div>
+      <div><b id="nLive">0</b><span>live sites</span></div>
+      <div class="hi"><b id="nActive">0</b><span>active</span></div>
+      <div><b id="nStable">0</b><span>stable</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="bar" id="bar">
+  <input type="search" id="q" placeholder="Search the repositories" aria-label="Search the repositories">
+  <div class="st" role="group" aria-label="Filter by status"><button class="on" data-s="">All</button><button data-s="active">Active</button><button data-s="stable">Stable</button><button data-s="proto">Prototype</button><span class="cnt" id="count"></span></div>
+</div>
 
 <!-- Start here -->
-<section id="start"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>01</div><div><h2>Start here</h2><p>Three sites built on the repositories below. If you want to use the work rather than read the code, go to these.</p></div></div>
-  <div class="tiles">
-    <a class="tile" href="https://www.impactmojo.in"><span class="go">↗</span><div class="dom">impactmojo.in</div><h3>Impact Mojo</h3><p>Teaching and practice platform for development economics and social research: courses, case studies and open teaching material.</p></a>
-    <a class="tile" href="https://www.janvayu.in"><span class="go">↗</span><div class="dom">janvayu.in</div><h3>JanVayu जनवायु</h3><p>A citizen-led national archive of India's air quality crisis: data, stories and sensor readings.</p></a>
-    <a class="tile" href="https://whatcounts.in/"><span class="go">↗</span><div class="dom">whatcounts.in</div><h3>The Measurement Trap</h3><p>Companion site to the forthcoming Routledge book on India's eight decades of counting itself.</p></a>
+<section class="band white" id="start">
+  <div class="band-h"><h2>Start here</h2><span class="sub">Three sites built on the repositories below. If you want to use the work rather than read the code, go to these.</span></div>
+  <div class="doors">
+    <a class="door" href="https://www.impactmojo.in"><span class="dom">impactmojo.in</span><h3>Impact Mojo</h3><p>Teaching and practice platform for development economics and social research: courses, case studies and open teaching material.</p><span class="go">Open ↗</span></a>
+    <a class="door" href="https://www.janvayu.in"><span class="dom">janvayu.in</span><h3>JanVayu जनवायु</h3><p>A citizen-led national archive of India's air quality crisis: data, stories and sensor readings.</p><span class="go">Open ↗</span></a>
+    <a class="door" href="https://whatcounts.in/"><span class="dom">whatcounts.in</span><h3>The Measurement Trap</h3><p>Companion site to the forthcoming Routledge book on India's eight decades of counting itself.</p><span class="go">Open ↗</span></a>
   </div>
-</div></section>
+</section>
 
 <!-- What this is -->
-<section id="status"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>02</div><div><h2>What this is</h2></div></div>
+<section class="band ash" id="labels">
+  <div class="band-h"><h2>What this is</h2><span class="sub">and what the labels mean</span></div>
   <div class="two">
     <div class="prose">
       <p><strong>This site is an index.</strong> It holds no code or data of its own; every link goes to a repository on GitHub or to a live site built from one.</p>
@@ -246,164 +232,148 @@
       <p>Every repository has one of the four labels on the right. The <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a> says what each label commits the maintainer to. Code is MIT-licensed unless a repository says otherwise; some written material is under Creative Commons. Each repository stands on its own, with its own README and no shared dependency.</p>
     </div>
     <div class="legend" role="list">
-      <div class="row" role="listitem"><b><i class="dot active"></i>Active</b><p>Being worked on. Issues and pull requests get a reply within days.</p></div>
-      <div class="row" role="listitem"><b><i class="dot stable"></i>Stable</b><p>Works as described and is not being developed. Bug reports are welcome and may wait weeks for a reply. New features are unlikely.</p></div>
-      <div class="row" role="listitem"><b><i class="dot proto"></i>Prototype</b><p>Unfinished, and shared as it is. Lives in the Experiments repository until it gets a repository of its own or is dropped.</p></div>
-      <div class="row" role="listitem"><b><i class="dot retired"></i>Retired</b><p>Archived on GitHub and read-only. Kept public so that links, citations and forks continue to work.</p></div>
+      <div role="listitem"><b><i></i>Active</b><p>Being worked on. Issues and pull requests get a reply within days.</p></div>
+      <div role="listitem"><b class="stable"><i></i>Stable</b><p>Works as described and is not being developed. Bug reports are welcome and may wait weeks for a reply. New features are unlikely.</p></div>
+      <div role="listitem"><b class="proto"><i></i>Prototype</b><p>Unfinished, and shared as it is. Lives in the Experiments repository until it gets a repository of its own or is dropped.</p></div>
+      <div role="listitem"><b class="retired"><i></i>Retired</b><p>Archived on GitHub and read-only. Kept public so that links, citations and forks continue to work.</p></div>
     </div>
   </div>
-</div></section>
+</section>
 
-<!-- Index -->
-<section id="index"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>03</div><div><h2>Repositories</h2><p>Grouped by purpose. Filter by group or status, or search.</p></div></div>
-  <div class="toolbar">
-    <input type="search" id="q" placeholder="Search the index" aria-label="Search the index">
-    <div class="chips" id="groups" role="group" aria-label="Filter by group"><button class="chip on" data-g="">All</button><button class="chip" data-g="data">Data and policy</button><button class="chip" data-g="teach">Teaching and practice</button><button class="chip" data-g="stack">Research toolkits</button><button class="chip" data-g="write">Writing and utilities</button></div>
-    <div class="chips" id="statuses" role="group" aria-label="Filter by status"><button class="chip s on" data-s="">any status</button><button class="chip s" data-s="active">active</button><button class="chip s" data-s="stable">stable</button><button class="chip s" data-s="proto">prototype</button></div>
-    <span class="count" id="count"></span>
+<!-- Data and policy -->
+<section class="band navy group" id="data" data-g="data">
+  <div class="band-h"><h2>Data and policy</h2><span class="sub">explorers, trackers and datasets</span></div>
+  <div class="tiles">
+    <a class="tile big" data-s="active" data-live="1" href="https://howindialives.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>How India Lives</h3><p>205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education and environment.</p><span class="foot"><span class="url">howindialives.impactmojo.in</span><span class="tags"><span>HTML</span><span>maps</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://github.com/Varnasr/PolicyDhara"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>PolicyDhara</h3><p>Auto-updating tracker of Indian government policy across development sectors. The maintained successor to PolicyStack.</p><span class="foot"><span class="url">github.com/Varnasr/PolicyDhara</span><span class="tags"><span>Astro</span><span>open data</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://forindia.netlify.app"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Bihar Electoral Dashboard</h3><p>Analysis of Bihar electoral roll anomalies: voter deletion patterns, demographic shifts and election data integrity.</p><span class="foot"><span class="url">forindia.netlify.app</span><span class="tags"><span>elections</span><span>data integrity</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://sdgtracker.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>SDG Progress Tracker</h3><p>India's progress on all 17 UN Sustainable Development Goals: scores, trends, radar charts and category breakdowns.</p><span class="foot"><span class="url">sdgtracker.impactmojo.in</span><span class="tags"><span>Chart.js</span><span>SDGs</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://devindicators.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>India Development Indicators</h3><p>Interactive dashboard across economic, health, education, infrastructure and environmental indicators, pulling live from the World Bank Open Data API.</p><span class="foot"><span class="url">devindicators.impactmojo.in</span><span class="tags"><span>World Bank API</span><span>Chart.js</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://climatetrace.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Climate TRACE India</h3><p>Satellite-verified, facility-level greenhouse-gas emissions for India: power, manufacturing, transport, fossil fuels, agriculture and waste, including the top-emitting coal and steel plants.</p><span class="foot"><span class="url">climatetrace.impactmojo.in</span><span class="tags"><span>Climate TRACE</span><span>emissions</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://industrygroups.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Industry Conglomerates Tracker</h3><p>Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999 to 2026, searchable and filterable, with government-support classification.</p><span class="foot"><span class="url">industrygroups.impactmojo.in</span><span class="tags"><span>open data</span><span>mapping</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://whogavetheorder.netlify.app"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>WhoGaveTheOrder.in</h3><p>Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map and an RTI register with a live reply-due clock.</p><span class="foot"><span class="url">whogavetheorder.netlify.app</span><span class="tags"><span>evidence archive</span><span>RTI</span></span></span></a>
+    <a class="tile" data-s="stable" data-live="1" href="https://someperspective.info"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>Some Perspective</h3><p>Unfunded empirical study of India's political economy, 2004 to 2026. Three constructed indices, the full dataset, replication code and a working paper.</p><span class="foot"><span class="url">someperspective.info</span><span class="tags"><span>data</span><span>replication</span></span></span></a>
+    <a class="tile big" data-s="active" data-live="1" href="https://varnasr.github.io/Hyderabad-Electoral-Analysis/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Hyderabad Electoral Analysis</h3><p>Five old-city seats, one winner since 1999, and still the poorest part of Hyderabad. Ward-level census data shows the gap is in work and income rather than services or slums: water and drainage are at full parity, but a third fewer people have jobs. The only gaps that closed since 2011 were closed by national schemes. Includes a run of the standard causal test, which cannot answer either way from public data.</p><span class="foot"><span class="url">varnasr.github.io/Hyderabad-Electoral-Analysis</span><span class="tags"><span>elections</span><span>census</span><span>data</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/BiharParichay-Project"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>Bihar Parichay</h3><p>Interactive bilingual resource on Bihar: society, economy, caste, migration, climate, culture. A single offline-capable HTML file.</p><span class="foot"><span class="url">github.com/Varnasr/BiharParichay-Project</span><span class="tags"><span>D3</span><span>Leaflet</span><span>bilingual</span></span></span></a>
   </div>
+</section>
 
-  <div class="group" data-g="data">
-    <div class="group-h"><h3>Data and policy</h3><span>explorers, trackers and datasets</span></div>
-    <div class="list">
-      <a class="entry" data-s="active" data-live="1" href="https://github.com/Varnasr/PolicyDhara"><span class="no"></span><div><h4>PolicyDhara</h4><span class="st"><i class="dot active"></i>active</span><span class="url">github.com/Varnasr/PolicyDhara</span></div><div><p>Auto-updating tracker of Indian government policy across development sectors. The maintained successor to PolicyStack.</p><div class="tags"><span class="tag">Astro</span><span class="tag">open data</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://howindialives.impactmojo.in"><span class="no"></span><div><h4>How India Lives</h4><span class="st"><i class="dot active"></i>active</span><span class="url">howindialives.impactmojo.in</span></div><div><p>205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education and environment.</p><div class="tags"><span class="tag">HTML</span><span class="tag">maps</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://forindia.netlify.app"><span class="no"></span><div><h4>Bihar Electoral Dashboard</h4><span class="st"><i class="dot active"></i>active</span><span class="url">forindia.netlify.app</span></div><div><p>Analysis of Bihar electoral roll anomalies: voter deletion patterns, demographic shifts and election data integrity.</p><div class="tags"><span class="tag">elections</span><span class="tag">data integrity</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://sdgtracker.impactmojo.in"><span class="no"></span><div><h4>SDG Progress Tracker</h4><span class="st"><i class="dot active"></i>active</span><span class="url">sdgtracker.impactmojo.in</span></div><div><p>India's progress on all 17 UN Sustainable Development Goals: scores, trends, radar charts and category breakdowns.</p><div class="tags"><span class="tag">Chart.js</span><span class="tag">SDGs</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://devindicators.impactmojo.in"><span class="no"></span><div><h4>India Development Indicators</h4><span class="st"><i class="dot active"></i>active</span><span class="url">devindicators.impactmojo.in</span></div><div><p>Interactive dashboard across economic, health, education, infrastructure and environmental indicators, pulling live from the World Bank Open Data API.</p><div class="tags"><span class="tag">World Bank API</span><span class="tag">Chart.js</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://climatetrace.impactmojo.in"><span class="no"></span><div><h4>Climate TRACE India</h4><span class="st"><i class="dot active"></i>active</span><span class="url">climatetrace.impactmojo.in</span></div><div><p>Satellite-verified, facility-level greenhouse-gas emissions for India: power, manufacturing, transport, fossil fuels, agriculture and waste, including the top-emitting coal and steel plants.</p><div class="tags"><span class="tag">Climate TRACE</span><span class="tag">emissions</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://industrygroups.impactmojo.in"><span class="no"></span><div><h4>Industry Conglomerates Tracker</h4><span class="st"><i class="dot active"></i>active</span><span class="url">industrygroups.impactmojo.in</span></div><div><p>Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999 to 2026, searchable and filterable, with government-support classification.</p><div class="tags"><span class="tag">open data</span><span class="tag">mapping</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://whogavetheorder.netlify.app"><span class="no"></span><div><h4>WhoGaveTheOrder.in</h4><span class="st"><i class="dot active"></i>active</span><span class="url">whogavetheorder.netlify.app</span></div><div><p>Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map and an RTI register with a live reply-due clock.</p><div class="tags"><span class="tag">evidence archive</span><span class="tag">RTI</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" data-live="1" href="https://someperspective.info"><span class="no"></span><div><h4>Some Perspective</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">someperspective.info</span></div><div><p>Unfunded empirical study of India's political economy, 2004 to 2026. Three constructed indices, the full dataset, replication code and a working paper.</p><div class="tags"><span class="tag">data</span><span class="tag">replication</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://varnasr.github.io/Hyderabad-Electoral-Analysis/"><span class="no"></span><div><h4>Hyderabad Electoral Analysis</h4><span class="st"><i class="dot active"></i>active</span><span class="url">varnasr.github.io/Hyderabad-Electoral-Analysis</span></div><div><p>Five old-city seats, one winner since 1999, and still the poorest part of Hyderabad. Ward-level census data shows the gap is in work and income rather than services or slums: water and drainage are at full parity, but a third fewer people have jobs. The only gaps that closed since 2011 were closed by national schemes. Includes a run of the standard causal test, which cannot answer either way from public data.</p><div class="tags"><span class="tag">elections</span><span class="tag">census</span><span class="tag">data</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/BiharParichay-Project"><span class="no"></span><div><h4>Bihar Parichay</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/BiharParichay-Project</span></div><div><p>Interactive bilingual resource on Bihar: society, economy, caste, migration, climate, culture. A single offline-capable HTML file.</p><div class="tags"><span class="tag">D3</span><span class="tag">Leaflet</span><span class="tag">bilingual</span></div></div><span class="arrow">→</span></a>
-    </div>
+<!-- Teaching -->
+<section class="band saffron group" id="teach" data-g="teach">
+  <div class="band-h"><h2>Teaching and practice</h2><span class="sub">case studies, libraries, practice data</span></div>
+  <div class="tiles">
+    <a class="tile" data-s="active" href="https://github.com/Varnasr/dev-case-studies"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Dev Case Studies</h3><p>200 real development case studies from 117 countries, searchable, filterable and fully cited.</p><span class="foot"><span class="url">github.com/Varnasr/dev-case-studies</span><span class="tags"><span>JavaScript</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://varnasr.github.io/development-discourses/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Development Discourses</h3><p>A curated open-access library of 500+ research papers, books and grey literature for practitioners in South Asia.</p><span class="foot"><span class="url">varnasr.github.io/development-discourses</span><span class="tags"><span>JavaScript</span><span>open access</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/devdata-practice"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevData Practice</h3><p>Realistic practice datasets for development economics: 10 generators producing 350k+ rows for teaching and training.</p><span class="foot"><span class="url">github.com/Varnasr/devdata-practice</span><span class="tags"><span>Python</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/deveconomics-toolkit"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevEconomics Toolkit</h3><p>11 interactive Shiny apps for impact evaluation, poverty analysis, program design and data exploration.</p><span class="foot"><span class="url">github.com/Varnasr/deveconomics-toolkit</span><span class="tags"><span>R</span><span>Shiny</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://www.impactmojo.in/impactlex/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>ImpactLex</h3><p>Development-sector glossary and companion to Impact Mojo: 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae and cross-references to where each term is taught. Offline-capable PWA.</p><span class="foot"><span class="url">impactmojo.in/impactlex</span><span class="tags"><span>glossary</span><span>PWA</span></span></span></a>
   </div>
+</section>
 
-  <div class="group" data-g="teach">
-    <div class="group-h"><h3>Teaching and practice</h3><span>case studies, libraries, practice data</span></div>
-    <div class="list">
-      <a class="entry" data-s="active" href="https://github.com/Varnasr/dev-case-studies"><span class="no"></span><div><h4>Dev Case Studies</h4><span class="st"><i class="dot active"></i>active</span><span class="url">github.com/Varnasr/dev-case-studies</span></div><div><p>200 real development case studies from 117 countries, searchable, filterable and fully cited.</p><div class="tags"><span class="tag">JavaScript</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://varnasr.github.io/development-discourses/"><span class="no"></span><div><h4>Development Discourses</h4><span class="st"><i class="dot active"></i>active</span><span class="url">varnasr.github.io/development-discourses</span></div><div><p>A curated open-access library of 500+ research papers, books and grey literature for practitioners in South Asia.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">open access</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/devdata-practice"><span class="no"></span><div><h4>DevData Practice</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/devdata-practice</span></div><div><p>Realistic practice datasets for development economics: 10 generators producing 350k+ rows for teaching and training.</p><div class="tags"><span class="tag">Python</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/deveconomics-toolkit"><span class="no"></span><div><h4>DevEconomics Toolkit</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/deveconomics-toolkit</span></div><div><p>11 interactive Shiny apps for impact evaluation, poverty analysis, program design and data exploration.</p><div class="tags"><span class="tag">R</span><span class="tag">Shiny</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://www.impactmojo.in/impactlex/"><span class="no"></span><div><h4>ImpactLex</h4><span class="st"><i class="dot active"></i>active</span><span class="url">impactmojo.in/impactlex</span></div><div><p>Development-sector glossary and companion to Impact Mojo: 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae and cross-references to where each term is taught. Offline-capable PWA.</p><div class="tags"><span class="tag">glossary</span><span class="tag">PWA</span></div></div><span class="arrow">→</span></a>
-    </div>
+<!-- Toolkits -->
+<section class="band teal group" id="stacks" data-g="stack">
+  <div class="band-h"><h2>Research toolkits</h2><span class="sub">the five stacks</span></div>
+  <div class="tiles">
+    <a class="tile big" data-s="stable" href="https://github.com/Varnasr/InsightStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>InsightStack</h3><p>The largest of the set. MEL calculators, visual frameworks, research documentation templates and a full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis). Has a DOI: 10.5281/zenodo.15245182.</p><span class="foot"><span class="url">github.com/Varnasr/InsightStack</span><span class="tags"><span>Stata</span><span>Python</span><span>R</span><span>Observable</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/FieldStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>FieldStack</h3><p>The applied fieldwork lifecycle: survey design, sample size, sampling weights, complex survey analysis, cost-effectiveness, qualitative coding and batch Quarto reporting.</p><span class="foot"><span class="url">github.com/Varnasr/FieldStack</span><span class="tags"><span>R</span><span>Quarto</span><span>KoboToolbox</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/EquityStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>EquityStack</h3><p>Development data workflows across health, gender, education and climate equity. An impact evaluation module and a data-cleaning pipeline with automatic logging.</p><span class="foot"><span class="url">github.com/Varnasr/EquityStack</span><span class="tags"><span>Python</span><span>Jupyter</span><span>pandas</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/PolicyStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>PolicyStack</h3><p>South Asia policy tracker: 15 flagship schemes, 4 years of budget data and performance indicators. Superseded for new work by PolicyDhara.</p><span class="foot"><span class="url">github.com/Varnasr/PolicyStack</span><span class="tags"><span>Python</span><span>CSV</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/SignalStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>SignalStack</h3><p>Companion archive for the Research Rundown newsletter: issues, featured tools, method spotlights and curated resources.</p><span class="foot"><span class="url">github.com/Varnasr/SignalStack</span><span class="tags"><span>Markdown</span><span>Substack</span></span></span></a>
   </div>
+</section>
 
-  <div class="group" data-g="stack">
-    <div class="group-h"><h3>Research toolkits</h3><span>the five stacks</span></div>
-    <div class="list">
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/InsightStack"><span class="no"></span><div><h4>InsightStack</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/InsightStack</span></div><div><p>The largest of the set. MEL calculators, visual frameworks, research documentation templates and a full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis). Has a DOI: 10.5281/zenodo.15245182.</p><div class="tags"><span class="tag">Stata</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">Observable</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/FieldStack"><span class="no"></span><div><h4>FieldStack</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/FieldStack</span></div><div><p>The applied fieldwork lifecycle: survey design, sample size, sampling weights, complex survey analysis, cost-effectiveness, qualitative coding and batch Quarto reporting.</p><div class="tags"><span class="tag">R</span><span class="tag">Quarto</span><span class="tag">KoboToolbox</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/EquityStack"><span class="no"></span><div><h4>EquityStack</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/EquityStack</span></div><div><p>Development data workflows across health, gender, education and climate equity. An impact evaluation module and a data-cleaning pipeline with automatic logging.</p><div class="tags"><span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">pandas</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/PolicyStack"><span class="no"></span><div><h4>PolicyStack</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/PolicyStack</span></div><div><p>South Asia policy tracker: 15 flagship schemes, 4 years of budget data and performance indicators. Superseded for new work by PolicyDhara.</p><div class="tags"><span class="tag">Python</span><span class="tag">CSV</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/SignalStack"><span class="no"></span><div><h4>SignalStack</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/SignalStack</span></div><div><p>Companion archive for the Research Rundown newsletter: issues, featured tools, method spotlights and curated resources.</p><div class="tags"><span class="tag">Markdown</span><span class="tag">Substack</span></div></div><span class="arrow">→</span></a>
-    </div>
+<!-- Writing and utilities -->
+<section class="band brick group" id="writing" data-g="write">
+  <div class="band-h"><h2>Writing and utilities</h2><span class="sub">books, fiction, small tools</span></div>
+  <div class="tiles">
+    <a class="tile" data-s="active" href="https://github.com/Varnasr/the-measurement-trap"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>The Measurement Trap</h3><p>Companion site for the forthcoming Routledge book on India's quest for social progress through eight decades of measurement.</p><span class="foot"><span class="url">github.com/Varnasr/the-measurement-trap</span><span class="tags"><span>HTML</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://postheroic.world"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>The Very Last Superhero</h3><p>An illustrated speculative fiction novel set in a climate-collapsed India, following a 14-year-old girl through AI, memory and resistance.</p><span class="foot"><span class="url">postheroic.world</span><span class="tags"><span>Astro</span><span>fiction</span></span></span></a>
+    <a class="tile" data-s="stable" href="https://github.com/Varnasr/CandidateDossier"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>CandidateDossier</h3><p>CSV to LaTeX to PDF generator for uniform, privacy-masked candidate dossiers. Runs via Netlify Functions or Overleaf.</p><span class="foot"><span class="url">github.com/Varnasr/CandidateDossier</span><span class="tags"><span>LaTeX</span><span>Netlify</span></span></span></a>
+    <a class="tile" data-s="proto" href="https://github.com/Varnasr/Experiments/tree/main/court-translator"><span class="meta"><span class="stt proto"><i></i>prototype</span><span class="no"></span></span><h3>Court Petition Translator</h3><p>Hindi to English translation for Supreme Court and High Court petitions. Sarvam AI handles translation; Llama 3.3 corrects legal terminology.</p><span class="foot"><span class="url">github.com/Varnasr/Experiments/tree/main/court-translator</span><span class="tags"><span>Sarvam AI</span><span>Groq</span></span></span></a>
+    <a class="tile big" data-s="active" data-live="1" href="https://varnasr-experiments.netlify.app/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Experiments</h3><p>Twenty small tools that run in the browser: causal-inference estimators, poverty and inequality measures, survey checks, legal calculators and others, each with a note on how it was checked. New ideas start here and move to a repository of their own if they last.</p><span class="foot"><span class="url">varnasr-experiments.netlify.app · github.com/Varnasr/Experiments</span><span class="tags"><span>HTML</span><span>no dependencies</span></span></span></a>
   </div>
+</section>
 
-  <div class="group" data-g="write">
-    <div class="group-h"><h3>Writing and utilities</h3><span>books, fiction, small tools</span></div>
-    <div class="list">
-      <a class="entry" data-s="active" href="https://github.com/Varnasr/the-measurement-trap"><span class="no"></span><div><h4>The Measurement Trap</h4><span class="st"><i class="dot active"></i>active</span><span class="url">github.com/Varnasr/the-measurement-trap</span></div><div><p>Companion site for the forthcoming Routledge book on India's quest for social progress through eight decades of measurement.</p><div class="tags"><span class="tag">HTML</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://postheroic.world"><span class="no"></span><div><h4>The Very Last Superhero</h4><span class="st"><i class="dot active"></i>active</span><span class="url">postheroic.world</span></div><div><p>An illustrated speculative fiction novel set in a climate-collapsed India, following a 14-year-old girl through AI, memory and resistance.</p><div class="tags"><span class="tag">Astro</span><span class="tag">fiction</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="stable" href="https://github.com/Varnasr/CandidateDossier"><span class="no"></span><div><h4>CandidateDossier</h4><span class="st"><i class="dot stable"></i>stable</span><span class="url">github.com/Varnasr/CandidateDossier</span></div><div><p>CSV to LaTeX to PDF generator for uniform, privacy-masked candidate dossiers. Runs via Netlify Functions or Overleaf.</p><div class="tags"><span class="tag">LaTeX</span><span class="tag">Netlify</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="proto" href="https://github.com/Varnasr/Experiments/tree/main/court-translator"><span class="no"></span><div><h4>Court Petition Translator</h4><span class="st"><i class="dot proto"></i>prototype</span><span class="url">github.com/Varnasr/Experiments/tree/main/court-translator</span></div><div><p>Hindi to English translation for Supreme Court and High Court petitions. Sarvam AI handles translation; Llama 3.3 corrects legal terminology.</p><div class="tags"><span class="tag">Sarvam AI</span><span class="tag">Groq</span></div></div><span class="arrow">→</span></a>
-      <a class="entry" data-s="active" data-live="1" href="https://varnasr-experiments.netlify.app/"><span class="no"></span><div><h4>Experiments</h4><span class="st"><i class="dot active"></i>active</span><span class="url">varnasr-experiments.netlify.app · github.com/Varnasr/Experiments</span></div><div><p>Twenty small tools that run in the browser: causal-inference estimators, poverty and inequality measures, survey checks, legal calculators and others, each with a note on how it was checked. New ideas start here and move to a repository of their own if they last.</p><div class="tags"><span class="tag">HTML</span><span class="tag">no dependencies</span></div></div><span class="arrow">→</span></a>
-    </div>
-  </div>
-  <p class="empty" id="empty">Nothing in the index matches that. Clear the search or the filters.</p>
-</div></section>
+<p class="band black" id="empty" hidden style="font-family:var(--mono);font-size:.9rem">Nothing matches that. Clear the search or the status filter.</p>
 
 <!-- Retired -->
-<section id="retired"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>04</div><div><h2>Retired</h2><p>Archived and read-only. The code is still public and can be forked or cited.</p></div></div>
-  <div class="retired">
-    <div class="ret"><h4>RootStack</h4><p>SQLite and PostgreSQL schemas for the shared data layer.</p><span class="st"><i class="dot retired"></i>retired</span></div>
-    <div class="ret"><h4>BridgeStack</h4><p>FastAPI backend serving RootStack to frontends.</p><span class="st"><i class="dot retired"></i>retired</span></div>
-    <div class="ret"><h4>ViewStack</h4><p>React dashboard for exploring the data.</p><span class="st"><i class="dot retired"></i>retired</span></div>
+<section class="band ash" id="retired">
+  <div class="band-h"><h2>Retired</h2><span class="sub">Archived and read-only. The code is still public and can be forked or cited.</span></div>
+  <div class="ret">
+    <div><h3>RootStack</h3><p>SQLite and PostgreSQL schemas for the shared data layer.</p></div>
+    <div><h3>BridgeStack</h3><p>FastAPI backend serving RootStack to frontends.</p></div>
+    <div><h3>ViewStack</h3><p>React dashboard for exploring the data.</p></div>
   </div>
   <div class="notice">
     <p>These three were a database, an API and a dashboard, built as one pipeline. It cost the most to maintain, was used the least, and the research toolkits never depended on it.</p>
     <p><strong>ImpactLex is not on this list.</strong> Its old repository is archived, but the project graduated into <a href="https://www.impactmojo.in/impactlex/">Impact Mojo</a> rather than winding down; it is listed under Teaching and practice above. An archived repository and a finished project are not the same thing.</p>
     <p>Four further stacks (ClimateStack, EduStack, SocialStack and InfraStack) sat on a published roadmap for a year without a line of code written. That roadmap has been withdrawn rather than left standing as a promise to readers. The needs behind it are better served by How India Lives, PolicyDhara and JanVayu.</p>
   </div>
-</div></section>
+</section>
 
 <!-- Who it is for -->
-<section id="for"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>05</div><div><h2>Who this is for</h2><p>People working on health, education, gender, climate and governance, mostly in India and South Asia.</p></div></div>
+<section class="band white" id="for">
+  <div class="band-h"><h2>Who this is for</h2><span class="sub">People working on health, education, gender, climate and governance, mostly in India and South Asia.</span></div>
   <div class="aud">
-    <div><h4>Practitioners</h4><p>Analysis tools for monitoring and evaluation, impact assessment and programme design.</p></div>
-    <div><h4>Researchers and evaluators</h4><p>Scripts, sample data and evaluation frameworks from fieldwork in South Asia.</p></div>
-    <div><h4>Analysts in NGOs</h4><p>Python, R and Stata templates for the data formats the sector uses.</p></div>
-    <div><h4>Students and teachers</h4><p>Practice datasets, notebooks, case studies and worked examples for development economics and public policy courses.</p></div>
+    <div><h3>Practitioners</h3><p>Analysis tools for monitoring and evaluation, impact assessment and programme design.</p></div>
+    <div><h3>Researchers and evaluators</h3><p>Scripts, sample data and evaluation frameworks from fieldwork in South Asia.</p></div>
+    <div><h3>Analysts in NGOs</h3><p>Python, R and Stata templates for the data formats the sector uses.</p></div>
+    <div><h3>Students and teachers</h3><p>Practice datasets, notebooks, case studies and worked examples for development economics and public policy courses.</p></div>
   </div>
-</div></section>
+</section>
 
 <!-- About -->
-<section id="about"><div class="wrap">
-  <div class="sec-head"><div class="n"><i></i>06</div><div><h2>About</h2></div></div>
+<section class="band black" id="about">
   <div class="about">
     <img src="photo.jpg" alt="Dr. Varna Sri Raman">
     <div>
-      <h3>Dr. Varna Sri Raman</h3>
+      <h2>Dr. Varna Sri Raman</h2>
       <p>Development economist, social researcher and licensed social justice worker. Twenty years of work on public health, education, gender and climate in India and South Asia.</p>
       <p>Has led programme design, evaluation and research for Oxfam, UNICEF, the Gates Foundation, PLAN India and BBC Media Action. Founder of StoryWell Books.</p>
-      <div class="links"><a href="https://github.com/Varnasr">github ↗</a><a href="https://x.com/varna">x.com ↗</a><a href="https://on-web.link/varna">web ↗</a></div>
+      <div class="links"><a class="btn" href="https://github.com/Varnasr">GitHub ↗</a><a class="btn" href="https://x.com/varna">X ↗</a><a class="btn" href="https://on-web.link/varna">Web ↗</a></div>
     </div>
   </div>
-  <div class="support"><p>If this work is useful to you, you can support it by UPI.</p><a class="btn teal" href="support.html">Support via UPI</a></div>
-</div></section>
+  <div class="support"><p>If this work is useful to you, you can support it by UPI.</p><a class="btn fill" href="support.html">Support via UPI</a></div>
+</section>
 
-<footer><div class="wrap">
+<footer>
   <div>
     <div class="fl"><a href="https://github.com/Varnasr/OpenStacks-for-Change">GitHub</a><a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">Maintenance policy</a><a href="https://github.com/Varnasr/.github/blob/main/CONTRIBUTING.md">Contributing</a><a href="https://github.com/Varnasr/.github/blob/main/CODE_OF_CONDUCT.md">Code of conduct</a><a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/CITATION.cff">Cite this work</a></div>
     <p class="note">AI tools were used for documentation and code. The decisions, designs, datasets and selection of projects are the author's.</p>
   </div>
-  <div class="right"><p>MIT License. Built by <a href="https://github.com/Varnasr">Varna Sri Raman</a> in Delhi, India.</p></div>
-</div></footer>
+  <div class="r"><p>MIT License. Built by <a href="https://github.com/Varnasr">Varna Sri Raman</a> in Delhi, India.</p></div>
+</footer>
 
 <script>
 (function () {
   'use strict';
-  var entries = Array.prototype.slice.call(document.querySelectorAll('.entry'));
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('.tile'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.group'));
-  // numbering, catalogue style
-  entries.forEach(function (e, i) { e.querySelector('.no').textContent = String(i + 1).padStart(3, '0'); });
-  // counts
-  var by = function (s) { return entries.filter(function (e) { return e.dataset.s === s; }).length; };
-  document.getElementById('nProj').textContent = entries.length;
-  document.getElementById('nLive').textContent = entries.filter(function (e) { return e.dataset.live === '1'; }).length;
+  tiles.forEach(function (t, i) { t.querySelector('.no').textContent = String(i + 1).padStart(3, '0'); });
+  var by = function (s) { return tiles.filter(function (t) { return t.dataset.s === s; }).length; };
+  document.getElementById('nProj').textContent = tiles.length;
+  document.getElementById('nLive').textContent = tiles.filter(function (t) { return t.dataset.live === '1'; }).length;
   document.getElementById('nActive').textContent = by('active');
   document.getElementById('nStable').textContent = by('stable');
-  // filters
-  var g = '', s = '', q = '';
-  var qEl = document.getElementById('q'), count = document.getElementById('count'), empty = document.getElementById('empty');
+  var s = '', q = '', qEl = document.getElementById('q'), count = document.getElementById('count'), empty = document.getElementById('empty');
   function apply() {
     var shown = 0;
-    groups.forEach(function (grp) {
+    groups.forEach(function (g) {
       var any = false;
-      grp.querySelectorAll('.entry').forEach(function (e) {
-        var ok = (!g || grp.dataset.g === g) && (!s || e.dataset.s === s) && (!q || e.textContent.toLowerCase().indexOf(q) >= 0);
-        e.classList.toggle('hide', !ok); if (ok) { any = true; shown++; }
+      g.querySelectorAll('.tile').forEach(function (t) {
+        var ok = (!s || t.dataset.s === s) && (!q || t.textContent.toLowerCase().indexOf(q) >= 0);
+        t.classList.toggle('hide', !ok); if (ok) { any = true; shown++; }
       });
-      grp.classList.toggle('hide', !any);
+      g.classList.toggle('hide', !any);
     });
-    count.textContent = shown === entries.length ? entries.length + ' projects' : shown + ' of ' + entries.length;
-    empty.classList.toggle('show', shown === 0);
+    count.textContent = shown === tiles.length ? tiles.length + ' repositories' : shown + ' of ' + tiles.length;
+    empty.hidden = shown !== 0;
   }
-  function chips(id, key, set) {
-    var box = document.getElementById(id);
-    box.addEventListener('click', function (ev) {
-      var b = ev.target.closest('.chip'); if (!b) return;
-      box.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('on', c === b); });
-      set(b.dataset[key]); apply();
-    });
-  }
-  chips('groups', 'g', function (v) { g = v; });
-  chips('statuses', 's', function (v) { s = v; });
+  document.querySelector('.bar .st').addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return;
+    document.querySelectorAll('.bar .st button').forEach(function (c) { c.classList.toggle('on', c === b); });
+    s = b.dataset.s; apply();
+  });
   qEl.addEventListener('input', function () { q = qEl.value.trim().toLowerCase(); apply(); });
   apply();
 })();
