@@ -69,11 +69,11 @@ Reusable scripts, notebooks, and templates for people doing MEL and applied rese
 
 | Stack | What it is | Languages |
 |---|---|---|
-| **[InsightStack](https://github.com/Varnasr/InsightStack)** | The largest of the set. MEL calculators, visual frameworks, research documentation templates, and a full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis). | Stata, Python, R, Observable |
-| **[FieldStack](https://github.com/Varnasr/FieldStack)** | Applied fieldwork lifecycle — survey design, sample size, sampling weights, complex survey analysis, cost-effectiveness, qualitative coding, batch Quarto reporting. | R, Quarto, Stata |
-| **[EquityStack](https://github.com/Varnasr/EquityStack)** | Development data workflows across health, gender, education, and climate equity. Impact evaluation module and a logged data-cleaning pipeline. | Python, Jupyter |
+| **[InsightStack](https://github.com/Varnasr/InsightStack)** | The largest of the set. MEL calculators that run in the browser, loaders that open DHS and PLFS microdata as the files actually arrive, a tested econometrics module, data validation and labelling from one dictionary, annotated research briefs, and templates for logframes, indicators and MEL frameworks. | Stata, Python, R, SPSS |
+| **[FieldStack](https://github.com/Varnasr/FieldStack)** | Field operations while a survey is being collected: high-frequency checks, enumerator monitoring, back checks, GPS checks, an ODK reader, and the evening report that runs them. Then the analysis after: sample size, weights, design-based estimates. | R |
+| **[EquityStack](https://github.com/Varnasr/EquityStack)** | Equity from a development economics perspective. Who is carrying the bad outcome and how steeply: the Gini and Theil family, the concentration index with its corrections, within/between decomposition, Blinder-Oaxaca, benefit incidence, and design-based standard errors for clustered surveys. | Python |
 | **[PolicyStack](https://github.com/Varnasr/PolicyStack)** | South Asia policy tracker — 15 flagship schemes, 4 years of budget data, performance indicators. Superseded for new work by [PolicyDhara](https://github.com/Varnasr/PolicyDhara). | Python, CSV |
-| **[SignalStack](https://github.com/Varnasr/SignalStack)** | Companion archive for the [Research Rundown](https://researchrundown.substack.com) newsletter — issues, featured tools, method spotlights. | Markdown |
+| **[SignalStack](https://github.com/Varnasr/SignalStack)** | Companion archive for the [Research Rundown](https://researchrundown.substack.com) newsletter: issues, featured tools, method spotlights. Beside the stacks rather than one of them. | Markdown |
 
 InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo.15245182).
 
