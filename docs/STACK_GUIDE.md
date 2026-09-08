@@ -9,16 +9,16 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 ## By task
 
 ### I need to analyse survey data
-**[FieldStack](https://github.com/Varnasr/FieldStack)** — R notebooks for sampling, sample size, sampling weights, complex survey analysis, regression, cost-effectiveness, and qualitative coding. Works with KoboToolbox and ODK exports.
+**[FieldStack](https://varnasr.github.io/FieldStack/)** ([source](https://github.com/Varnasr/FieldStack)): R for the checks a survey team runs while data is being collected, and for sample size, weights and design-based estimates after. Reads ODK, KoBo and SurveyCTO exports.
 
 ### I need to clean and transform development data
-**[EquityStack](https://github.com/Varnasr/EquityStack)** — Python/Jupyter templates for cleaning, modelling, and visualisation across health, gender, education, and climate datasets. Includes a data-cleaning pipeline with automatic logging.
+**[EquityStack](https://varnasr.github.io/EquityStack/)** ([source](https://github.com/Varnasr/EquityStack)): inequality measurement and design-based survey estimation in Python, plus cleaning, modelling and visualisation modules.
 
 ### I need MEL tools, frameworks, or calculators
-**[InsightStack](https://github.com/Varnasr/InsightStack)** — Monitoring, evaluation, and learning toolkits: visual frameworks, calculators, Observable notebooks, and research documentation templates.
+**[InsightStack](https://varnasr.github.io/InsightStack/)** ([source](https://github.com/Varnasr/InsightStack)): MEL calculators, loaders for DHS and PLFS microdata, validation and labelling tools, and templates for evaluation documents.
 
 ### I need to run an impact evaluation
-**[InsightStack](https://github.com/Varnasr/InsightStack)** for the full econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R. **[EquityStack](https://github.com/Varnasr/EquityStack)** has a lighter Python-only version (DiD, PSM, RDD).
+**[InsightStack](https://varnasr.github.io/InsightStack/)** for the econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R. **[EquityStack](https://varnasr.github.io/EquityStack/)** has a Python-only version (DiD, PSM, RDD) and the survey estimation the intervals depend on.
 
 ### I need to track government policies and schemes
 **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** for current work — it auto-updates and is actively developed. **[PolicyStack](https://github.com/Varnasr/PolicyStack)** holds the original static dataset: 15 flagship schemes with four years of budget data.
@@ -33,7 +33,7 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 **[How India Lives](https://github.com/Varnasr/how-india-lives)** — 205 state-level choropleth maps across demography, health, gender, economy, education, and environment.
 
 ### I need to publish or archive research content
-**[SignalStack](https://github.com/Varnasr/SignalStack)** — Markdown archive for the Research Rundown newsletter: method spotlights, curated resources, tool reviews.
+**[SignalStack](https://varnasr.github.io/SignalStack/)** ([source](https://github.com/Varnasr/SignalStack)): the Research Rundown newsletter archived in full, its recurring sections compiled, and four scripts from its methods notes.
 
 ---
 
