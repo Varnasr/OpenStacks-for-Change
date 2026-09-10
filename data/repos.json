@@ -1,0 +1,159 @@
+{
+ "fetched": "2026-09-10",
+ "repos": {
+  "Varnasr/BiharParichay-Project": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 2,
+   "pushed_at": "2026-04-02",
+   "stars": 1
+  },
+  "Varnasr/CandidateDossier": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 2,
+   "pushed_at": "2026-04-01",
+   "stars": 1
+  },
+  "Varnasr/EquityStack": {
+   "archived": false,
+   "language": "Python",
+   "open_issues": 0,
+   "pushed_at": "2026-09-08",
+   "stars": 1
+  },
+  "Varnasr/Experiments": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 2,
+   "pushed_at": "2026-09-03",
+   "stars": 0
+  },
+  "Varnasr/FieldStack": {
+   "archived": false,
+   "language": "R",
+   "open_issues": 0,
+   "pushed_at": "2026-09-08",
+   "stars": 1
+  },
+  "Varnasr/Hyderabad-Electoral-Analysis": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 2,
+   "pushed_at": "2026-08-29",
+   "stars": 1
+  },
+  "Varnasr/InsightStack": {
+   "archived": false,
+   "language": "Python",
+   "open_issues": 0,
+   "pushed_at": "2026-09-08",
+   "stars": 1
+  },
+  "Varnasr/PolicyDhara": {
+   "archived": false,
+   "language": "Astro",
+   "open_issues": 13,
+   "pushed_at": "2026-09-10",
+   "stars": 1
+  },
+  "Varnasr/SignalStack": {
+   "archived": false,
+   "language": "Python",
+   "open_issues": 7,
+   "pushed_at": "2026-09-08",
+   "stars": 1
+  },
+  "Varnasr/climate-trace-india": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-09-02",
+   "stars": 0
+  },
+  "Varnasr/dev-case-studies": {
+   "archived": false,
+   "language": "JavaScript",
+   "open_issues": 2,
+   "pushed_at": "2026-08-01",
+   "stars": 1
+  },
+  "Varnasr/devdata-practice": {
+   "archived": false,
+   "language": "Python",
+   "open_issues": 3,
+   "pushed_at": "2026-07-01",
+   "stars": 1
+  },
+  "Varnasr/deveconomics-toolkit": {
+   "archived": false,
+   "language": "R",
+   "open_issues": 2,
+   "pushed_at": "2026-08-01",
+   "stars": 1
+  },
+  "Varnasr/development-discourses": {
+   "archived": false,
+   "language": "JavaScript",
+   "open_issues": 2,
+   "pushed_at": "2026-08-01",
+   "stars": 1
+  },
+  "Varnasr/how-india-lives": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-07-13",
+   "stars": 0
+  },
+  "Varnasr/india-development-indicators": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-09-02",
+   "stars": 0
+  },
+  "Varnasr/industry-conglomerates-database": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-09-02",
+   "stars": 0
+  },
+  "Varnasr/sdg-progress-tracker": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-09-02",
+   "stars": 0
+  },
+  "Varnasr/someperspective": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 0,
+   "pushed_at": "2026-09-03",
+   "stars": 1
+  },
+  "Varnasr/the-measurement-trap": {
+   "archived": false,
+   "language": "HTML",
+   "open_issues": 1,
+   "pushed_at": "2026-08-18",
+   "stars": 0
+  },
+  "Varnasr/theverylastsuperhero": {
+   "archived": false,
+   "language": "Astro",
+   "open_issues": 4,
+   "pushed_at": "2026-09-09",
+   "stars": 1
+  },
+  "Varnasr/whogavetheorder": {
+   "archived": false,
+   "language": "JavaScript",
+   "open_issues": 9,
+   "pushed_at": "2026-09-09",
+   "stars": 1
+  }
+ }
+}

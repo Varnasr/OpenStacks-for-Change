@@ -107,6 +107,9 @@
     .tile .stt i { width: 9px; height: 9px; display: inline-block; background: currentColor; }
     .tile .stt.stable i { background: transparent; border: 2px solid currentColor; }
     .tile .stt.proto i { transform: rotate(45deg); }
+    .tile .meta .r { display: inline-flex; align-items: center; gap: .6rem; }
+    .tile .use { border: 1px solid currentColor; padding: .05rem .35rem; }
+    .tile .upd, .tile .stars { opacity: .75; }
     .tile h3 { font-family: var(--display); font-weight: 700; font-size: 1.55rem; line-height: 1.05; letter-spacing: -.02em; margin-bottom: .55rem; }
     .tile p { font-size: .88rem; line-height: 1.45; opacity: .92; flex: 1; }
     .tile .foot { margin-top: .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: flex-end; font-family: var(--mono); font-size: .68rem; }
@@ -195,7 +198,7 @@
   <h1 class="word"><span class="s1">Open</span><span class="s2">Stacks</span><span class="s3">for Change</span></h1>
   <div class="hero-grid">
     <div>
-      <p>An index of open-source work on development research, data and policy. Twenty-five public repositories by Varna Sri Raman, most of them about India, grouped by what they are for. Each one has a status label; the labels are defined below and in the <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
+      <p>An index of open-source work on development research, data and policy. The public repositories of Varna Sri Raman, most of them about India, grouped by what they are for. Each one has a status label; the labels are defined below and in the <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
       <div class="cta"><a class="btn fill" href="#data">See the repositories</a><a class="btn" href="#start">Reader-facing sites</a></div>
     </div>
     <div class="counts" aria-label="Counts on this page">
@@ -214,7 +217,7 @@
 
 <!-- Start here -->
 <section class="band white" id="start">
-  <div class="band-h"><h2>Start here</h2><span class="sub">Three sites built on the repositories below. If you want to use the work rather than read the code, go to these.</span></div>
+  <div class="band-h"><h2>Start here</h2><span class="sub">Three sites built on the repositories below. If you want to use the work rather than read the code, go to these. <span class="num"></span></span></div>
   <div class="doors">
     <a class="door" href="https://www.impactmojo.in"><span class="dom">impactmojo.in</span><h3>Impact Mojo</h3><p>Teaching and practice platform for development economics and social research: courses, case studies and open teaching material.</p><span class="go">Open ↗</span></a>
     <a class="door" href="https://www.janvayu.in"><span class="dom">janvayu.in</span><h3>JanVayu जनवायु</h3><p>A citizen-led national archive of India's air quality crisis: data, stories and sensor readings.</p><span class="go">Open ↗</span></a>
@@ -224,10 +227,10 @@
 
 <!-- What this is -->
 <section class="band ash" id="labels">
-  <div class="band-h"><h2>What this is</h2><span class="sub">and what the labels mean</span></div>
+  <div class="band-h"><h2>What this is</h2><span class="sub">and what the labels mean <span class="num"></span></span></div>
   <div class="two">
     <div class="prose">
-      <p><strong>This site is an index.</strong> It holds no code or data of its own; every link goes to a repository on GitHub or to a live site built from one.</p>
+      <p><strong>This site is an index.</strong> It holds no code or data of its own; every link goes to a repository on GitHub or to a live site built from one. Each tile shows the month of the repository's last commit, read from GitHub once a week, and a star count once it reaches ten. A tile marked <em>in use</em> runs inside <a href="https://www.impactmojo.in">impactmojo.in</a>.</p>
       <p>It started in 2025 as the home page for eight related "stacks". Four of them are in use and are listed under research toolkits. Three (RootStack, BridgeStack and ViewStack) were a database, an API and a dashboard that the toolkits did not need, and PolicyStack was replaced by PolicyDhara; all four are archived and listed at the bottom of the page.</p>
       <p>Every repository has one of the four labels on the right. The <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a> says what each label commits the maintainer to. Code is MIT-licensed unless a repository says otherwise; some written material is under Creative Commons. Each repository stands on its own, with its own README and no shared dependency.</p>
     </div>
@@ -242,37 +245,37 @@
 
 <!-- Data and policy -->
 <section class="band navy group" id="data" data-g="data">
-  <div class="band-h"><h2>Data and policy</h2><span class="sub">explorers, trackers and datasets</span></div>
+  <div class="band-h"><h2>Data and policy</h2><span class="sub">explorers, trackers and datasets <span class="num"></span></span></div>
   <div class="tiles">
-    <a class="tile big" data-s="active" data-live="1" href="https://howindialives.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>How India Lives</h3><p>205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education and environment.</p><span class="foot"><span class="url">howindialives.impactmojo.in</span><span class="tags"><span>HTML</span><span>maps</span></span></span></a>
-    <a class="tile" data-s="active" data-live="1" href="https://github.com/Varnasr/PolicyDhara"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>PolicyDhara</h3><p>Auto-updating tracker of Indian government policy across development sectors. The maintained successor to PolicyStack.</p><span class="foot"><span class="url">github.com/Varnasr/PolicyDhara</span><span class="tags"><span>Astro</span><span>open data</span></span></span></a>
+    <a class="tile big" data-s="active" data-live="1" href="https://howindialives.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>How India Lives</h3><p>205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education and environment.</p><span class="foot"><span class="url">howindialives.impactmojo.in · github.com/Varnasr/how-india-lives</span><span class="tags"><span>HTML</span><span>maps</span></span></span></a>
+    <a class="tile" data-s="active" data-use="impactmojo.in" data-live="1" href="https://github.com/Varnasr/PolicyDhara"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>PolicyDhara</h3><p>Auto-updating tracker of Indian government policy across development sectors. The maintained successor to PolicyStack.</p><span class="foot"><span class="url">github.com/Varnasr/PolicyDhara</span><span class="tags"><span>Astro</span><span>open data</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://forindia.netlify.app"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Bihar Electoral Dashboard</h3><p>Analysis of Bihar electoral roll anomalies: voter deletion patterns, demographic shifts and election data integrity.</p><span class="foot"><span class="url">forindia.netlify.app</span><span class="tags"><span>elections</span><span>data integrity</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://sdgtracker.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>SDG Progress Tracker</h3><p>India's progress on all 17 UN Sustainable Development Goals: scores, trends, radar charts and category breakdowns.</p><span class="foot"><span class="url">sdgtracker.impactmojo.in · github.com/Varnasr/sdg-progress-tracker</span><span class="tags"><span>Chart.js</span><span>SDGs</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://devindicators.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>India Development Indicators</h3><p>Interactive dashboard across economic, health, education, infrastructure and environmental indicators, pulling live from the World Bank Open Data API.</p><span class="foot"><span class="url">devindicators.impactmojo.in · github.com/Varnasr/india-development-indicators</span><span class="tags"><span>World Bank API</span><span>Chart.js</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://climatetrace.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Climate TRACE India</h3><p>Satellite-verified, facility-level greenhouse-gas emissions for India: power, manufacturing, transport, fossil fuels, agriculture and waste, including the top-emitting coal and steel plants.</p><span class="foot"><span class="url">climatetrace.impactmojo.in · github.com/Varnasr/climate-trace-india</span><span class="tags"><span>Climate TRACE</span><span>emissions</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://industrygroups.impactmojo.in"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Industry Conglomerates Tracker</h3><p>Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999 to 2026, searchable and filterable, with government-support classification.</p><span class="foot"><span class="url">industrygroups.impactmojo.in · github.com/Varnasr/industry-conglomerates-database</span><span class="tags"><span>open data</span><span>mapping</span></span></span></a>
-    <a class="tile" data-s="active" data-live="1" href="https://whogavetheorder.netlify.app"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>WhoGaveTheOrder.in</h3><p>Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map and an RTI register with a live reply-due clock.</p><span class="foot"><span class="url">whogavetheorder.netlify.app</span><span class="tags"><span>evidence archive</span><span>RTI</span></span></span></a>
-    <a class="tile" data-s="stable" data-live="1" href="https://someperspective.info"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>Some Perspective</h3><p>Unfunded empirical study of India's political economy, 2004 to 2026. Three constructed indices, the full dataset, replication code and a working paper.</p><span class="foot"><span class="url">someperspective.info</span><span class="tags"><span>data</span><span>replication</span></span></span></a>
-    <a class="tile big" data-s="active" data-live="1" href="https://varnasr.github.io/Hyderabad-Electoral-Analysis/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Hyderabad Electoral Analysis</h3><p>Five old-city seats, one winner since 1999, and still the poorest part of Hyderabad. Ward-level census data shows the gap is in work and income rather than services or slums: water and drainage are at full parity, but a third fewer people have jobs. The only gaps that closed since 2011 were closed by national schemes. Includes a run of the standard causal test, which cannot answer either way from public data.</p><span class="foot"><span class="url">varnasr.github.io/Hyderabad-Electoral-Analysis</span><span class="tags"><span>elections</span><span>census</span><span>data</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://whogavetheorder.netlify.app"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>WhoGaveTheOrder.in</h3><p>Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map and an RTI register with a live reply-due clock.</p><span class="foot"><span class="url">whogavetheorder.netlify.app · github.com/Varnasr/whogavetheorder</span><span class="tags"><span>evidence archive</span><span>RTI</span></span></span></a>
+    <a class="tile" data-s="stable" data-live="1" href="https://someperspective.info"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>Some Perspective</h3><p>Unfunded empirical study of India's political economy, 2004 to 2026. Three constructed indices, the full dataset, replication code and a working paper.</p><span class="foot"><span class="url">someperspective.info · github.com/Varnasr/someperspective</span><span class="tags"><span>data</span><span>replication</span></span></span></a>
+    <a class="tile big" data-s="active" data-live="1" href="https://varnasr.github.io/Hyderabad-Electoral-Analysis/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Hyderabad Electoral Analysis</h3><p>Five old-city seats, one winner since 1999, and still the poorest part of Hyderabad. Ward-level census data shows the gap is in work and income rather than services or slums: water and drainage are at full parity, but a third fewer people have jobs. The only gaps that closed since 2011 were closed by national schemes. Includes a run of the standard causal test, which cannot answer either way from public data.</p><span class="foot"><span class="url">varnasr.github.io/Hyderabad-Electoral-Analysis · github.com/Varnasr/Hyderabad-Electoral-Analysis</span><span class="tags"><span>elections</span><span>census</span><span>data</span></span></span></a>
     <a class="tile" data-s="stable" href="https://github.com/Varnasr/BiharParichay-Project"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>Bihar Parichay</h3><p>Interactive bilingual resource on Bihar: society, economy, caste, migration, climate, culture. A single offline-capable HTML file.</p><span class="foot"><span class="url">github.com/Varnasr/BiharParichay-Project</span><span class="tags"><span>D3</span><span>Leaflet</span><span>bilingual</span></span></span></a>
   </div>
 </section>
 
 <!-- Teaching -->
 <section class="band saffron group" id="teach" data-g="teach">
-  <div class="band-h"><h2>Teaching and practice</h2><span class="sub">case studies, libraries, practice data</span></div>
+  <div class="band-h"><h2>Teaching and practice</h2><span class="sub">case studies, libraries, practice data <span class="num"></span></span></div>
   <div class="tiles">
-    <a class="tile" data-s="active" href="https://github.com/Varnasr/dev-case-studies"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Dev Case Studies</h3><p>200 real development case studies from 117 countries, searchable, filterable and fully cited.</p><span class="foot"><span class="url">github.com/Varnasr/dev-case-studies</span><span class="tags"><span>JavaScript</span></span></span></a>
-    <a class="tile" data-s="active" data-live="1" href="https://varnasr.github.io/development-discourses/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Development Discourses</h3><p>A curated open-access library of 500+ research papers, books and grey literature for practitioners in South Asia.</p><span class="foot"><span class="url">varnasr.github.io/development-discourses</span><span class="tags"><span>JavaScript</span><span>open access</span></span></span></a>
-    <a class="tile" data-s="stable" href="https://github.com/Varnasr/devdata-practice"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevData Practice</h3><p>Realistic practice datasets for development economics: 10 generators producing 350k+ rows for teaching and training.</p><span class="foot"><span class="url">github.com/Varnasr/devdata-practice</span><span class="tags"><span>Python</span></span></span></a>
-    <a class="tile" data-s="stable" href="https://github.com/Varnasr/deveconomics-toolkit"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevEconomics Toolkit</h3><p>11 interactive Shiny apps for impact evaluation, poverty analysis, program design and data exploration.</p><span class="foot"><span class="url">github.com/Varnasr/deveconomics-toolkit</span><span class="tags"><span>R</span><span>Shiny</span></span></span></a>
+    <a class="tile" data-s="active" data-use="impactmojo.in" href="https://github.com/Varnasr/dev-case-studies"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Dev Case Studies</h3><p>200 real development case studies from 117 countries, searchable, filterable and fully cited.</p><span class="foot"><span class="url">github.com/Varnasr/dev-case-studies</span><span class="tags"><span>JavaScript</span></span></span></a>
+    <a class="tile" data-s="active" data-use="impactmojo.in" data-live="1" href="https://varnasr.github.io/development-discourses/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Development Discourses</h3><p>A curated open-access library of 500+ research papers, books and grey literature for practitioners in South Asia.</p><span class="foot"><span class="url">varnasr.github.io/development-discourses · github.com/Varnasr/development-discourses</span><span class="tags"><span>JavaScript</span><span>open access</span></span></span></a>
+    <a class="tile" data-s="stable" data-use="impactmojo.in" href="https://github.com/Varnasr/devdata-practice"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevData Practice</h3><p>Realistic practice datasets for development economics: 10 generators producing 350k+ rows for teaching and training.</p><span class="foot"><span class="url">github.com/Varnasr/devdata-practice</span><span class="tags"><span>Python</span></span></span></a>
+    <a class="tile" data-s="stable" data-use="impactmojo.in" href="https://github.com/Varnasr/deveconomics-toolkit"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>DevEconomics Toolkit</h3><p>11 interactive Shiny apps for impact evaluation, poverty analysis, program design and data exploration.</p><span class="foot"><span class="url">github.com/Varnasr/deveconomics-toolkit</span><span class="tags"><span>R</span><span>Shiny</span></span></span></a>
     <a class="tile" data-s="active" data-live="1" href="https://www.impactmojo.in/impactlex/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>ImpactLex</h3><p>Development-sector glossary and companion to Impact Mojo: 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae and cross-references to where each term is taught. Offline-capable PWA.</p><span class="foot"><span class="url">impactmojo.in/impactlex</span><span class="tags"><span>glossary</span><span>PWA</span></span></span></a>
   </div>
 </section>
 
 <!-- Toolkits -->
 <section class="band teal group" id="stacks" data-g="stack">
-  <div class="band-h"><h2>Research toolkits</h2><span class="sub">three stacks and the newsletter archive</span></div>
+  <div class="band-h"><h2>Research toolkits</h2><span class="sub">three stacks and the newsletter archive <span class="num"></span></span></div>
   <div class="tiles">
     <a class="tile big" data-s="stable" data-live="1" href="https://varnasr.github.io/InsightStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>InsightStack</h3><p>MEL tools, calculators, research documentation and loaders for survey microdata. Six browser calculators, DHS and PLFS loaders in Stata, R and Python, an econometrics module (DiD, PSM, IV/2SLS, RDD), tested validation and labelling tools, and templates for the documents an evaluation produces. DOI 10.5281/zenodo.15245182.</p><span class="foot"><span class="url">varnasr.github.io/InsightStack · github.com/Varnasr/InsightStack</span><span class="tags"><span>Stata</span><span>Python</span><span>R</span><span>SPSS</span></span></span></a>
     <a class="tile" data-s="stable" data-live="1" href="https://varnasr.github.io/FieldStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>FieldStack</h3><p>R for the checks a survey team runs while data is being collected (duplicates, duration, enumerator monitoring, back checks, GPS) and for sample size, weights and design-based estimates after. Base R in the field; the survey package for analysis.</p><span class="foot"><span class="url">varnasr.github.io/FieldStack · github.com/Varnasr/FieldStack</span><span class="tags"><span>R</span><span>Quarto</span><span>ODK</span></span></span></a>
@@ -283,10 +286,10 @@
 
 <!-- Writing and utilities -->
 <section class="band brick group" id="writing" data-g="write">
-  <div class="band-h"><h2>Writing and utilities</h2><span class="sub">books, fiction, small tools</span></div>
+  <div class="band-h"><h2>Writing and utilities</h2><span class="sub">books, fiction, small tools <span class="num"></span></span></div>
   <div class="tiles">
     <a class="tile" data-s="active" href="https://github.com/Varnasr/the-measurement-trap"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>The Measurement Trap</h3><p>Companion site for the forthcoming Routledge book on India's quest for social progress through eight decades of measurement.</p><span class="foot"><span class="url">github.com/Varnasr/the-measurement-trap</span><span class="tags"><span>HTML</span></span></span></a>
-    <a class="tile" data-s="active" data-live="1" href="https://postheroic.world"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>The Very Last Superhero</h3><p>An illustrated speculative fiction novel set in a climate-collapsed India, following a 14-year-old girl through AI, memory and resistance.</p><span class="foot"><span class="url">postheroic.world</span><span class="tags"><span>Astro</span><span>fiction</span></span></span></a>
+    <a class="tile" data-s="active" data-live="1" href="https://postheroic.world"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>The Very Last Superhero</h3><p>An illustrated speculative fiction novel set in a climate-collapsed India, following a 14-year-old girl through AI, memory and resistance.</p><span class="foot"><span class="url">postheroic.world · github.com/Varnasr/theverylastsuperhero</span><span class="tags"><span>Astro</span><span>fiction</span></span></span></a>
     <a class="tile" data-s="stable" href="https://github.com/Varnasr/CandidateDossier"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>CandidateDossier</h3><p>CSV to LaTeX to PDF generator for uniform, privacy-masked candidate dossiers. Runs via Netlify Functions or Overleaf.</p><span class="foot"><span class="url">github.com/Varnasr/CandidateDossier</span><span class="tags"><span>LaTeX</span><span>Netlify</span></span></span></a>
     <a class="tile big" data-s="active" data-live="1" href="https://varnasr-experiments.netlify.app/"><span class="meta"><span class="stt active"><i></i>active</span><span class="no"></span></span><h3>Experiments</h3><p>The sandbox. Small browser tools are built and indexed there, and are not listed here; anything that lasts moves to a repository of its own and appears on this page.</p><span class="foot"><span class="url">varnasr-experiments.netlify.app · github.com/Varnasr/Experiments</span><span class="tags"><span>HTML</span><span>no dependencies</span></span></span></a>
   </div>
@@ -296,7 +299,7 @@
 
 <!-- Retired -->
 <section class="band ash" id="retired">
-  <div class="band-h"><h2>Retired</h2><span class="sub">Archived and read-only. The code is still public and can be forked or cited.</span></div>
+  <div class="band-h"><h2>Retired</h2><span class="sub">Archived and read-only. The code is still public and can be forked or cited. <span class="num"></span></span></div>
   <div class="ret">
     <div><h3>RootStack</h3><p>SQLite and PostgreSQL schemas for the shared data layer.</p></div>
     <div><h3>BridgeStack</h3><p>FastAPI backend serving RootStack to frontends.</p></div>
@@ -312,7 +315,7 @@
 
 <!-- Who it is for -->
 <section class="band white" id="for">
-  <div class="band-h"><h2>Who this is for</h2><span class="sub">People working on health, education, gender, climate and governance, mostly in India and South Asia.</span></div>
+  <div class="band-h"><h2>Who this is for</h2><span class="sub">People working on health, education, gender, climate and governance, mostly in India and South Asia. <span class="num"></span></span></div>
   <div class="aud">
     <div><h3>Practitioners</h3><p>Analysis tools for monitoring and evaluation, impact assessment and programme design.</p></div>
     <div><h3>Researchers and evaluators</h3><p>Scripts, sample data and evaluation frameworks from fieldwork in South Asia.</p></div>
@@ -358,7 +361,26 @@
   fit(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit); window.addEventListener('resize', fit);
   var tiles = Array.prototype.slice.call(document.querySelectorAll('.tile'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.group'));
-  tiles.forEach(function (t, i) { t.querySelector('.no').textContent = String(i + 1).padStart(3, '0'); });
+  tiles.forEach(function (t, i) {
+    var no = t.querySelector('.no'), r = document.createElement('span'); r.className = 'r';
+    no.parentNode.insertBefore(r, no);
+    if (t.dataset.use) { var u = document.createElement('span'); u.className = 'use'; u.title = 'Runs inside ' + t.dataset.use; u.textContent = 'in use'; r.appendChild(u); }
+    r.appendChild(no); no.textContent = String(i + 1).padStart(3, '0');
+  });
+  groups.forEach(function (g) { var n = g.querySelector('.band-h .num'); if (n) n.textContent = '(' + g.querySelectorAll('.tile').length + ')'; });
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  fetch('data/repos.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || !d.repos) return;
+    tiles.forEach(function (t) {
+      var m = (t.innerHTML.match(/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/) || [])[1];
+      var rec = m && d.repos[m]; if (!rec) return;
+      var r = t.querySelector('.meta .r');
+      if (rec.pushed_at) { var u = document.createElement('span'); u.className = 'upd'; u.title = 'Last commit ' + rec.pushed_at;
+        var dt = rec.pushed_at.split('-'); u.textContent = MONTHS[+dt[1] - 1] + ' ' + dt[0]; r.insertBefore(u, r.firstChild); }
+      if (rec.stars >= 10) { var st = document.createElement('span'); st.className = 'stars'; st.title = rec.stars + ' stars on GitHub';
+        st.textContent = (rec.stars >= 1000 ? (rec.stars / 1000).toFixed(1) + 'k' : rec.stars) + ' \u2605'; r.insertBefore(st, r.firstChild); }
+    });
+  }).catch(function () {});
   var by = function (s) { return tiles.filter(function (t) { return t.dataset.s === s; }).length; };
   document.getElementById('nProj').textContent = tiles.length;
   document.getElementById('nLive').textContent = tiles.filter(function (t) { return t.dataset.live === '1'; }).length;
