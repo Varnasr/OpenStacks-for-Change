@@ -16,7 +16,6 @@ What remains is the part that always worked: five self-contained toolkits that a
 InsightStack   MEL tools, calculators, econometrics      Stata · Python · R
 FieldStack     Survey design → analysis → reporting      R · Quarto
 EquityStack    Data cleaning, modelling, impact eval     Python · Jupyter
-PolicyStack    South Asia scheme and budget data         Python · CSV
 SignalStack    Research Rundown newsletter archive       Markdown
 ```
 

@@ -72,7 +72,6 @@ Reusable scripts, notebooks, and templates for people doing MEL and applied rese
 | **[InsightStack](https://varnasr.github.io/InsightStack/)** ([source](https://github.com/Varnasr/InsightStack)) | The largest of the set. MEL calculators that run in the browser, loaders that open DHS and PLFS microdata as the files actually arrive, a tested econometrics module, data validation and labelling from one dictionary, annotated research briefs, and templates for logframes, indicators and MEL frameworks. | Stata, Python, R, SPSS |
 | **[FieldStack](https://varnasr.github.io/FieldStack/)** ([source](https://github.com/Varnasr/FieldStack)) | Field operations while a survey is being collected: high-frequency checks, enumerator monitoring, back checks, GPS checks, an ODK reader, and the evening report that runs them. Then the analysis after: sample size, weights, design-based estimates. | R |
 | **[EquityStack](https://varnasr.github.io/EquityStack/)** ([source](https://github.com/Varnasr/EquityStack)) | Equity from a development economics perspective. Who is carrying the bad outcome and how steeply: the Gini and Theil family, the concentration index with its corrections, within/between decomposition, Blinder-Oaxaca, benefit incidence, and design-based standard errors for clustered surveys. | Python |
-| **[PolicyStack](https://github.com/Varnasr/PolicyStack)** | South Asia policy tracker — 15 flagship schemes, 4 years of budget data, performance indicators. Superseded for new work by [PolicyDhara](https://github.com/Varnasr/PolicyDhara). | Python, CSV |
 | **[SignalStack](https://varnasr.github.io/SignalStack/)** ([source](https://github.com/Varnasr/SignalStack)) | Companion archive for the [Research Rundown](https://varna.substack.com) newsletter: every post in full, its recurring sections (praxis, glossary, researchers, reading) compiled into reference pages, and four tested scripts implementing its methods notes. Beside the stacks rather than one of them. | Markdown, Python |
 
 InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo.15245182).
@@ -96,13 +95,14 @@ InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo
 
 ## Retired
 
-These are archived and read-only. The code stays public and browsable; nothing has been deleted. They were built as a database → API → dashboard pipeline for an ecosystem that the toolkits above never actually needed.
+These are archived and read-only. The code stays public and browsable; nothing has been deleted. Three were built as a database, API and dashboard pipeline for an ecosystem that the toolkits above never needed. PolicyStack was replaced by PolicyDhara.
 
 | Repo | Was |
 |---|---|
 | **[RootStack](https://github.com/Varnasr/RootStack)** | SQLite/PostgreSQL schemas and seed data for the shared data layer |
 | **[BridgeStack](https://github.com/Varnasr/BridgeStack)** | FastAPI backend serving RootStack to frontends |
 | **[ViewStack](https://github.com/Varnasr/ViewStack)** | React dashboard for exploring the data |
+| **[PolicyStack](https://github.com/Varnasr/PolicyStack)** | South Asia policy tracker: 15 flagship schemes and four years of budget data as static CSVs. Replaced by [PolicyDhara](https://github.com/Varnasr/PolicyDhara), which updates itself |
 **Not retired — graduated.** [ImpactLex](https://www.impactmojo.in/impactlex/) moved into Impact Mojo rather than winding down, and is listed under Teaching and practice above. Its [old repository](https://github.com/Varnasr/ImpactLex) is archived for citation continuity only; the living version is at [impactmojo.in/impactlex](https://www.impactmojo.in/impactlex/).
 
 Four further stacks — ClimateStack, EduStack, SocialStack, InfraStack — were on a published roadmap and were never started. That roadmap has been withdrawn rather than left standing as a promise. The needs behind them are better served by [How India Lives](https://github.com/Varnasr/how-india-lives), [PolicyDhara](https://github.com/Varnasr/PolicyDhara), and [JanVayu](https://www.janvayu.in).
