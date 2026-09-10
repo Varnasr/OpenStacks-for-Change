@@ -21,7 +21,7 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 **[InsightStack](https://varnasr.github.io/InsightStack/)** for the econometrics module (DiD, PSM, IV/2SLS, RDD, sensitivity analysis) in Python and R. **[EquityStack](https://varnasr.github.io/EquityStack/)** has a Python-only version (DiD, PSM, RDD) and the survey estimation the intervals depend on.
 
 ### I need to track government policies and schemes
-**[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** for current work — it auto-updates and is actively developed. **[PolicyStack](https://github.com/Varnasr/PolicyStack)** holds the original static dataset: 15 flagship schemes with four years of budget data.
+**[PolicyDhara](https://github.com/Varnasr/PolicyDhara)**, which updates itself. PolicyStack, the earlier static dataset, is retired.
 
 ### I need practice data to teach or learn with
 **[DevData Practice](https://github.com/Varnasr/devdata-practice)** — 10 generators, 350k+ rows of realistic development data.
@@ -42,7 +42,7 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 | Language | Repositories |
 |----------|--------------|
 | **R** | FieldStack, InsightStack, [DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit) |
-| **Python** | EquityStack, InsightStack, PolicyStack, [DevData Practice](https://github.com/Varnasr/devdata-practice) |
+| **Python** | EquityStack, InsightStack, [DevData Practice](https://github.com/Varnasr/devdata-practice) |
 | **Stata** | InsightStack, FieldStack |
 | **Jupyter** | EquityStack |
 | **Quarto** | FieldStack |
@@ -59,7 +59,7 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 | **Education** | EquityStack | InsightStack, Dev Case Studies |
 | **Gender equity** | EquityStack | InsightStack |
 | **Climate / resilience** | EquityStack | [JanVayu](https://www.janvayu.in) for air quality |
-| **Governance / policy** | [PolicyDhara](https://github.com/Varnasr/PolicyDhara) | PolicyStack, InsightStack |
+| **Governance / policy** | [PolicyDhara](https://github.com/Varnasr/PolicyDhara) | InsightStack |
 | **General MEL** | InsightStack | FieldStack |
 | **Fieldwork / surveys** | FieldStack | InsightStack |
 
@@ -91,4 +91,4 @@ What do you need?
 
 ## Retired
 
-**RootStack** (database schemas), **BridgeStack** (FastAPI backend), and **ViewStack** (React dashboard) are archived and read-only. They formed a data → API → dashboard pipeline that the toolkits above never depended on. If you were looking for a database of Indian development indicators, [How India Lives](https://github.com/Varnasr/how-india-lives) and [PolicyDhara](https://github.com/Varnasr/PolicyDhara) are the maintained alternatives.
+**RootStack** (database schemas), **BridgeStack** (FastAPI backend), **ViewStack** (React dashboard) and **PolicyStack** (replaced by PolicyDhara) are archived and read-only. They formed a data → API → dashboard pipeline that the toolkits above never depended on. If you were looking for a database of Indian development indicators, [How India Lives](https://github.com/Varnasr/how-india-lives) and [PolicyDhara](https://github.com/Varnasr/PolicyDhara) are the maintained alternatives.

@@ -228,7 +228,7 @@
   <div class="two">
     <div class="prose">
       <p><strong>This site is an index.</strong> It holds no code or data of its own; every link goes to a repository on GitHub or to a live site built from one.</p>
-      <p>It started in 2025 as the home page for eight related "stacks". Five of them are in use and are listed under research toolkits. The other three (RootStack, BridgeStack and ViewStack) were a database, an API and a dashboard that the toolkits did not need; they are archived and listed at the bottom of the page.</p>
+      <p>It started in 2025 as the home page for eight related "stacks". Four of them are in use and are listed under research toolkits. Three (RootStack, BridgeStack and ViewStack) were a database, an API and a dashboard that the toolkits did not need, and PolicyStack was replaced by PolicyDhara; all four are archived and listed at the bottom of the page.</p>
       <p>Every repository has one of the four labels on the right. The <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a> says what each label commits the maintainer to. Code is MIT-licensed unless a repository says otherwise; some written material is under Creative Commons. Each repository stands on its own, with its own README and no shared dependency.</p>
     </div>
     <div class="legend" role="list">
@@ -272,12 +272,11 @@
 
 <!-- Toolkits -->
 <section class="band teal group" id="stacks" data-g="stack">
-  <div class="band-h"><h2>Research toolkits</h2><span class="sub">three stacks, the newsletter archive, and one superseded</span></div>
+  <div class="band-h"><h2>Research toolkits</h2><span class="sub">three stacks and the newsletter archive</span></div>
   <div class="tiles">
     <a class="tile big" data-s="stable" data-live="1" href="https://varnasr.github.io/InsightStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>InsightStack</h3><p>MEL tools, calculators, research documentation and loaders for survey microdata. Six browser calculators, DHS and PLFS loaders in Stata, R and Python, an econometrics module (DiD, PSM, IV/2SLS, RDD), tested validation and labelling tools, and templates for the documents an evaluation produces. DOI 10.5281/zenodo.15245182.</p><span class="foot"><span class="url">varnasr.github.io/InsightStack · github.com/Varnasr/InsightStack</span><span class="tags"><span>Stata</span><span>Python</span><span>R</span><span>SPSS</span></span></span></a>
     <a class="tile" data-s="stable" data-live="1" href="https://varnasr.github.io/FieldStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>FieldStack</h3><p>R for the checks a survey team runs while data is being collected (duplicates, duration, enumerator monitoring, back checks, GPS) and for sample size, weights and design-based estimates after. Base R in the field; the survey package for analysis.</p><span class="foot"><span class="url">varnasr.github.io/FieldStack · github.com/Varnasr/FieldStack</span><span class="tags"><span>R</span><span>Quarto</span><span>ODK</span></span></span></a>
     <a class="tile" data-s="stable" data-live="1" href="https://varnasr.github.io/EquityStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>EquityStack</h3><p>Inequality measurement and design-based survey estimation in Python: Gini, Theil, Atkinson, the concentration index with its corrections, decomposition, benefit incidence, and standard errors for stratified clustered surveys. 101 tests.</p><span class="foot"><span class="url">varnasr.github.io/EquityStack · github.com/Varnasr/EquityStack</span><span class="tags"><span>Python</span><span>pandas</span></span></span></a>
-    <a class="tile" data-s="stable" href="https://github.com/Varnasr/PolicyStack"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>PolicyStack</h3><p>South Asia policy tracker: 15 flagship schemes, 4 years of budget data and performance indicators. Superseded for new work by PolicyDhara.</p><span class="foot"><span class="url">github.com/Varnasr/PolicyStack</span><span class="tags"><span>Python</span><span>CSV</span></span></span></a>
     <a class="tile" data-s="stable" data-live="1" href="https://varnasr.github.io/SignalStack/"><span class="meta"><span class="stt stable"><i></i>stable</span><span class="no"></span></span><h3>SignalStack</h3><p>The Research Rundown newsletter, archived and indexed: every post in full, the recurring sections gathered into reference pages, and four tested scripts from its methods notes.</p><span class="foot"><span class="url">varnasr.github.io/SignalStack · github.com/Varnasr/SignalStack</span><span class="tags"><span>Markdown</span><span>Python</span></span></span></a>
   </div>
 </section>
@@ -302,9 +301,10 @@
     <div><h3>RootStack</h3><p>SQLite and PostgreSQL schemas for the shared data layer.</p></div>
     <div><h3>BridgeStack</h3><p>FastAPI backend serving RootStack to frontends.</p></div>
     <div><h3>ViewStack</h3><p>React dashboard for exploring the data.</p></div>
+    <div><h3>PolicyStack</h3><p>South Asia policy tracker: 15 flagship schemes and four years of budget data as static CSVs. Replaced by <a href="https://github.com/Varnasr/PolicyDhara">PolicyDhara</a>, which updates itself.</p></div>
   </div>
   <div class="notice">
-    <p>These three were a database, an API and a dashboard, built as one pipeline. It cost the most to maintain, was used the least, and the research toolkits never depended on it.</p>
+    <p>RootStack, BridgeStack and ViewStack were a database, an API and a dashboard, built as one pipeline. It cost the most to maintain, was used the least, and the research toolkits never depended on it. PolicyStack was a hand-maintained dataset; PolicyDhara does the same job and updates itself.</p>
     <p><strong>ImpactLex is not on this list.</strong> Its old repository is archived, but the project graduated into <a href="https://www.impactmojo.in/impactlex/">Impact Mojo</a> rather than winding down; it is listed under Teaching and practice above. An archived repository and a finished project are not the same thing.</p>
     <p>Four further stacks (ClimateStack, EduStack, SocialStack and InfraStack) sat on a published roadmap for a year without a line of code written. That roadmap has been withdrawn rather than left standing as a promise to readers. The needs behind it are better served by How India Lives, PolicyDhara and JanVayu.</p>
   </div>
