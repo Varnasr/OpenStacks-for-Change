@@ -1,5 +1,5 @@
 {
- "fetched": "2026-09-10",
+ "fetched": "2026-09-14",
  "repos": {
   "Varnasr/BiharParichay-Project": {
    "archived": false,
@@ -53,8 +53,8 @@
   "Varnasr/PolicyDhara": {
    "archived": false,
    "language": "Astro",
-   "open_issues": 13,
-   "pushed_at": "2026-09-10",
+   "open_issues": 15,
+   "pushed_at": "2026-09-14",
    "stars": 1
   },
   "Varnasr/SignalStack": {
@@ -144,15 +144,8 @@
   "Varnasr/theverylastsuperhero": {
    "archived": false,
    "language": "Astro",
-   "open_issues": 4,
-   "pushed_at": "2026-09-09",
-   "stars": 1
-  },
-  "Varnasr/whogavetheorder": {
-   "archived": false,
-   "language": "JavaScript",
-   "open_issues": 9,
-   "pushed_at": "2026-09-09",
+   "open_issues": 5,
+   "pushed_at": "2026-09-13",
    "stars": 1
   }
  }
