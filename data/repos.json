@@ -1,11 +1,11 @@
 {
- "fetched": "2026-09-14",
+ "fetched": "2026-09-21",
  "repos": {
   "Varnasr/BiharParichay-Project": {
    "archived": false,
    "language": "HTML",
    "open_issues": 2,
-   "pushed_at": "2026-04-02",
+   "pushed_at": "2026-09-15",
    "stars": 1
   },
   "Varnasr/CandidateDossier": {
@@ -26,7 +26,7 @@
    "archived": false,
    "language": "HTML",
    "open_issues": 2,
-   "pushed_at": "2026-09-03",
+   "pushed_at": "2026-09-15",
    "stars": 0
   },
   "Varnasr/FieldStack": {
@@ -53,15 +53,15 @@
   "Varnasr/PolicyDhara": {
    "archived": false,
    "language": "Astro",
-   "open_issues": 15,
-   "pushed_at": "2026-09-14",
+   "open_issues": 16,
+   "pushed_at": "2026-09-21",
    "stars": 1
   },
   "Varnasr/SignalStack": {
    "archived": false,
    "language": "Python",
    "open_issues": 7,
-   "pushed_at": "2026-09-08",
+   "pushed_at": "2026-09-15",
    "stars": 1
   },
   "Varnasr/climate-trace-india": {
@@ -75,7 +75,7 @@
    "archived": false,
    "language": "JavaScript",
    "open_issues": 2,
-   "pushed_at": "2026-08-01",
+   "pushed_at": "2026-09-15",
    "stars": 1
   },
   "Varnasr/devdata-practice": {
@@ -96,14 +96,14 @@
    "archived": false,
    "language": "JavaScript",
    "open_issues": 2,
-   "pushed_at": "2026-08-01",
+   "pushed_at": "2026-09-15",
    "stars": 1
   },
   "Varnasr/how-india-lives": {
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-07-13",
+   "pushed_at": "2026-09-15",
    "stars": 0
   },
   "Varnasr/india-development-indicators": {
@@ -131,14 +131,14 @@
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-09-03",
+   "pushed_at": "2026-09-15",
    "stars": 1
   },
   "Varnasr/the-measurement-trap": {
    "archived": false,
    "language": "HTML",
    "open_issues": 1,
-   "pushed_at": "2026-08-18",
+   "pushed_at": "2026-09-15",
    "stars": 0
   },
   "Varnasr/theverylastsuperhero": {
