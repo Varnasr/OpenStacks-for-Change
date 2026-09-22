@@ -1,0 +1,19 @@
+name: CI
+
+# Neither existing workflow validated anything on a push or a pull request:
+# link-check.yml crawls external hosts and repo-stats.yml is the scheduled
+# fetch. This runs the index's own invariants before a change lands.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/check.py
