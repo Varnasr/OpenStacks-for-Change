@@ -61,7 +61,12 @@ def main() -> int:
     print(f"wrote {OUT.relative_to(ROOT)}: {len(out['repos'])} repositories")
     for f in failed:
         print("failed:", f, file=sys.stderr)
-    return 1 if failed and not out["repos"] else 0
+    # Any failure is a failure. This used to be `failed and not out["repos"]`,
+    # so the run only failed when *every* repository failed, and one that
+    # failed on its own wrote a file missing that row and exited 0. That is how
+    # Varnasr/whogavetheorder came to be absent from a committed data/repos.json
+    # while its tile sat on the page: a partial write nothing reported.
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
