@@ -30,10 +30,12 @@ build that is never published, cost nothing. So:
 - Work on the session's development branch and push there. Open a pull
   request only when the owner asks for one, and never merge without being
   asked.
-- Gather a day's work and merge it once, twice at most.
+- Build all day and publish once. Do not merge on your own judgement: the
+  owner merges, and nothing goes live before 20:00 IST. Do not use Firecrawl
+  where curl or a web search will do; its credits are paid for.
 - Every site on the Netlify team has auto-publishing locked except
   democracybydesign.in, which must be able to take a photograph down at once.
-  A merge builds but goes live only at 07:47 or 19:47 IST, when the "Publish
+  A merge builds but goes live only at 20:00 IST, once a day, when the "Publish
   locked sites" workflow in Democracy-by-Design (`tools/publish-locked.py`)
   publishes the newest finished build of each locked site. The script reads
   the locked set from Netlify, not from a list. Running that workflow by hand,
