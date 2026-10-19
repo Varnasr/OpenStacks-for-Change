@@ -305,6 +305,12 @@ again.
 
 Never say a feature was tested when it was read or inferred.
 
+The cloud session clones each repository shallow. A script that reads git
+history (a change log, a feed, a "last updated" date) either refuses to run or
+writes a different answer from CI, and a refusal can look like a clean diff.
+Run `git fetch --unshallow` before trusting it. WhoGaveTheOrder's `build.js`
+refused, and the empty diff was briefly read as a pass (2026-10-19).
+
 ## 7. CI/CD and dependencies
 
 Use GitHub Actions. The pipeline covers what applies: installs from a
