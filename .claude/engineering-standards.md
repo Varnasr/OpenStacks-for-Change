@@ -86,7 +86,13 @@ colour schemes, and `scrollWidth` against `clientWidth`. Chromium is installed
 in the cloud sandbox; it reaches localhost and not the internet, so stub CDN
 scripts by route.
 
-**Privacy and law.** These are public repositories. Never commit a secret, a
+**Privacy and law.** Most of these repositories are public. Fourteen were
+private on 2026-10-19: Chromalie, Democracy-by-Design, INDIA-DATA,
+IdealogWorks, WhoGaveTheOrder, WomenOnRecord, allthegoodstuff,
+impactmojo-field-notes-pro, impactmojo-workshop-pro, makeitpop,
+phototales-studio, pika-woodcraft, pinpointventures and storywell. A private
+repository can be made public with one click, and everything in its history
+goes with it, so treat every one as public: never commit a secret, a
 personal email address that is not already the published contact, or
 row-level personal data (names, EPIC numbers, phone numbers). No survivor or
 private person is named on a page. A licence, a privacy claim or a compliance
