@@ -8,6 +8,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Read-only: this workflow checks the repository and writes nothing back to it.
+permissions:
+  contents: read
+
 jobs:
   checks:
     runs-on: ubuntu-latest

@@ -34,14 +34,27 @@ jobs:
             --no-progress
             --max-concurrency 4
             --accept 200,206,429
-            --exclude-mail
             README.md MAINTENANCE.md docs/**/*.md index.html
           fail: false
 
-      - name: Open an issue if links are broken
+      # The check also runs on every push that touches the pages, and each
+      # failing run used to open a fresh issue: 21 identical "Broken links
+      # found" issues were open on 2026-10-19. Update the open one instead.
+      - name: Find the open report, if there is one
+        if: steps.lychee.outputs.exit_code != 0
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --label documentation \
+                --search 'in:title "Broken links found"' --json number --jq '.[0].number // empty')
+          echo "number=$n" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the issue if links are broken
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v6
         with:
           title: "Broken links found"
+          issue-number: ${{ steps.existing.outputs.number }}
           content-filepath: ./lychee/out.md
           labels: documentation
