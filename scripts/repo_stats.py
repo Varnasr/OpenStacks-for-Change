@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,6 +22,21 @@ INDEX = ROOT / "index.html"
 OUT = ROOT / "data" / "repos.json"
 TILE = re.compile(r'<a class="tile[^"]*"[^>]*>.*?</a>', re.S)
 REPO = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
+
+# Repositories on the index that a repository-scoped token cannot read, with
+# the reason. The weekly workflow passes secrets.GITHUB_TOKEN, which is scoped
+# to this repository, so GET /repos on a private one elsewhere answers 404 and
+# cannot be told apart from a repository that does not exist. That is why these
+# are named rather than inferred: a 404 for anything not in here is still a
+# failure, so a typo or a deleted repository is reported as loudly as before.
+#
+# This is why the workflow failed every Monday from 28 September 2026: the run
+# of 22 September had been made by hand with a personal token, so the committed
+# file held all 22 rows, and every scheduled run since 404'd on this one and
+# exited 1. The file went 27 days without a refresh.
+PRIVATE = {
+    "Varnasr/whogavetheorder": "private; a repository-scoped token 404s on it",
+}
 
 
 def repos_on_page() -> list[str]:
@@ -49,16 +65,34 @@ def fetch(full: str, token: str | None) -> dict:
 
 def main() -> int:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_PAT")
-    out = {"fetched": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "repos": {}}
-    failed = []
+    # Start from what is already there, so a repository this token cannot read
+    # keeps the figures a previous run got for it instead of disappearing from
+    # the file. Rebuilding from nothing is what made a partial run destructive.
+    try:
+        before = json.loads(OUT.read_text(encoding="utf-8")).get("repos") or {}
+    except (OSError, ValueError):
+        before = {}
+    out = {"fetched": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+           "repos": dict(before)}
+    failed, kept = [], []
     for full in repos_on_page():
         try:
             out["repos"][full] = fetch(full, token)
+        except urllib.error.HTTPError as e:
+            if e.code == 404 and full in PRIVATE:
+                kept.append(f"{full} ({PRIVATE[full]})")
+            else:
+                failed.append(f"{full}: {e}")
         except Exception as e:  # noqa: BLE001
             failed.append(f"{full}: {e}")
+    # A repository nothing on the page mentions any more should not linger.
+    for gone in [k for k in out["repos"] if k not in repos_on_page()]:
+        del out["repos"][gone]
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(out, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(out['repos'])} repositories")
+    for k in kept:
+        print(f"kept the previous row for {k}")
     for f in failed:
         print("failed:", f, file=sys.stderr)
     # Any failure is a failure. This used to be `failed and not out["repos"]`,
