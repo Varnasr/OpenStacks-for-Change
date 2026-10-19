@@ -144,7 +144,7 @@ If you use this work, please cite it. Machine-readable metadata is in [CITATION.
 
 **Dr. Varna Sri Raman** — Development economist and social researcher with 20+ years of experience across public health, education, gender equity, and climate resilience in India and South Asia. Has led programme design, MEL strategies, and research with Oxfam, UNICEF, Gates Foundation, PLAN India, and BBC Media Action.
 
-[GitHub](https://github.com/Varnasr) · [Twitter](https://x.com/varna) · [Web](https://on-web.link/varna)
+[GitHub](https://github.com/Varnasr) · [Twitter](https://x.com/varna) · [Web](https://idealog.works)
 
 ## Support
 
