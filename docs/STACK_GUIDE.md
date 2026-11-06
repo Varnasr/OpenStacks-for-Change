@@ -27,10 +27,10 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 **[DevData Practice](https://github.com/Varnasr/devdata-practice)** — 10 generators, 350k+ rows of realistic development data.
 
 ### I need teaching material or case studies
-**[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** (200 cases, 117 countries) and **[Development Discourses](https://github.com/Varnasr/development-discourses)** (500+ curated open-access sources).
+**[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** (208 cases, 117 countries) and **[Development Discourses](https://github.com/Varnasr/development-discourses)** (500+ curated open-access sources).
 
 ### I need Indian state-level data or maps
-**[How India Lives](https://github.com/Varnasr/how-india-lives)** — 205 state-level choropleth maps across demography, health, gender, economy, education, and environment.
+**[How India Lives](https://github.com/Varnasr/how-india-lives)** — 259 state-level choropleth maps across demography, health, gender, economy, education, and environment.
 
 ### I need to publish or archive research content
 **[SignalStack](https://varnasr.github.io/SignalStack/)** ([source](https://github.com/Varnasr/SignalStack)): the Research Rundown newsletter archived in full, its recurring sections compiled, and four scripts from its methods notes.

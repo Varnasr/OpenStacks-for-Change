@@ -42,7 +42,7 @@ If you are looking for the polished, reader-facing version of this work, start w
 | Project | What it is |
 |---|---|
 | **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** | Auto-updating tracker of Indian government policy across development sectors. A complement to Impact Mojo. |
-| **[How India Lives](https://howindialives.impactmojo.in)** | 205 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. [Source](https://github.com/Varnasr/how-india-lives). |
+| **[How India Lives](https://howindialives.impactmojo.in)** | 259 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. [Source](https://github.com/Varnasr/how-india-lives). |
 | **[Some Perspective](https://someperspective.info)** | Unfunded empirical study of India's political economy, 2004–2026. Three constructed indices, full dataset, replication code, and a working paper. |
 | **[Hyderabad Electoral Analysis](https://varnasr.github.io/Hyderabad-Electoral-Analysis/)** | Five old-city seats, one winner since 1999 — and still the poorest part of Hyderabad. Ward-level census analysis showing the gap is in work and income, not services or slums. [Source](https://github.com/Varnasr/Hyderabad-Electoral-Analysis). |
 | **[Bihar Parichay](https://github.com/Varnasr/BiharParichay-Project)** | Interactive bilingual resource on Bihar — society, economy, caste, migration, climate, culture. Single offline-capable HTML file. |
@@ -57,7 +57,7 @@ If you are looking for the polished, reader-facing version of this work, start w
 
 | Project | What it is |
 |---|---|
-| **[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** | 200 real development case studies from 117 countries — searchable, filterable, fully cited. |
+| **[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** | 208 real development case studies from 117 countries — searchable, filterable, fully cited. |
 | **[Development Discourses](https://varnasr.github.io/development-discourses/)** | Curated open-access library of 500+ papers, books, and grey literature for South Asian practitioners. |
 | **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 10 generators, 350k+ rows. |
 | **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps for impact evaluation, poverty analysis, and program design. |
