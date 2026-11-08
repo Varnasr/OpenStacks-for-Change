@@ -82,6 +82,41 @@ def main():
               re.search(r'<meta[^>]*name=["\']?viewport', read(page), re.I) is not None,
               'a phone lays the page out at desktop width and zooms out')
 
+    # Search engines. robots.txt names the sitemap, the sitemap lists exactly the
+    # pages that can be indexed (a noindex page stays out), every listed address
+    # has a file behind it, and every indexable page carries its own canonical.
+    # The site has no build step, so these files are kept by hand and this is
+    # what notices a page added without them.
+    host = 'https://openstacks.dev'
+    check('robots.txt names the sitemap',
+          re.search(r'^Sitemap: %s/sitemap\.xml$' % re.escape(host), read('robots.txt'), re.M),
+          'add "Sitemap: %s/sitemap.xml"' % host)
+    check('robots.txt allows crawling',
+          re.search(r'^User-agent: \*\s*\nAllow: /\s*$', read('robots.txt'), re.M),
+          'expected "User-agent: *" then "Allow: /"')
+    pages = sorted(f for f in os.listdir(ROOT) if f.endswith('.html'))
+    indexable = [f for f in pages
+                 if not re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', read(f), re.I)]
+
+    def url_of(f):
+        return host + '/' if f == 'index.html' else '%s/%s' % (host, f[:-5])
+
+    locs = re.findall(r'<loc>([^<]+)</loc>', read('sitemap.xml'))
+    check('sitemap.xml lists pages', locs, 'no <loc> found')
+    for loc in locs:
+        path = loc[len(host):] if loc.startswith(host) else None
+        f = None if path is None else ('index.html' if path == '/' else path.lstrip('/') + '.html')
+        check('sitemap address %s has a file behind it' % loc,
+              f is not None and os.path.isfile(os.path.join(ROOT, f)),
+              'no file %s' % f)
+    check('sitemap.xml lists exactly the indexable pages',
+          sorted(locs) == sorted(url_of(f) for f in indexable),
+          '%s in the sitemap, %s on disk' % (sorted(locs), sorted(url_of(f) for f in indexable)))
+    for f in indexable:
+        check('%s has its own canonical link' % f,
+              '<link rel="canonical" href="%s">' % url_of(f) in read(f),
+              'expected <link rel="canonical" href="%s">' % url_of(f))
+
     if errors:
         print('FAIL: %d of %d checks' % (len(errors), checks))
         for e in errors:

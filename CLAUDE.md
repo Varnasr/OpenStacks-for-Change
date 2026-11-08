@@ -49,3 +49,7 @@ GitHub credentials, so no request to `api.github.com` is ever unauthenticated
 and a private repository answers 200. An unlisted repository gets 403 from that
 proxy rather than 404 from GitHub, which is the sandbox and not the case this
 guards.
+
+## Robots and sitemap
+
+`robots.txt` and `sitemap.xml` are kept by hand at the root. The sitemap lists only pages that can be indexed, in the address the live site answers 200 for (`/` for the home page, no `.html` for the others), so `support.html`, which is `noindex`, stays out. A new indexable page needs a sitemap entry and its own `<link rel="canonical">`; `scripts/check.py` fails on a missing entry, an address with no file, or a missing canonical.
