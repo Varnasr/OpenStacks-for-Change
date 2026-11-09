@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-02",
+ "fetched": "2026-11-09",
  "repos": {
   "Varnasr/BiharParichay-Project": {
    "archived": false,
@@ -12,14 +12,14 @@
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/EquityStack": {
    "archived": false,
    "language": "Python",
    "open_issues": 2,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/Experiments": {
@@ -33,49 +33,49 @@
    "archived": false,
    "language": "R",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/Hyderabad-Electoral-Analysis": {
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/InsightStack": {
    "archived": false,
    "language": "Python",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/PolicyDhara": {
    "archived": false,
    "language": "Astro",
    "open_issues": 9,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-09",
    "stars": 1
   },
   "Varnasr/SignalStack": {
    "archived": false,
    "language": "Python",
    "open_issues": 3,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/climate-trace-india": {
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 0
   },
   "Varnasr/dev-case-studies": {
    "archived": false,
    "language": "JavaScript",
    "open_issues": 1,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/devdata-practice": {
@@ -94,16 +94,16 @@
   },
   "Varnasr/development-discourses": {
    "archived": false,
-   "language": "JavaScript",
+   "language": "HTML",
    "open_issues": 1,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/how-india-lives": {
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 0
   },
   "Varnasr/india-development-indicators": {
@@ -124,15 +124,15 @@
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 0
   },
   "Varnasr/someperspective": {
    "archived": false,
    "language": "HTML",
    "open_issues": 0,
-   "pushed_at": "2026-11-02",
-   "stars": 1
+   "pushed_at": "2026-11-08",
+   "stars": 2
   },
   "Varnasr/the-measurement-trap": {
    "archived": false,
@@ -145,15 +145,15 @@
    "archived": false,
    "language": "Astro",
    "open_issues": 2,
-   "pushed_at": "2026-11-02",
+   "pushed_at": "2026-11-08",
    "stars": 1
   },
   "Varnasr/whogavetheorder": {
    "archived": false,
    "language": "JavaScript",
-   "open_issues": 44,
-   "pushed_at": "2026-11-02",
-   "stars": 1
+   "open_issues": 50,
+   "pushed_at": "2026-11-09",
+   "stars": 2
   }
  }
 }
