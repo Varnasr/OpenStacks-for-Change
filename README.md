@@ -51,7 +51,7 @@ If you are looking for the polished, reader-facing version of this work, start w
 | **[India Development Indicators](https://devindicators.impactmojo.in)** | [Source](https://github.com/Varnasr/india-development-indicators) · Interactive dashboard across economic, health, education, infrastructure, and environmental indicators, pulling live from the World Bank Open Data API. |
 | **[Climate TRACE India](https://climatetrace.impactmojo.in)** | [Source](https://github.com/Varnasr/climate-trace-india) · Satellite-verified, facility-level greenhouse-gas emissions for India — power, manufacturing, transport, fossil fuels, agriculture, and waste, including the top-emitting coal and steel plants. |
 | **[Industry Conglomerates Tracker](https://industrygroups.impactmojo.in)** | [Source](https://github.com/Varnasr/industry-conglomerates-database) · Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999–2026 — searchable and filterable, with government-support classification. |
-| **[WhoGaveTheOrder.in](https://whogavetheorder.netlify.app)** | Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map, and an RTI register with a live reply-due clock. |
+| **[WhoGaveTheOrder.in](https://www.whogavetheorder.in/)** | Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map, and an RTI register with a live reply-due clock. |
 
 ### Teaching and practice
 
@@ -88,7 +88,7 @@ InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo
 | Project | What it is |
 |---|---|
 | **[CandidateDossier](https://github.com/Varnasr/CandidateDossier)** | CSV → LaTeX → PDF generator for uniform, privacy-masked candidate dossiers. |
-| **[Experiments](https://github.com/Varnasr/Experiments)** | The sandbox. Small browser tools are built and indexed there and are not listed here; anything that lasts moves to a repository of its own and appears above. |
+| **[Experiments](https://idealogworks.foo/)** | The sandbox, at idealogworks.foo. Small browser tools are built and indexed there and are not listed here; anything that lasts moves to a repository of its own and appears above. |
 | **[.github](https://github.com/Varnasr/.github)** | Shared community health files — contributing guide, code of conduct, issue templates — inherited by every repo above. |
 
 ---
