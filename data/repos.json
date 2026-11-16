@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-09",
+ "fetched": "2026-11-16",
  "repos": {
   "Varnasr/BiharParichay-Project": {
    "archived": false,
@@ -25,8 +25,8 @@
   "Varnasr/Experiments": {
    "archived": false,
    "language": "HTML",
-   "open_issues": 1,
-   "pushed_at": "2026-11-02",
+   "open_issues": 2,
+   "pushed_at": "2026-11-12",
    "stars": 0
   },
   "Varnasr/FieldStack": {
@@ -53,8 +53,8 @@
   "Varnasr/PolicyDhara": {
    "archived": false,
    "language": "Astro",
-   "open_issues": 9,
-   "pushed_at": "2026-11-09",
+   "open_issues": 11,
+   "pushed_at": "2026-11-16",
    "stars": 1
   },
   "Varnasr/SignalStack": {
@@ -144,15 +144,15 @@
   "Varnasr/theverylastsuperhero": {
    "archived": false,
    "language": "Astro",
-   "open_issues": 2,
-   "pushed_at": "2026-11-08",
+   "open_issues": 3,
+   "pushed_at": "2026-11-14",
    "stars": 1
   },
   "Varnasr/whogavetheorder": {
    "archived": false,
    "language": "JavaScript",
-   "open_issues": 50,
-   "pushed_at": "2026-11-09",
+   "open_issues": 57,
+   "pushed_at": "2026-11-16",
    "stars": 2
   }
  }
