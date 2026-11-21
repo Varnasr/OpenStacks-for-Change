@@ -30,7 +30,7 @@ StackName/
 | JSON | API responses, nested structures, config files |
 | GeoJSON | Geospatial data |
 | Parquet | Large datasets (>100MB) where CSV is impractical |
-| SQLite | Database seeds and schema exports (RootStack) |
+| SQLite | Database seeds and schema exports (RootStack, now retired) |
 | Markdown | Documentation, narrative content |
 
 ### CSV Conventions

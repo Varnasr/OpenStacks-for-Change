@@ -10,12 +10,12 @@ OpenStacks is **not** a platform. It is a set of independent repositories that s
 
 This is a correction. An earlier version of this document described a layered pipeline in which analysis repos fed a central database (RootStack), which was served by an API (BridgeStack), which was rendered by a frontend (ViewStack). That pipeline was built, and it was the most expensive part of the project to maintain and the least used. Those three repos have been [retired](../README.md#retired).
 
-What remains is the part that always worked: five self-contained toolkits that a researcher can clone one at a time.
+What remains is the part that always worked: four self-contained toolkits that a researcher can clone one at a time.
 
 ```
 InsightStack   MEL tools, calculators, econometrics      Stata · Python · R
-FieldStack     Survey design → analysis → reporting      R · Quarto
-EquityStack    Data cleaning, modelling, impact eval     Python · Jupyter
+FieldStack     Field checks, sampling, estimates         R · Quarto
+EquityStack    Inequality measures, survey estimation    Python · Jupyter
 SignalStack    Research Rundown newsletter archive       Markdown
 ```
 
@@ -36,7 +36,7 @@ Built for evaluators, analysts, and programme designers, not platform engineers.
 Scripts ship with sample data. Notebooks are self-contained. A repo cloned three years from now should still run — which is a reason to pin dependencies and leave them pinned, not to chase the newest version of everything.
 
 ### Boring is a feature
-Stata do-files, R scripts, and Jupyter notebooks have almost no maintenance surface. They do not break when a transitive npm dependency publishes a new major version. The toolkits have survived untouched for a year precisely because they were built out of durable, unfashionable things.
+Stata do-files, R scripts, and Jupyter notebooks have almost no maintenance surface. They do not break when a transitive npm dependency publishes a new major version, which is the reason the toolkits are built out of durable, unfashionable things.
 
 ## Directory conventions
 
