@@ -77,6 +77,54 @@ def main():
                   status.group(1) in {'active', 'stable', 'retired', 'archived'},
                   '%r' % status.group(1))
 
+    # Counts. A tile that states a count ("259 state-level choropleth maps")
+    # is repeating a number that lives in another repository, and nothing here
+    # can read that repository. What can be held is that the number was read
+    # from somewhere and that this repository says it one way: data/claims.json
+    # records each count with its source, the tile must say it, the README and
+    # the stack guide must say the same, and a tile may not state a count that
+    # has no entry. On 21 November 2026 eight tiles carried counts that their
+    # repositories had moved on from, and two of them had been corrected in the
+    # README two weeks earlier and left as they were on the page.
+    claims = json.loads(read('data/claims.json')).get('claims', [])
+    check('data/claims.json holds claims', claims, 'none found, so the count checks see nothing')
+    readme = read('README.md')
+    by_name = {}
+    for tile in tiles:
+        m = re.search(r'<h3>([^<]+)</h3>', tile)
+        if m:
+            by_name[m.group(1)] = tile
+    for c in claims:
+        label = '%s: %s' % (c.get('tile'), c.get('page'))
+        for field in ('tile', 'value', 'page', 'source', 'checked'):
+            check('claim %s carries %s' % (label, field), c.get(field), 'absent or empty')
+        check('claim %s contains its own value' % label,
+              str(c.get('value')) in str(c.get('page')), 'value %r is not in the page text' % c.get('value'))
+        tile = by_name.get(c.get('tile'))
+        check('claim %s names a tile on the page' % label, tile is not None, 'no tile with that heading')
+        if tile is not None:
+            check('the tile says %s' % label, c['page'] in tile,
+                  'the tile no longer says %r; change data/claims.json and the tile together' % c['page'])
+        if c.get('readme'):
+            check('README.md says %s' % label, c['readme'] in readme,
+                  'README.md does not say %r' % c['readme'])
+        for path, text in c.get('also', []):
+            check('%s says %s' % (path, label), text in read(path), '%s does not say %r' % (path, text))
+    # A number in a tile's description that is a count and has no entry. Years,
+    # the DOI and the ISBN are left alone, and so is a number joined to a word
+    # or to another number ("14-year-old", "2025-26", "IV/2SLS").
+    number = re.compile(r'(?<![\w./-])\d[\d,]*\+?(?![\w/-]|\.\d)')
+    for name, tile in sorted(by_name.items()):
+        para = re.search(r'<p>(.*?)</p>', tile, re.S)
+        text = re.sub(r'<[^>]+>', '', para.group(1)) if para else ''
+        for n in number.findall(text):
+            digits = n.replace(',', '').rstrip('+')
+            if len(digits) >= 8 or (len(digits) == 4 and digits[:2] in ('19', '20')):
+                continue
+            check('%s: the count %s has a source' % (name, n),
+                  any(c.get('tile') == name and str(c.get('value')) == n for c in claims),
+                  'no entry in data/claims.json for %r on this tile' % n)
+
     for page in ('index.html',):
         check('%s sets a viewport' % page,
               re.search(r'<meta[^>]*name=["\']?viewport', read(page), re.I) is not None,

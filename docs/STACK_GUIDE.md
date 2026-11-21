@@ -2,7 +2,7 @@
 
 Which repository should you use? Find your use case below.
 
-All five toolkits are **Stable** — usable and correct, not under active development. See [MAINTENANCE.md](../MAINTENANCE.md) for what that means.
+All four toolkits are **Stable** — usable and correct, not under active development. See [MAINTENANCE.md](../MAINTENANCE.md) for what that means.
 
 ---
 
@@ -24,10 +24,10 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)**, which updates itself. PolicyStack, the earlier static dataset, is retired.
 
 ### I need practice data to teach or learn with
-**[DevData Practice](https://github.com/Varnasr/devdata-practice)** — 10 generators, 350k+ rows of realistic development data.
+**[DevData Practice](https://github.com/Varnasr/devdata-practice)** — 36 generators, 840,000+ rows of realistic development data.
 
 ### I need teaching material or case studies
-**[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** (208 cases, 117 countries) and **[Development Discourses](https://github.com/Varnasr/development-discourses)** (500+ curated open-access sources).
+**[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** (208 cases, 117 countries) and **[Development Discourses](https://github.com/Varnasr/development-discourses)** (687 curated sources, open access first).
 
 ### I need Indian state-level data or maps
 **[How India Lives](https://github.com/Varnasr/how-india-lives)** — 259 state-level choropleth maps across demography, health, gender, economy, education, and environment.
@@ -43,7 +43,7 @@ All five toolkits are **Stable** — usable and correct, not under active develo
 |----------|--------------|
 | **R** | FieldStack, InsightStack, [DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit) |
 | **Python** | EquityStack, InsightStack, [DevData Practice](https://github.com/Varnasr/devdata-practice) |
-| **Stata** | InsightStack, FieldStack |
+| **Stata** | InsightStack |
 | **Jupyter** | EquityStack |
 | **Quarto** | FieldStack |
 | **Observable** | InsightStack |

@@ -41,27 +41,27 @@ If you are looking for the polished, reader-facing version of this work, start w
 
 | Project | What it is |
 |---|---|
-| **[PolicyDhara](https://github.com/Varnasr/PolicyDhara)** | Auto-updating tracker of Indian government policy across development sectors. A complement to Impact Mojo. |
-| **[How India Lives](https://howindialives.impactmojo.in)** | 259 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment. [Source](https://github.com/Varnasr/how-india-lives). |
+| **[PolicyDhara](https://policydhara.impactmojo.in)** | [Source](https://github.com/Varnasr/PolicyDhara) · Auto-updating tracker of Indian government policy across development sectors. A complement to Impact Mojo. |
+| **[How India Lives](https://howindialives.impactmojo.in)** | 259 state-level choropleth maps and 10 visual stories on India's diversity across demography, health, gender, economy, education, and environment, with an interactive map of 106 indicators. [Source](https://github.com/Varnasr/how-india-lives). |
 | **[Some Perspective](https://someperspective.info)** | Unfunded empirical study of India's political economy, 2004–2026. Three constructed indices, full dataset, replication code, and a working paper. |
 | **[Hyderabad Electoral Analysis](https://varnasr.github.io/Hyderabad-Electoral-Analysis/)** | Five old-city seats, one winner since 1999 — and still the poorest part of Hyderabad. Ward-level census analysis showing the gap is in work and income, not services or slums. [Source](https://github.com/Varnasr/Hyderabad-Electoral-Analysis). |
-| **[Bihar Parichay](https://github.com/Varnasr/BiharParichay-Project)** | Interactive bilingual resource on Bihar — society, economy, caste, migration, climate, culture. Single offline-capable HTML file. |
-| **[Bihar Electoral Dashboard](https://forindia.netlify.app)** | Analysis of Bihar electoral roll anomalies — voter deletion patterns, demographic shifts, and election data integrity. |
+| **[Bihar Parichay](https://bihar-parichayproject.netlify.app)** | [Source](https://github.com/Varnasr/BiharParichay-Project) · Interactive bilingual resource on Bihar — society, economy, caste, migration, climate, culture. Single offline-capable HTML file. |
+| **[Off the Roll](https://offtheroll.in)** | [Source](https://github.com/Varnasr/INDIA-DATA) · Who was struck off India's electoral rolls in the 2025-26 Special Intensive Revision: across India, in Bihar, in five Old City constituencies of Hyderabad, and in Tamil Nadu, Karnataka, West Bengal and Kerala. |
 | **[SDG Progress Tracker](https://sdgtracker.impactmojo.in)** | [Source](https://github.com/Varnasr/sdg-progress-tracker) · India's progress on all 17 UN Sustainable Development Goals — scores, trends, radar charts, and category breakdowns. |
 | **[India Development Indicators](https://devindicators.impactmojo.in)** | [Source](https://github.com/Varnasr/india-development-indicators) · Interactive dashboard across economic, health, education, infrastructure, and environmental indicators, pulling live from the World Bank Open Data API. |
 | **[Climate TRACE India](https://climatetrace.impactmojo.in)** | [Source](https://github.com/Varnasr/climate-trace-india) · Satellite-verified, facility-level greenhouse-gas emissions for India — power, manufacturing, transport, fossil fuels, agriculture, and waste, including the top-emitting coal and steel plants. |
-| **[Industry Conglomerates Tracker](https://industrygroups.impactmojo.in)** | [Source](https://github.com/Varnasr/industry-conglomerates-database) · Open geographic database of 444 major Adani and Ambani infrastructure projects, 1999–2026 — searchable and filterable, with government-support classification. |
-| **[WhoGaveTheOrder.in](https://www.whogavetheorder.in/)** | Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a chain-of-command map, and an RTI register with a live reply-due clock. |
+| **[Industry Conglomerates Tracker](https://industrygroups.impactmojo.in)** | [Source](https://github.com/Varnasr/industry-conglomerates-database) · Open geographic database of 386 major Adani and Ambani infrastructure projects, 1998–2026 — searchable and filterable, with government-support classification. |
+| **[WhoGaveTheOrder.in](https://www.whogavetheorder.in/)** | Citizen-led accountability archive asking who authorised the use of state power against citizens. A six-state evidence grammar, a page for each incident, an evidence library, a calendar of court hearings and committee sittings, letters asking offices to preserve their records, and a log of what has been asked of public offices. [Source](https://github.com/Varnasr/whogavetheorder). |
 
 ### Teaching and practice
 
 | Project | What it is |
 |---|---|
-| **[Dev Case Studies](https://github.com/Varnasr/dev-case-studies)** | 208 real development case studies from 117 countries — searchable, filterable, fully cited. |
-| **[Development Discourses](https://varnasr.github.io/development-discourses/)** | Curated open-access library of 500+ papers, books, and grey literature for South Asian practitioners. |
-| **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 10 generators, 350k+ rows. |
-| **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps for impact evaluation, poverty analysis, and program design. |
-| **[ImpactLex](https://www.impactmojo.in/impactlex/)** | Development-sector glossary and companion to Impact Mojo — 390+ terms merged from 20 course lexicons, with 5 case studies, 10 worked formulae, and cross-references to where each term is taught. Offline-capable PWA. |
+| **[Dev Case Studies](https://varnasr.github.io/dev-case-studies/)** | [Source](https://github.com/Varnasr/dev-case-studies) · 208 real development case studies from 117 countries — searchable, filterable, fully cited. |
+| **[Development Discourses](https://devdiscourses.impactmojo.in/)** | Curated library of 687 research papers, books, and grey literature for practitioners in South Asia, open access first. [Source](https://github.com/Varnasr/development-discourses). |
+| **[DevData Practice](https://github.com/Varnasr/devdata-practice)** | Realistic practice datasets — 36 generators, 840,000+ rows. |
+| **[DevEconomics Toolkit](https://github.com/Varnasr/deveconomics-toolkit)** | 11 interactive Shiny apps, six in Python and five in R, for impact evaluation, poverty analysis, and program design. |
+| **[ImpactLex](https://www.impactmojo.in/impactlex/)** | Development-sector glossary and companion to Impact Mojo — 494 terms, with 5 case studies, 10 worked formulae, and cross-references to where each term is taught. Offline-capable PWA. |
 
 ### Research toolkits — the OpenStacks
 
@@ -80,14 +80,14 @@ InsightStack has a DOI: [10.5281/zenodo.15245182](https://doi.org/10.5281/zenodo
 
 | Project | What it is |
 |---|---|
-| **[The Measurement Trap](https://github.com/Varnasr/the-measurement-trap)** | Companion site for *The Measurement Trap: India's Quest for Social Progress Through Eight Decades* (Routledge, forthcoming). Live at [whatcounts.in](https://whatcounts.in/). |
+| **[The Measurement Trap](https://github.com/Varnasr/the-measurement-trap)** | Companion site for *The Measurement Trap: India's Quest for Social Progress Through Eight Decades* (Routledge, March 2027; ISBN 9781041436744). Live at [whatcounts.in](https://whatcounts.in/). |
 | **[The Very Last Superhero](https://postheroic.world)** | Illustrated speculative fiction set in a climate-collapsed India. |
 
 ### Utilities
 
 | Project | What it is |
 |---|---|
-| **[CandidateDossier](https://github.com/Varnasr/CandidateDossier)** | CSV → LaTeX → PDF generator for uniform, privacy-masked candidate dossiers. |
+| **[CandidateDossier](https://github.com/Varnasr/CandidateDossier)** | CSV → PDF generator for uniform candidate dossiers with phone numbers and emails masked. It runs in the browser, and the PDF comes from the browser's print dialogue. [Live](https://varnasr.github.io/CandidateDossier/). |
 | **[Experiments](https://idealogworks.foo/)** | The sandbox, at idealogworks.foo. Small browser tools are built and indexed there and are not listed here; anything that lasts moves to a repository of its own and appears above. |
 | **[.github](https://github.com/Varnasr/.github)** | Shared community health files — contributing guide, code of conduct, issue templates — inherited by every repo above. |
 

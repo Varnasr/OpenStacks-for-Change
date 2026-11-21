@@ -34,9 +34,12 @@ REPO = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
 # of 22 September had been made by hand with a personal token, so the committed
 # file held all 22 rows, and every scheduled run since 404'd on this one and
 # exited 1. The file went 27 days without a refresh.
-PRIVATE = {
-    "Varnasr/whogavetheorder": "private; a repository-scoped token 404s on it",
-}
+#
+# Varnasr/whogavetheorder was the one entry until 21 November 2026, when the
+# GitHub API reported it public (private: false), so it is fetched like every
+# other repository again. The list is empty today. Add a repository here only
+# with the reason, and take it out when it becomes public.
+PRIVATE: dict[str, str] = {}
 
 
 def repos_on_page() -> list[str]:

@@ -1,0 +1,161 @@
+{
+ "note": "Every count stated on a tile of index.html, with the file it was read from and the day it was read. scripts/check.py fails if a tile states a count that is not here, or if the page, the README or the stack guide stops saying a count that is. Change the number here first, from the repository's own data, then change the text.",
+ "claims": [
+  {
+   "tile": "How India Lives",
+   "value": "259",
+   "page": "259 state-level choropleth maps",
+   "readme": "259 state-level choropleth maps",
+   "source": "Varnasr/how-india-lives data/maps.json: 259 entries; README.md says 259",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "259 state-level choropleth maps"
+    ]
+   ]
+  },
+  {
+   "tile": "How India Lives",
+   "value": "10",
+   "page": "10 visual stories",
+   "readme": "10 visual stories",
+   "source": "Varnasr/how-india-lives README.md: 10 curated visual stories",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "How India Lives",
+   "value": "106",
+   "page": "106 indicators",
+   "readme": "106 indicators",
+   "source": "Varnasr/how-india-lives data/interactive-data.json: 106 entries under indicators",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "SDG Progress Tracker",
+   "value": "17",
+   "page": "all 17 UN Sustainable Development Goals",
+   "readme": "all 17 UN Sustainable Development Goals",
+   "source": "Varnasr/sdg-progress-tracker README.md",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "Industry Conglomerates Tracker",
+   "value": "386",
+   "page": "386 major Adani and Ambani infrastructure projects",
+   "readme": "386 major Adani and Ambani infrastructure projects",
+   "source": "Varnasr/industry-conglomerates-database adani_database.csv: 386 rows, Year 1998 to 2026",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "Dev Case Studies",
+   "value": "208",
+   "page": "208 real development case studies",
+   "readme": "208 real development case studies",
+   "source": "Varnasr/dev-case-studies data/stats.json: totals.studies 208",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "208 cases"
+    ]
+   ]
+  },
+  {
+   "tile": "Dev Case Studies",
+   "value": "117",
+   "page": "117 countries",
+   "readme": "117 countries",
+   "source": "Varnasr/dev-case-studies data/stats.json: totals.countries 117",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "117 countries"
+    ]
+   ]
+  },
+  {
+   "tile": "Development Discourses",
+   "value": "687",
+   "page": "687 research papers",
+   "readme": "687 research papers",
+   "source": "Varnasr/development-discourses data/stats.json: total 687",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "687 curated sources"
+    ]
+   ]
+  },
+  {
+   "tile": "DevData Practice",
+   "value": "36",
+   "page": "36 generators",
+   "readme": "36 generators",
+   "source": "Varnasr/devdata-practice generate.py: 36 entries in GENERATORS; README.md says 36",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "36 generators"
+    ]
+   ]
+  },
+  {
+   "tile": "DevData Practice",
+   "value": "840,000+",
+   "page": "840,000+ rows",
+   "readme": "840,000+ rows",
+   "source": "Varnasr/devdata-practice README.md: 840,000+ rows",
+   "checked": "2026-11-21",
+   "also": [
+    [
+     "docs/STACK_GUIDE.md",
+     "840,000+ rows"
+    ]
+   ]
+  },
+  {
+   "tile": "DevEconomics Toolkit",
+   "value": "11",
+   "page": "11 interactive Shiny apps",
+   "readme": "11 interactive Shiny apps",
+   "source": "Varnasr/deveconomics-toolkit: 6 directories under python-shiny/ and 5 under r-shiny/",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "ImpactLex",
+   "value": "494",
+   "page": "494 terms",
+   "readme": "494 terms",
+   "source": "ImpactMojo/ImpactMojo impactlex/data/seed-snapshot.json: counts.terms 494",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "ImpactLex",
+   "value": "5",
+   "page": "5 case studies",
+   "readme": "5 case studies",
+   "source": "ImpactMojo/ImpactMojo impactlex/data/seed-snapshot.json: counts.caseStudies 5",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "ImpactLex",
+   "value": "10",
+   "page": "10 worked formulae",
+   "readme": "10 worked formulae",
+   "source": "ImpactMojo/ImpactMojo impactlex/data/seed-snapshot.json: counts.formulae 10",
+   "checked": "2026-11-21"
+  },
+  {
+   "tile": "EquityStack",
+   "value": "101",
+   "page": "101 tests",
+   "readme": null,
+   "source": "Varnasr/EquityStack README.md and CLAUDE.md: pytest tests/ runs 101 tests",
+   "checked": "2026-11-21"
+  }
+ ]
+}
